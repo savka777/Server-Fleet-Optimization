@@ -92,130 +92,160 @@ def initialize_state(time_step):
 '''
 This sections focuses on the OBjective 0 = U x L x P
 '''
-'''
-Tried to use the evaluation script but im having issues with the dataframes. For the time being ill calculate the O myself
-'''
-# def calculate_objective(state, demand_df, selling_prices_df):
-#     print("Debugging State:")
-#     print("Time Step:", state['time_step'])
-#     print("Datacenters:", state['datacenters'])
-#     print("Demand:", state['demand'])
-#     # Create a list to store fleet information
-#     fleet_list = []
-    
+
+
+# def calculate_demand(state):
+#     return state['demand']
+
+# def calculate_capacity(state):
+#     capacity = {}
 #     for dc_id, datacenter in state['datacenters'].items():
 #         for server_type, count in datacenter['allocated_servers'].items():
 #             if count > 0:
-#                 for _ in range(count):
-#                     capacity = servers_df.loc[servers_df['server_generation'] == server_type, 'capacity'].values[0]
-#                     # Adjust capacity by failure rate
-#                     adjusted_capacity = evaluation.adjust_capacity_by_failure_rate(capacity)
-#                     fleet_list.append({
-#                         'server_generation': server_type,
-#                         'datacenter_id': dc_id,
-#                         'latency_sensitivity': datacenter['latency_sensitivity'],
-#                         'capacity': servers_df.loc[servers_df['server_generation'] == server_type, 'capacity'].values[0],
-#                         'lifespan': datacenter['operating_times'][server_type],
-#                         'life_expectancy': servers_df.loc[servers_df['server_generation'] == server_type, 'life_expectancy'].values[0],
-#                         'purchase_price': servers_df.loc[servers_df['server_generation'] == server_type, 'purchase_price'].values[0],
-#                         'average_maintenance_fee': servers_df.loc[servers_df['server_generation'] == server_type, 'average_maintenance_fee'].values[0],
-#                         'cost_of_energy': servers_df.loc[servers_df['server_generation'] == server_type, 'energy_consumption'].values[0],
-#                         'slots_size': servers_df.loc[servers_df['server_generation'] == server_type, 'slots_size'].values[0],
-#                         'cost_of_moving': servers_df.loc[servers_df['server_generation'] == server_type, 'cost_of_moving'].values[0]
-#                     })
+#                 total_capacity = count * state['slot_requirements'][server_type]
+#                 capacity[(server_type, datacenter['latency_sensitivity'])] = total_capacity
+#     return capacity
+
+# def calculate_utilization(demand, capacity):
+#     utilization = {}
+#     for key, cap in capacity.items():
+#         server_type, latency_sensitivity = key
+#         dem = demand.get(server_type, 0)
+#         utilization[key] = min(cap, dem) / cap if cap > 0 else 0
+#     return utilization
+
+# def calculate_lifespan(state):
+#     total_lifespan_ratio = 0
+#     total_servers = 0
+#     for dc_id, datacenter in state['datacenters'].items():
+#         for server_type, operating_time in datacenter['operating_times'].items():
+#             if operating_time > 0:
+#                 life_expectancy = servers_df.loc[servers_df['server_generation'] == server_type, 'life_expectancy'].values[0]
+#                 lifespan_ratio = operating_time / life_expectancy
+#                 total_lifespan_ratio += lifespan_ratio
+#                 total_servers += 1
+#     return total_lifespan_ratio / total_servers if total_servers > 0 else 0
+
+# def calculate_profit(demand, capacity, state):
+#     revenue = 0
+#     cost = 0
+#     for key, cap in capacity.items():
+#         server_type, latency_sensitivity = key
+#         dem = demand.get(server_type, 0)
+#         fulfilled_demand = min(cap, dem)
+#         selling_price = selling_prices_df.loc[(selling_prices_df['server_generation'] == server_type) &
+#                                               (selling_prices_df['latency_sensitivity'] == latency_sensitivity), 'selling_price'].values[0]
+#         revenue += fulfilled_demand * selling_price
+        
+#         # Calculate cost for each server type in each datacenter
+#         for dc_id, datacenter in state['datacenters'].items():
+#             if datacenter['allocated_servers'][server_type] > 0:
+#                 purchase_price = servers_df.loc[servers_df['server_generation'] == server_type, 'purchase_price'].values[0]
+#                 maintenance_fee = servers_df.loc[servers_df['server_generation'] == server_type, 'average_maintenance_fee'].values[0]
+#                 energy_cost = servers_df.loc[servers_df['server_generation'] == server_type, 'energy_consumption'].values[0]
+                
+#                 # Calculate costs proportionally to the number of servers
+#                 num_servers = datacenter['allocated_servers'][server_type]
+#                 operating_time = datacenter['operating_times'][server_type]
+#                 total_maintenance_cost = maintenance_fee * operating_time * num_servers
+#                 total_energy_cost = energy_cost * operating_time * num_servers
+#                 total_purchase_cost = purchase_price * num_servers  # Only add this once, maybe during server purchase
+
+#                 # Add all costs together
+#                 cost += total_purchase_cost + total_maintenance_cost + total_energy_cost
+                
+#     return revenue - cost
+
+# def calculate_objective(state):
+#     demand = calculate_demand(state)
+#     capacity = calculate_capacity(state)
+#     utilization = calculate_utilization(demand, capacity)
+#     lifespan = calculate_lifespan(state)
+#     profit = calculate_profit(demand, capacity, state)
+#     print(f"Demand: {demand}, Capacity: {capacity}")
+#     print(f"Utilization: {utilization}")
+#     print(f"Profit: {profit}")
     
-#     # Convert the list to a DataFrame
-#     fleet_df = pd.DataFrame(fleet_list)
 
     
-#     # Debug: print the structure of fleet_df
-#     print("Fleet DataFrame Structure:")
-#     print(fleet_df.head())
-
-#      # Use demand directly from state
-#     D = pd.DataFrame.from_dict(state['demand'], orient='index', columns=['demand'])
-
-#     Z = evaluation.get_capacity_by_server_generation_latency_sensitivity(fleet_df)
-#     U = evaluation.get_utilization(D, Z)
-#     L = evaluation.get_normalized_lifespan(fleet_df)
-#     P = evaluation.get_profit(D, Z, selling_prices_df, fleet_df)
-    
-#     # Calculate the objective
-#     O = U * L * P
+#     # Calculate O as a product of utilization, lifespan, and profit
+#     O = sum(utilization.values()) * lifespan * profit
+#     print(f"Objective O: {O}")
 #     return O
 
-def calculate_demand(state):
-    return state['demand']
+def reshape_demand_df(demand_df):
+    return demand_df.melt(id_vars=['time_step', 'latency_sensitivity'], 
+                          var_name='server_generation', 
+                          value_name='demand')
 
-def calculate_capacity(state):
-    capacity = {}
+def prepare_fleet_df(state, servers_df):
+    fleet_list = []
     for dc_id, datacenter in state['datacenters'].items():
         for server_type, count in datacenter['allocated_servers'].items():
             if count > 0:
-                total_capacity = count * state['slot_requirements'][server_type]
-                capacity[(server_type, datacenter['latency_sensitivity'])] = total_capacity
-    return capacity
+                for _ in range(count):
+                    fleet_list.append({
+                        'server_generation': server_type,
+                        'datacenter_id': dc_id,
+                        'latency_sensitivity': datacenter['latency_sensitivity'],
+                        'capacity': servers_df.loc[servers_df['server_generation'] == server_type, 'capacity'].values[0],
+                        'lifespan': datacenter['operating_times'][server_type],
+                        'life_expectancy': servers_df.loc[servers_df['server_generation'] == server_type, 'life_expectancy'].values[0],
+                        'purchase_price': servers_df.loc[servers_df['server_generation'] == server_type, 'purchase_price'].values[0],
+                        'average_maintenance_fee': servers_df.loc[servers_df['server_generation'] == server_type, 'average_maintenance_fee'].values[0],
+                         'cost_of_energy': datacenters_df.loc[datacenters_df['datacenter_id'] == dc_id, 'cost_of_energy'].values[0],
+                        'energy_consumption': servers_df.loc[servers_df['server_generation'] == server_type, 'energy_consumption'].values[0],
+                        'slots_size': servers_df.loc[servers_df['server_generation'] == server_type, 'slots_size'].values[0],
+                        'cost_of_moving': servers_df.loc[servers_df['server_generation'] == server_type, 'cost_of_moving'].values[0],
+                        'moved': 0  # Initialize moved status as 0 (not moved)
+                        
+                    })
+    fleet_df = pd.DataFrame(fleet_list)
+    return fleet_df
 
-def calculate_utilization(demand, capacity):
-    utilization = {}
-    for key, cap in capacity.items():
-        server_type, latency_sensitivity = key
-        dem = demand.get(server_type, 0)
-        utilization[key] = min(cap, dem) / cap if cap > 0 else 0
-    return utilization
-
-def calculate_lifespan(state):
-    total_lifespan_ratio = 0
-    total_servers = 0
-    for dc_id, datacenter in state['datacenters'].items():
-        for server_type, operating_time in datacenter['operating_times'].items():
-            if operating_time > 0:
-                life_expectancy = servers_df.loc[servers_df['server_generation'] == server_type, 'life_expectancy'].values[0]
-                lifespan_ratio = operating_time / life_expectancy
-                total_lifespan_ratio += lifespan_ratio
-                total_servers += 1
-    return total_lifespan_ratio / total_servers if total_servers > 0 else 0
-
-def calculate_profit(demand, capacity, state):
-    revenue = 0
-    cost = 0
-    for key, cap in capacity.items():
-        server_type, latency_sensitivity = key
-        dem = demand.get(server_type, 0)
-        fulfilled_demand = min(cap, dem)
-        selling_price = selling_prices_df.loc[(selling_prices_df['server_generation'] == server_type) &
-                                              (selling_prices_df['latency_sensitivity'] == latency_sensitivity), 'selling_price'].values[0]
-        revenue += fulfilled_demand * selling_price
-        
-        # Calculate cost for each server type in each datacenter
-        for dc_id, datacenter in state['datacenters'].items():
-            if datacenter['allocated_servers'][server_type] > 0:
-                purchase_price = servers_df.loc[servers_df['server_generation'] == server_type, 'purchase_price'].values[0]
-                maintenance_fee = servers_df.loc[servers_df['server_generation'] == server_type, 'average_maintenance_fee'].values[0]
-                energy_cost = servers_df.loc[servers_df['server_generation'] == server_type, 'energy_consumption'].values[0]
-                operating_time = datacenter['operating_times'][server_type]
-                cost += purchase_price + (maintenance_fee + energy_cost) * operating_time
-                
-    return revenue - cost
-
-def calculate_objective(state):
-    demand = calculate_demand(state)
-    capacity = calculate_capacity(state)
-    utilization = calculate_utilization(demand, capacity)
-    lifespan = calculate_lifespan(state)
-    profit = calculate_profit(demand, capacity, state)
-    print(f"Demand: {demand}, Capacity: {capacity}")
-    print(f"Utilization: {utilization}")
-    print(f"Profit: {profit}")
+def calculate_demand_and_capacity(state, demand_df, servers_df):
+    # Reshape the demand DataFrame
+    demand_df_melted = reshape_demand_df(demand_df)
     
+    # Extract the demand for the current time step
+    time_step = state['time_step']
+    D = evaluation.get_time_step_demand(demand_df_melted, time_step)
 
+    if 'server_generation' not in D.columns:
+        D = D.reset_index()  # This makes sure 'server_generation' becomes a column
     
-    # Calculate O as a product of utilization, lifespan, and profit
-    O = sum(utilization.values()) * lifespan * profit
-    print(f"Objective O: {O}")
+    D_pivoted = D.pivot(index='server_generation', columns='latency_sensitivity', values='demand')
+    
+    # Prepare the fleet DataFrame from the state
+    fleet_df = prepare_fleet_df(state, servers_df)
+    
+    # Calculate the capacity
+    Z = evaluation.get_capacity_by_server_generation_latency_sensitivity(fleet_df)
+    
+    return D_pivoted, Z, fleet_df
+
+def reshape_selling_prices(selling_prices_df):
+    # Pivot the DataFrame so that latency_sensitivity becomes columns
+    selling_prices_pivoted = selling_prices_df.pivot(index='server_generation', columns='latency_sensitivity', values='selling_price')
+    
+    return selling_prices_pivoted
+
+
+def calculate_objective(state, demand_df, selling_prices_df, servers_df):
+    # Prepare demand, capacity, and fleet DataFrame
+    D, Z, fleet_df = calculate_demand_and_capacity(state, demand_df, servers_df)
+
+    # Reshape selling_prices_df to the correct format
+    selling_prices_df_pivoted = reshape_selling_prices(selling_prices_df)
+    
+    # Use the provided methods to calculate U, L, P
+    U = evaluation.get_utilization(D, Z)
+    L = evaluation.get_normalized_lifespan(fleet_df)
+    P = evaluation.get_profit(D, Z, selling_prices_df_pivoted, fleet_df)
+    
+    # Calculate the overall objective O
+    O = U * L * P
     return O
-
-
 
 # Get the initial state of the datacenters
 def calculate_initial_utilization(datacenter_id):
@@ -240,7 +270,9 @@ def buy_server(state, server_type, datacenter_id):
         state['required_servers'][server_type] = max(0, state['required_servers'][server_type] - 1)
 
         # Calculate the overall objective O after the action
-        O = calculate_objective(state)
+        # O = calculate_objective(state)
+        O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
+
 
         print(f"Purchased {server_type} at datacenter {datacenter_id}. Updated 0: {O} Remaining demand: {state['required_servers'][server_type]}")
     else:
@@ -275,7 +307,8 @@ def move_server(state, server_type, from_datacenter_id, to_datacenter_id):
             # Transfer the operating time for the server
             to_datacenter['operating_times'][server_type] = from_datacenter['operating_times'][server_type]
             # Calculate the overall objective O after the action
-            O = calculate_objective(state)
+            # O = calculate_objective(state)
+            O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
             print(f"Moved {server_type} from {from_datacenter_id} to {to_datacenter_id}. Updated Objective O: {O}")
         else:
             print(f"Cannot move server {server_type} from datacenter {from_datacenter_id} to {to_datacenter_id}: Not enough capacity.")
@@ -343,19 +376,22 @@ def dismiss_server(state, server_type, datacenter_id):
         # Reset operating time for the dismissed server
         datacenter['operating_times'][server_type] = 0
         # Calculate the overall objective O after the action
-        O = calculate_objective(state)
+        # O = calculate_objective(state)
+        O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
         print(f"Dismissed {server_type} from {datacenter_id}. Updated Objective O: {O}")
     else:
         print(f"Cannot dismiss server {server_type}: No such server in datacenter {datacenter_id}.")
 
 def hold(state):
     # Optionally calculate Objective O even if no action is taken
-    O = calculate_objective(state)
+    # O = calculate_objective(state)
+    O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
     print(f"Held state. Objective O remains: {O}")
 
 
 # After all functions are defined, you can add this test code
 if __name__ == "__main__":
+
     # Initialize the state
     state = initialize_state(time_step=1)
     print("state: " ,state)
@@ -376,5 +412,5 @@ if __name__ == "__main__":
     print(state['datacenters']['DC1'])
 
     # Calculate the objective
-    O = calculate_objective(state)
+    O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
     print("Objective O after action:", O)
