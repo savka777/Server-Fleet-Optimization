@@ -8,9 +8,9 @@ datacenters_df = pd.read_csv("data\datacenters.csv")
 # Implementing a greedy approach
 def greedy_allocation(time_step, server_df, demand_df, datacenters_df):
     actions = []
-    # For each step identify the demand for each server type and categorize it by latency
+    # for each step identify the demand for each server type and categorize it by latency
     
-    # Get the current step
+    # get the current step
     curr_demand_row = demand_df[demand_df['time_step'] == time_step]
 
     if not curr_demand_row.empty:

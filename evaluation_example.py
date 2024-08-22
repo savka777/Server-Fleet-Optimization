@@ -6,7 +6,7 @@ from evaluation import evaluation_function
 
 
 # LOAD SOLUTION
-solution = load_solution('./data/solution_example.json')
+solution = load_solution('./data/solution.json')
 
 # LOAD PROBLEM DATA
 demand, datacenters, servers, selling_prices = load_problem_data()

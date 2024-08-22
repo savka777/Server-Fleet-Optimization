@@ -174,6 +174,7 @@ def get_time_step_demand(demand, ts):
     return d
 
 
+
 def get_time_step_fleet(solution, ts):
     # GET THE SOLUTION AT A SPECIFIC TIME-STEP t
     if ts in solution['time_step']:
@@ -239,7 +240,6 @@ def get_utilization(D, Z):
         return sum(u) / len(u)
     else:
         return 0
-
 
 def get_normalized_lifespan(fleet):
     # CALCULATE OBJECTIVE L = NORMALIZED LIFESPAN

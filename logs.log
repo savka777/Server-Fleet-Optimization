@@ -1,0 +1,1437 @@
+2024-08-20 19:00:24,596 | ERROR | Please check the solution format.
+2024-08-20 19:46:00,930 | ERROR | "None of [Index(['0c94dfcc-1ddb-4bb0-952e-1cb0fcd3ec52'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:50:45,391 | ERROR | "None of [Index(['4717dc7c-71b4-4343-ab26-67ee79ad8c5f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:52:48,263 | ERROR | "None of [Index(['a612cc2e-d12e-4950-9ffb-edaff7cd914b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:52:48,785 | ERROR | "['7df57e4d-d4c7-45d7-8ab6-8d6a55ac912a'] not found in axis"
+2024-08-20 19:52:49,248 | ERROR | "None of [Index(['63617a30-bf38-4a77-bc7b-c73ad0c27019'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:52:49,771 | ERROR | "None of [Index(['270e2fdc-290f-4eb7-aa2e-a300f4ad51d5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:52:50,142 | ERROR | "['9aa8408b-509e-41c6-b7d3-422fe76fa937'] not found in axis"
+2024-08-20 19:52:50,488 | ERROR | "None of [Index(['1559abc7-062f-4520-8944-235d91cf8536'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:52:51,004 | ERROR | "None of [Index(['8d0476b8-a1b2-41f7-9f42-fe7b0a26bf50'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:52:51,385 | ERROR | "None of [Index(['29ed16fd-d9bc-4529-b1eb-168f118779f5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:52:52,751 | ERROR | "None of [Index(['6c2d6d18-635b-4439-880b-a90e9b5e46fd'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:52:52,993 | ERROR | "None of [Index(['f52a6e56-2eb7-45cb-bd0b-a93531b79a82'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:52:53,431 | ERROR | "None of [Index(['c00b6ccd-1e8e-4ac7-bc31-dcf0626a7d51'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:52:53,660 | ERROR | "['42fa440e-84c7-42eb-a81a-e7d14d790caa'] not found in axis"
+2024-08-20 19:52:55,838 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:52:56,330 | ERROR | "None of [Index(['01fade6b-61e4-4e0d-b1ba-db53a5f80e7e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:52:56,658 | ERROR | "['25e0558a-c1a1-4820-b5ee-606c946a968c'] not found in axis"
+2024-08-20 19:52:56,989 | ERROR | "None of [Index(['ca1e29f3-511b-4ecc-8c58-ae3a187841ef'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:52:58,477 | ERROR | "None of [Index(['c77c773a-f5d3-4d9f-8f1c-280262683376'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:52:58,636 | ERROR | "None of [Index(['b6f82811-3e37-4799-90dc-2fe78e33e5e3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:52:59,146 | ERROR | "['ccf1ba58-42c5-486f-8c00-2941ea2937e2'] not found in axis"
+2024-08-20 19:52:59,586 | ERROR | "['d2020e5d-9d9c-4fb3-832f-7437b470dd9e'] not found in axis"
+2024-08-20 19:52:59,789 | ERROR | "None of [Index(['cd7c59c7-5fc2-410e-aeab-8ec90bbafdcf'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:00,221 | ERROR | "None of [Index(['780f81fe-4420-4ca8-a82a-ae54b53da2db'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:00,337 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:53:01,780 | ERROR | "None of [Index(['45708ed6-640d-44e5-a008-91a151911ef7'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:02,010 | ERROR | "['f08c69aa-dbfb-470b-990f-cd38d14b23d6'] not found in axis"
+2024-08-20 19:53:02,231 | ERROR | "None of [Index(['4df2af1b-b409-4eaa-b94f-109a0fd9105f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:02,391 | ERROR | "None of [Index(['22962897-2f57-4238-8142-3a20382d1d0c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:02,547 | ERROR | "['57fd7c20-2cf2-4909-920e-bc9a1e6555f3'] not found in axis"
+2024-08-20 19:53:05,109 | ERROR | "None of [Index(['c6c658fe-c27d-4072-8a17-8278264f078b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:05,617 | ERROR | "None of [Index(['860f43c4-c4f3-4abe-9989-ad47a9c4b022'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:05,859 | ERROR | "['4495d3e4-bce8-46f6-888b-e3fc34956d5d'] not found in axis"
+2024-08-20 19:53:06,085 | ERROR | "['0156cedf-d2a4-438a-993d-b435159dc689'] not found in axis"
+2024-08-20 19:53:06,564 | ERROR | "None of [Index(['28144f7a-3532-4aca-9af2-32dd038bd220'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:06,786 | ERROR | "['8d590a91-247b-4491-af1c-347265588024'] not found in axis"
+2024-08-20 19:53:07,261 | ERROR | "['cca5ddd0-f5ad-4ab6-a981-51c53f3ddd34'] not found in axis"
+2024-08-20 19:53:07,412 | ERROR | "['14b1d69c-6ae6-4987-88e4-157ee0365812'] not found in axis"
+2024-08-20 19:53:07,923 | ERROR | "['68b36df2-eba6-426f-9f2e-68da32abff7f'] not found in axis"
+2024-08-20 19:53:08,250 | ERROR | "None of [Index(['e7c64d11-4943-4ba4-9e04-07d454c911f8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:08,433 | ERROR | "None of [Index(['b4ed1e87-6425-4381-8123-516038a5d93a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:08,866 | ERROR | "['83408cc1-ff8d-4545-8adb-bf77e7668dc9'] not found in axis"
+2024-08-20 19:53:09,172 | ERROR | "None of [Index(['f259dfba-1730-4375-9701-28802a4d9a32'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:09,437 | ERROR | "None of [Index(['3dc9e2b7-edac-423f-940c-6ab1d44d5c96'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:09,837 | ERROR | "None of [Index(['d8700c51-b4e3-461d-b560-ef99662b98f7'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:10,088 | ERROR | "None of [Index(['26ea5d1b-3ab9-4065-bd26-1a22792891fd'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:10,376 | ERROR | "None of [Index(['fa997947-22bd-47b6-8b89-9af140598c34'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:10,597 | ERROR | "None of [Index(['eecce552-d08a-46fe-befc-ea9dc514d2a6'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:10,750 | ERROR | "None of [Index(['e43b54d9-b452-4433-a0e4-249f4719d758'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:11,113 | ERROR | "None of [Index(['ad80e4ce-8514-43ad-8787-0118374c4db8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:11,461 | ERROR | "None of [Index(['2e1893eb-c20e-4891-b81c-c5ac67f236e6'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:12,871 | ERROR | "['b55c6024-e5ba-4212-bb13-b2ad1989f3db'] not found in axis"
+2024-08-20 19:53:12,959 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:53:13,336 | ERROR | "['448d7dff-b701-4441-9046-9fd1f9a2bb16'] not found in axis"
+2024-08-20 19:53:13,472 | ERROR | "['bbe374fc-4679-410e-9a0c-67f857a1b644'] not found in axis"
+2024-08-20 19:53:13,882 | ERROR | "['c82fefd8-317c-4eba-9325-0aad9df3414f'] not found in axis"
+2024-08-20 19:53:14,150 | ERROR | "['3ed23527-4939-4ff6-9b8b-e8788013fb59'] not found in axis"
+2024-08-20 19:53:14,383 | ERROR | "['a1809e1f-b493-44d0-ba36-a9e7c0a2bb96'] not found in axis"
+2024-08-20 19:53:14,542 | ERROR | "None of [Index(['93c7a1f0-1951-467b-8c36-c4ea79cf965b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:14,878 | ERROR | "None of [Index(['9da9d181-68f1-436d-ba37-c850c8d0465a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:16,119 | ERROR | "['f04d19fe-5a64-4b64-9577-7aa66f7f5838'] not found in axis"
+2024-08-20 19:53:16,283 | ERROR | "None of [Index(['03c46a69-fc03-4ab6-8427-25ccc21af137'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:16,485 | ERROR | "None of [Index(['b0ac3d1b-d0df-46e7-9166-e69a26a5e772'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:16,869 | ERROR | "None of [Index(['eb5f3687-17a2-4efa-aab4-ebbf42c78953'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:17,195 | ERROR | "['0641268e-8653-4c4b-ad09-85cde7e2b7c5'] not found in axis"
+2024-08-20 19:53:17,692 | ERROR | "['6cce8083-ca56-48d3-9226-0adcec6ec43b'] not found in axis"
+2024-08-20 19:53:18,065 | ERROR | "None of [Index(['a74d2d78-b11e-4e0c-b230-20154597619c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:53:58,410 | ERROR | "['f355ace1-cdb7-4dbf-8c16-d43ebbf4db96'] not found in axis"
+2024-08-20 19:53:58,578 | ERROR | "['121e31b6-bcf1-434a-b5fc-753b80b245dd'] not found in axis"
+2024-08-20 19:53:58,680 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:54:00,168 | ERROR | "None of [Index(['3030c22a-6ab5-468f-9e03-13826be5ad5f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:00,598 | ERROR | "['638a4637-a375-42f3-9845-1209632b4765'] not found in axis"
+2024-08-20 19:54:01,088 | ERROR | "None of [Index(['3c67ecfc-f466-4f4f-9f01-dcddcc9c0d77'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:04,865 | ERROR | "None of [Index(['8e6ad7da-db3e-469b-85a9-63e26b81e0b8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:05,076 | ERROR | "['ac83ec93-4fd0-4727-8650-52d1956f2510'] not found in axis"
+2024-08-20 19:54:05,332 | ERROR | "None of [Index(['6d2006cf-7be4-4edd-8f4f-e431d0b0888b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:05,636 | ERROR | "None of [Index(['4045f97b-fc73-4d54-96f2-6501d838bd06'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:05,945 | ERROR | "None of [Index(['ffde22a9-61f5-4751-9860-031457e8b97e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:06,216 | ERROR | "['ef2fbd7a-90d9-4878-b3bc-26054b0a9397'] not found in axis"
+2024-08-20 19:54:06,438 | ERROR | "None of [Index(['7fa60879-46a7-4015-9740-614b00de09ea'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:07,919 | ERROR | "None of [Index(['ec09d59b-cd92-4201-a243-33c957a6c0bd'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:08,258 | ERROR | "['cb5885cb-23bc-44d3-9c6a-10c6c21916c8'] not found in axis"
+2024-08-20 19:54:08,350 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:54:09,807 | ERROR | "['dbc84d50-5231-4d15-b64e-cf41023827e0'] not found in axis"
+2024-08-20 19:54:10,316 | ERROR | "None of [Index(['9e5171db-cda5-4d40-9490-a24dc64331a5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:10,617 | ERROR | "None of [Index(['48669a50-5fea-4d5e-8590-6059b0d39bb3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:11,169 | ERROR | "['946a0a23-fbb1-4b38-8638-edfdb9863f3a'] not found in axis"
+2024-08-20 19:54:11,354 | ERROR | "None of [Index(['43a349ca-2132-4e01-ac07-52c14b65624a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:11,834 | ERROR | "None of [Index(['8e896b28-3aa2-43c9-9267-e4b4729ac446'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:13,344 | ERROR | "None of [Index(['7d93827f-3318-4004-bbc5-72651e78d46b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:13,616 | ERROR | "['ce5d7c3c-22d4-4d52-b77c-7a136b12f802'] not found in axis"
+2024-08-20 19:54:13,886 | ERROR | "None of [Index(['b9214cf2-5a46-41be-a5f7-d1640a65723f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:42,558 | ERROR | "None of [Index(['4b98b18b-d193-4108-bafd-22579c79ecb8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:42,852 | ERROR | "None of [Index(['41faaf41-26c5-412f-9b90-acfd0227c60a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:43,077 | ERROR | "None of [Index(['2f4e843c-22ca-4926-a595-490a30056eaa'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:43,708 | ERROR | "None of [Index(['d4cf9088-4444-4e7a-8ce6-7ffe03c6b85e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:43,865 | ERROR | "None of [Index(['9a876384-7993-406b-bf43-475f51af2c8d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:44,321 | ERROR | "None of [Index(['6a5a917a-0838-418f-9746-72148d5cb30f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:44,544 | ERROR | "None of [Index(['c97262bd-875e-4c61-ad99-a0cedbe02d7e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:44,923 | ERROR | "None of [Index(['435269cc-59a5-45d2-82e5-0ecb1fd73387'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:45,606 | ERROR | "['05c52c65-e069-4fcb-a3e8-cb14a36c4b94'] not found in axis"
+2024-08-20 19:54:45,702 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:54:45,803 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:54:46,156 | ERROR | "None of [Index(['b6dc4611-1683-4988-8f7b-ffb8b24d0ecd'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:46,734 | ERROR | "None of [Index(['711c459a-3792-486e-89bb-68b1fa2f3e69'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:46,954 | ERROR | "None of [Index(['66b9c2a7-c16e-4501-8d6e-c9afd9dcee63'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:47,481 | ERROR | "None of [Index(['9698848a-b57a-410d-b452-f32a0843d539'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:47,775 | ERROR | "['d1e9caea-0d10-4510-885c-a4b6be712c7c'] not found in axis"
+2024-08-20 19:54:48,034 | ERROR | "['f0790bb1-a527-4ec8-814f-4bf75c848d02'] not found in axis"
+2024-08-20 19:54:49,254 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:54:49,399 | ERROR | "None of [Index(['1f7cd5f9-5f20-4000-9bcf-373f6e63983e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:49,797 | ERROR | "None of [Index(['6ba54a1c-145b-41fe-bac3-3083855d0115'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:50,002 | ERROR | "['94f040e2-8043-44e3-bcfe-194068377bea'] not found in axis"
+2024-08-20 19:54:50,186 | ERROR | "['2cda28d7-5502-4b97-8dba-0f260a384bc3'] not found in axis"
+2024-08-20 19:54:50,487 | ERROR | "None of [Index(['1f7ab9ab-ca0c-4922-a306-2ae0059120ad'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:51,014 | ERROR | "None of [Index(['763537fd-9e45-4512-9c94-2620c2871d63'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:51,172 | ERROR | "None of [Index(['73e0c4a0-f99c-4091-9eda-7b8fe6ed842e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:52,571 | ERROR | "None of [Index(['4d081388-6fd7-403d-9fd9-2d350bb2bc96'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:53,023 | ERROR | "None of [Index(['458db937-b95b-427e-a654-0d8d20713bc6'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:53,247 | ERROR | "None of [Index(['de917803-bf07-4f83-b1ae-d80938b7d2d5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:54,738 | ERROR | "None of [Index(['9d9f992f-8ba1-4cf0-ab62-d6d3092001e5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:54,825 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:54:55,147 | ERROR | "['cd8cf3c9-f431-4074-ae26-f20e69ed3dbc'] not found in axis"
+2024-08-20 19:54:55,424 | ERROR | "None of [Index(['c912fb67-10b8-4747-8bd8-ea073d8ac7e8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:55,658 | ERROR | "None of [Index(['f959bfec-6418-4e51-b4d0-2b7149938833'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:55,749 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:54:55,894 | ERROR | "None of [Index(['1be0b4e6-4651-46b6-8cde-9472ea21ff54'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:57,457 | ERROR | "None of [Index(['0931088f-d269-4cdb-a540-3f263d878cba'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:57,733 | ERROR | "['bd5cad32-261c-4790-92eb-55dd314d7492'] not found in axis"
+2024-08-20 19:54:58,207 | ERROR | "None of [Index(['74fe6c4b-12ad-4354-9c85-a7417f34ebf1'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:58,513 | ERROR | "['d4fd8217-e970-453c-9f04-ee67578517dd'] not found in axis"
+2024-08-20 19:54:58,964 | ERROR | "None of [Index(['47ac32b4-f190-4e2a-ba46-c8b93c9895a2'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:59,098 | ERROR | 'life_expectancy'
+2024-08-20 19:54:59,394 | ERROR | "None of [Index(['72681804-1d13-4e31-af1d-dbf5c384f5a5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:59,634 | ERROR | "None of [Index(['b8cce4a0-89d0-4b94-9f17-a679542c8c6f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:54:59,859 | ERROR | "None of [Index(['ac79d3a7-76c7-42fa-ad84-469b936d722d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:00,020 | ERROR | "['a570f9dc-1e5d-4c86-a5ea-40d17c2902db'] not found in axis"
+2024-08-20 19:55:00,218 | ERROR | "None of [Index(['8659d6ad-ff9b-4b9a-aff9-8e66be1d7002'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:02,741 | ERROR | "['aaf3894d-2fef-42d1-a09f-e95c8e39db79'] not found in axis"
+2024-08-20 19:55:03,033 | ERROR | "None of [Index(['1f3552e5-7988-4286-837a-e873a633bbec'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:03,484 | ERROR | "['2be43f7f-76df-41a4-8538-ecaf2874c805'] not found in axis"
+2024-08-20 19:55:03,687 | ERROR | "['b4948fd6-e1eb-4509-b56f-be61b6d46944'] not found in axis"
+2024-08-20 19:55:05,188 | ERROR | "None of [Index(['2e1efc13-a3bd-4734-b11b-dedf1cebcdf8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:05,412 | ERROR | "None of [Index(['723a0c90-20fe-4273-b25b-3d44ac8abd12'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:05,564 | ERROR | "None of [Index(['f1ac194f-6bdb-43cd-8beb-2c863d9576da'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:05,650 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:55:06,117 | ERROR | "None of [Index(['adb73b24-e5c4-4949-b6cf-e231911531f2'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:06,311 | ERROR | "None of [Index(['3f05b3bc-a858-4c15-a416-b195d290be5c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:06,704 | ERROR | "None of [Index(['af9ba0cc-b515-4b6f-9c33-f60fdff07d88'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:06,852 | ERROR | "['e1aafa75-b47d-4742-8cb9-b5afa0b3d8b4'] not found in axis"
+2024-08-20 19:55:07,300 | ERROR | "None of [Index(['3ba8b095-4264-4207-9a19-7162f4f1094b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:07,385 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:55:07,780 | ERROR | "['42e1a642-f5cf-4d21-afed-efa585237875'] not found in axis"
+2024-08-20 19:55:07,977 | ERROR | "None of [Index(['f22f153e-5b76-484f-ba7e-a62b9d7d41a9'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:08,472 | ERROR | "None of [Index(['d47d1db5-dcd2-4603-8542-000131f88655'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:08,673 | ERROR | "None of [Index(['8ca0a675-4701-4ecb-9c51-5b9bbbba906c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:09,150 | ERROR | "None of [Index(['60cc2276-cdef-48ed-b80f-6067e61d9053'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:10,664 | ERROR | "None of [Index(['3d592bb4-98fb-4a4d-a850-29614d716107'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:10,980 | ERROR | "None of [Index(['2a168e24-002a-4f8a-80cc-e4fa3f09f34d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:11,349 | ERROR | "['4cc8835c-72ca-4a93-86c7-afeaa7421292'] not found in axis"
+2024-08-20 19:55:11,799 | ERROR | "None of [Index(['be875d0f-f311-4fea-b7e1-b8d416a9b35e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:13,223 | ERROR | "None of [Index(['d61296de-ce0e-4758-9ca4-3ce2eb551da1'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:13,620 | ERROR | "None of [Index(['ad01f651-f966-48c6-bd10-76e0a77cdc83'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:13,906 | ERROR | "None of [Index(['d2f627ac-a14a-49b0-962e-094102b4aad7'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:14,452 | ERROR | "None of [Index(['62e296bf-a20b-4a06-ba7b-80664d90d6d5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:14,593 | ERROR | "None of [Index(['f32942a0-a91b-4315-b011-d091228dd3ec'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:15,048 | ERROR | "None of [Index(['ba4477fd-f55d-4448-b1f5-80401c53bb70'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:15,183 | ERROR | "None of [Index(['4cce26f2-f33f-4426-a33c-55270e2284a3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:15,426 | ERROR | "None of [Index(['8441dd2d-bb84-4a24-a878-16977244ff2e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:15,589 | ERROR | "None of [Index(['11c8e320-f03e-4852-bf22-bf5ede885576'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:15,830 | ERROR | "['775ebc6c-7bfe-417e-80da-de1537bcfecb'] not found in axis"
+2024-08-20 19:55:18,492 | ERROR | "None of [Index(['93e2d381-f680-4354-954d-b0b5bc786469'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:18,664 | ERROR | "['0cf9e92c-1799-48bc-8f4f-2f505a5dce35'] not found in axis"
+2024-08-20 19:55:19,139 | ERROR | "None of [Index(['a3403386-aed0-446e-8aa4-364f09b9cdd3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:19,271 | ERROR | "['285e2850-a752-4294-8122-fdeab755ce9b'] not found in axis"
+2024-08-20 19:55:19,607 | ERROR | "None of [Index(['9fb6745b-0f53-4621-ab71-b10cfe951838'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:19,711 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:55:19,866 | ERROR | "None of [Index(['e75d74f1-9a26-4bb7-aa5f-8961a5bcf6f0'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:20,399 | ERROR | "None of [Index(['53b1662b-293d-4ab3-a431-68685750a6db'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:20,560 | ERROR | "None of [Index(['2ec4cd0e-2983-4cb1-bc62-5e9a6aefa74f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:20,732 | ERROR | "None of [Index(['bdb2247d-0630-49b3-b860-28a0a0cb3d0c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:55:48,654 | ERROR | Please check the solution format.
+2024-08-20 19:57:36,145 | ERROR | "['533c1993-13c4-439e-abc3-2b80362d99a3'] not found in axis"
+2024-08-20 19:57:36,145 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:36,609 | ERROR | "None of [Index(['0ab11af6-c24f-4477-91e0-5f4280b7211a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:36,609 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:36,891 | ERROR | "['4187a403-b359-4fea-8e94-accc5aa0ce21'] not found in axis"
+2024-08-20 19:57:36,891 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:38,149 | ERROR | "['f5251412-cba7-48db-a26f-990b72240157'] not found in axis"
+2024-08-20 19:57:38,149 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:38,206 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:57:38,206 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:38,328 | ERROR | "None of [Index(['69f00635-27a6-4ae2-89c9-4b39e3f6480c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:38,328 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:38,500 | ERROR | "None of [Index(['2af90f9a-228d-4288-be23-158b27963f3e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:38,500 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:38,622 | ERROR | "None of [Index(['7be9ec3d-9c79-4c51-8ecd-708e9c09dddd'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:38,622 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:39,090 | ERROR | "None of [Index(['a1f971bb-a3c6-4092-bb53-c06b319a357a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:39,090 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:39,196 | ERROR | "None of [Index(['a8a5be5d-266e-4121-b3bc-6df4b50074a9'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:39,197 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:39,511 | ERROR | "None of [Index(['1c042235-762b-4778-9ac0-a8551cd97735'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:39,511 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:40,008 | ERROR | "None of [Index(['95ea07c0-4f46-4a59-bb29-b7397d063503'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:40,008 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:40,242 | ERROR | "None of [Index(['94f11a54-bdaa-477d-b5f2-ebdd68fbb332'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:40,242 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:40,391 | ERROR | "None of [Index(['a9b16a63-2f02-462a-99f8-416250ff3d16'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:40,392 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:40,811 | ERROR | "None of [Index(['4a40976e-27d0-4814-ba59-19e9566244eb'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:40,811 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:41,032 | ERROR | "None of [Index(['858891c9-49b5-45d5-b153-ea5f2d74cedc'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:41,032 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:42,648 | ERROR | "None of [Index(['59ac88d8-d02f-443b-9ff0-bf5108b0191d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:42,648 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:42,740 | ERROR | 'life_expectancy'
+2024-08-20 19:57:42,740 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:44,134 | ERROR | "None of [Index(['c7f1bc2c-33ce-4b02-8e6f-412cc9427957'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:44,135 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:44,319 | ERROR | "None of [Index(['395e8e16-c67f-4f81-9a8e-adbe77d2ebf3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:44,319 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:45,490 | ERROR | "None of [Index(['8f228e8b-6c03-43af-b8af-5b390e942387'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:45,490 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:45,768 | ERROR | "None of [Index(['2b12427c-c3a9-4b7a-97af-469d9aced52a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:45,768 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:46,148 | ERROR | "['d94cd544-0d10-4f87-8781-7cd39b6cdb08'] not found in axis"
+2024-08-20 19:57:46,148 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:46,331 | ERROR | "['757dfc5b-67a7-4a1a-acb6-25c5e5bb5565'] not found in axis"
+2024-08-20 19:57:46,331 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:46,745 | ERROR | "None of [Index(['d61c806c-7d98-45eb-8089-462e2b6fd3be'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:46,745 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:47,054 | ERROR | "None of [Index(['3363c31a-7d5b-4ccf-94c4-a26e1abcb869'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:47,054 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:47,431 | ERROR | "None of [Index(['358d9042-6a9b-48bc-a841-dc08b2890381'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:47,432 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:47,619 | ERROR | "None of [Index(['f7a4af46-cfd9-414e-aec8-d5140dca582e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:47,619 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:47,673 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:57:47,673 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:48,055 | ERROR | "['031b1796-e08e-4c3c-98b0-810969ba50be'] not found in axis"
+2024-08-20 19:57:48,055 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:48,110 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:57:48,110 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:48,265 | ERROR | "None of [Index(['be7a2a0d-02c2-433e-a2e7-f32d5cb92a12'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:48,265 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:48,653 | ERROR | "None of [Index(['cf0c12f0-bafd-4e8f-a8b2-861009f73447'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:48,653 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:48,884 | ERROR | "None of [Index(['e44cff35-853b-4415-b33c-1b965892dc8b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:48,884 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:49,128 | ERROR | "None of [Index(['d22901da-582f-44e3-b3bc-fa7d332be8e3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:49,128 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:50,433 | ERROR | "None of [Index(['e37e00c9-7a2a-4b62-81e5-55f4340d78bf'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:50,433 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:50,845 | ERROR | "None of [Index(['5410e4ad-836e-4a9a-b42d-8e80f3773e2d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:50,845 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:51,091 | ERROR | "None of [Index(['45454697-b9f7-4333-aa71-240b3f1e5775'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:51,091 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:51,292 | ERROR | "None of [Index(['9d2f7cc7-0766-40e6-8a11-c1e46e4c07e7'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:51,293 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:51,490 | ERROR | "None of [Index(['b8e90c89-de9d-422e-a1cd-216deb403760'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:51,490 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:52,741 | ERROR | "None of [Index(['9cb737a7-221b-41b9-820c-770f0ab5de8f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:52,741 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:53,121 | ERROR | "None of [Index(['06fed516-272e-48b9-bb44-d3188c1c11fe'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:53,121 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:53,479 | ERROR | "None of [Index(['0218bac4-926d-4531-baa8-7d2d8133d4ab'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:53,479 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:53,799 | ERROR | "None of [Index(['42beed31-f67f-4f9a-834b-e6ad48a57276'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:53,799 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:53,989 | ERROR | "None of [Index(['5206b6d8-8ee4-4fe7-94c6-908c1b3ea503'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:53,990 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:54,251 | ERROR | "['7ab347d0-09e6-40c7-a4b2-e849f9c5c54f'] not found in axis"
+2024-08-20 19:57:54,251 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:54,309 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:57:54,309 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:56,457 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:57:56,457 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:56,719 | ERROR | "None of [Index(['cd5fc080-ec0c-400d-ab59-083373dfbd46'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:56,719 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:57,078 | ERROR | "None of [Index(['17556f0b-00e8-416b-887c-791015f9562e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:57,078 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:57,253 | ERROR | "None of [Index(['f5b5d11d-4142-4e93-8ec3-c543dba0261a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:57,253 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:57,424 | ERROR | "['e50fca01-f1b5-4bb3-897d-cf185b6578cf'] not found in axis"
+2024-08-20 19:57:57,424 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:57,480 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:57:57,480 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:58,767 | ERROR | "None of [Index(['8eeb2cfb-dd58-44b0-882b-d7dff5c0febd'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:58,767 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:58,997 | ERROR | "None of [Index(['d2a44378-b561-40c0-af9d-29c73037af61'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:58,997 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:59,491 | ERROR | "None of [Index(['d1e2fa9a-6892-4f36-8334-5b380bff0a41'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:59,492 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:57:59,879 | ERROR | "None of [Index(['6f4ac50c-cf98-4a8a-96de-2400ce7d5dc3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:57:59,879 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:02,471 | ERROR | "None of [Index(['2a662d21-d237-43fd-bae2-285e3c546b99'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:02,471 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:03,010 | ERROR | "None of [Index(['f3d9777a-d92b-46c7-97c5-5aa6e9302ff7'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:03,010 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:05,479 | ERROR | "None of [Index(['2cdeb7ca-b923-4311-b91d-ecc0bda37e9d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:05,479 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:07,090 | ERROR | "['0e729fda-3c2f-4f4f-aacc-57abcb373078'] not found in axis"
+2024-08-20 19:58:07,091 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:07,270 | ERROR | "None of [Index(['7f4f274e-c811-4bf4-bb18-187d91f88f6d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:07,270 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:07,742 | ERROR | "None of [Index(['1dc62995-b988-4f58-b5ac-69dfec0a056c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:07,742 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:07,898 | ERROR | "None of [Index(['6ed7616b-d074-49cd-a595-2fbe7db06856'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:07,898 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:09,083 | ERROR | "None of [Index(['2f72092a-def3-403a-8b47-59ddc90f70bf'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:09,083 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:09,139 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:58:09,139 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:10,416 | ERROR | "None of [Index(['376d03a3-8473-407c-bc6f-8b764d4cc80d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:10,417 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:11,731 | ERROR | "['51db41cf-c005-44bb-af8f-e314cf8b456b'] not found in axis"
+2024-08-20 19:58:11,733 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:11,900 | ERROR | "None of [Index(['c97ea838-7374-4e0d-9dfb-3ef328461ea9'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:11,900 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:12,281 | ERROR | "None of [Index(['e6a869f0-ccf7-4a0f-a653-ce88625189b0'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:12,282 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:12,763 | ERROR | "None of [Index(['cc7039e8-d9f8-47a5-bba3-c1466e7bc41c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:12,763 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:12,921 | ERROR | "None of [Index(['2f3bfab0-c6f3-4d77-9bb2-f9293250cc0b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:12,921 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:13,294 | ERROR | "['9a5e7ab9-9b36-463e-a7a5-3cbe6ef4a4ad'] not found in axis"
+2024-08-20 19:58:13,294 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:13,390 | ERROR | 'life_expectancy'
+2024-08-20 19:58:13,390 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:13,643 | ERROR | "None of [Index(['6a800c9c-4135-4de6-9093-1ab617217de8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:13,643 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:14,976 | ERROR | "None of [Index(['a4a60b4e-af1f-43d8-aa5e-41a1ab90428f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:14,977 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:15,087 | ERROR | 'life_expectancy'
+2024-08-20 19:58:15,087 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:15,262 | ERROR | "None of [Index(['609464c7-c2c5-4597-ac8e-36f0d2368860'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:15,263 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:15,374 | ERROR | "None of [Index(['991d25fc-95bc-40ac-9d2b-77d717722332'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:15,374 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:15,743 | ERROR | "['9396274e-a950-4665-9712-dda275414a26'] not found in axis"
+2024-08-20 19:58:15,743 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:16,128 | ERROR | "['0478e848-f05c-431b-b71b-e72f10d44d84'] not found in axis"
+2024-08-20 19:58:16,128 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:16,587 | ERROR | "None of [Index(['e0bbeec2-ee33-437f-adf2-659717d662a5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:16,587 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:16,641 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:58:16,641 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:17,047 | ERROR | "['4d5085c3-ac7c-4e93-98d4-a29c5a1d0923'] not found in axis"
+2024-08-20 19:58:17,047 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:17,166 | ERROR | "['feb888bc-1100-425b-a546-7ba03590229e'] not found in axis"
+2024-08-20 19:58:17,166 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:17,261 | ERROR | 'life_expectancy'
+2024-08-20 19:58:17,262 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:17,412 | ERROR | "None of [Index(['0361e6bc-3e3b-4184-85aa-dd1873403fd1'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:17,412 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:17,674 | ERROR | "None of [Index(['cf18ba2a-32cf-48c9-9970-c0f3f133712c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:17,674 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:17,787 | ERROR | "['0823f030-e5e9-4765-8441-ebdb4240992d'] not found in axis"
+2024-08-20 19:58:17,787 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:19,123 | ERROR | "['dbc31c64-587f-4659-a65d-519acc377a95'] not found in axis"
+2024-08-20 19:58:19,123 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:19,329 | ERROR | "None of [Index(['d73587ff-e104-4eaf-8503-9189cb1114bc'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:19,329 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:19,732 | ERROR | "None of [Index(['70650e8a-c91f-46e0-8171-43be549bb4ca'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:19,732 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:19,994 | ERROR | "['5c1993da-e72b-4fbf-93d6-34b1b7d490ff'] not found in axis"
+2024-08-20 19:58:19,994 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:20,411 | ERROR | "None of [Index(['ffa23560-8bff-4854-8968-cb46b1d2a834'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:20,412 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:20,624 | ERROR | "['9656b293-ab19-403d-98da-ac253e804432'] not found in axis"
+2024-08-20 19:58:20,624 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:20,960 | ERROR | "None of [Index(['7ab9dc27-f033-4859-b82f-6643e0e6a89e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:20,960 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:21,438 | ERROR | "None of [Index(['9a91dd89-2ee8-4a81-ae20-f09b07d77550'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:21,438 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:23,040 | ERROR | "['f42ec18b-b474-41b9-a33a-112e4563a962'] not found in axis"
+2024-08-20 19:58:23,041 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:23,601 | ERROR | "None of [Index(['9b91367f-86a4-463e-a9b5-b8db0cdef9f3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:23,601 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:23,658 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:58:23,658 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:24,921 | ERROR | "None of [Index(['c5e49efa-ee96-4f10-b846-201185191d5a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:24,921 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:25,167 | ERROR | "None of [Index(['95383f57-8854-4d6d-bedb-ce266e6b0e8a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:25,168 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:25,452 | ERROR | "['9bd26020-6ade-4040-a22f-32a5dee87e36'] not found in axis"
+2024-08-20 19:58:25,452 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:25,720 | ERROR | "None of [Index(['f8787c36-0656-40e3-9c56-2357039dd1b0'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:25,720 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:25,959 | ERROR | "['0b53845b-2b5f-418c-9a01-32c223d4d0c9'] not found in axis"
+2024-08-20 19:58:25,959 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:26,070 | ERROR | "None of [Index(['ec5d394b-3aec-4965-85ca-672355f807a5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:26,070 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:26,384 | ERROR | "None of [Index(['40f413cf-b7c7-4178-b33e-514bedbbfb45'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:26,384 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:26,823 | ERROR | "['9bc7afc5-1463-44bf-a182-fe169d59e018'] not found in axis"
+2024-08-20 19:58:26,823 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:26,997 | ERROR | "['4ed1ff39-2132-4938-915f-ec3907e17f5b'] not found in axis"
+2024-08-20 19:58:26,997 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:27,124 | ERROR | "None of [Index(['e93d68bf-7c2a-4858-993c-40a760c8fbe7'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:27,124 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:27,356 | ERROR | "None of [Index(['787353b2-6412-4c59-908b-3f0eacaa6456'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:27,356 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:28,465 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:58:28,465 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:28,834 | ERROR | "None of [Index(['e2481243-789e-4c62-aa5b-4530a8e6abfa'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:28,835 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:29,274 | ERROR | "None of [Index(['998e8418-eae1-4595-99d6-3582e59a5c10'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:29,274 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:29,725 | ERROR | "None of [Index(['85747127-ce87-483a-9203-7d44d6c7b41d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:29,725 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:29,984 | ERROR | "None of [Index(['38163bcb-ff6d-4276-b4a3-537f29c8edab'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:29,984 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:30,296 | ERROR | "None of [Index(['a5e938e9-b98e-4243-afb0-3332fa5e5bb3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:30,296 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:30,668 | ERROR | "None of [Index(['f7878d4b-92c8-4d9e-959e-5464f17c704f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:30,668 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:30,721 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:58:30,721 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:30,848 | ERROR | "None of [Index(['eb77e029-f56b-4b93-8bca-8ff55d234fef'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:30,848 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:31,344 | ERROR | "None of [Index(['bc94d500-b062-4a15-8f76-6253788a4b2d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:31,344 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:31,479 | ERROR | "None of [Index(['94b0281b-7f6a-468f-91cc-df9d38ee8bac'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:31,479 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:31,612 | ERROR | "['61b905c3-2c68-4fac-a507-323586074a7d'] not found in axis"
+2024-08-20 19:58:31,612 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:31,740 | ERROR | "None of [Index(['f147d00e-fac4-41a8-a1e4-417dcee2d14f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:31,741 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:34,230 | ERROR | "None of [Index(['4fb565a3-7bfc-4823-a2ae-6d17abc27dc4'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:34,230 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:34,466 | ERROR | "['a4760ec2-6d48-46f0-a8c2-984a933bd09f'] not found in axis"
+2024-08-20 19:58:34,466 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:37,725 | ERROR | "None of [Index(['0dfcbc87-53c4-492e-8e35-45268c59acbe'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:37,726 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:38,040 | ERROR | "['7d78b330-c37c-4fb9-91b9-7b106134356b'] not found in axis"
+2024-08-20 19:58:38,040 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:38,277 | ERROR | "None of [Index(['62266522-3044-4cf4-a569-39cb13e8c2a3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:38,277 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:38,412 | ERROR | "['366a6e49-04e9-4ff0-b3c0-e6fe480f4aeb'] not found in axis"
+2024-08-20 19:58:38,413 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:38,796 | ERROR | "['a6368ef2-c46e-45f4-aa55-18d52b1fcc56'] not found in axis"
+2024-08-20 19:58:38,796 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:39,112 | ERROR | "None of [Index(['d0037394-3f26-424a-b367-f6e5ee179be0'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:39,112 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:39,407 | ERROR | "None of [Index(['c5836eb3-0cb2-4dc4-aee3-3e17eec00f4c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:39,407 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:39,756 | ERROR | "None of [Index(['42d961a6-5a13-451e-9b00-e3b905cbe6ac'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:39,757 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:41,104 | ERROR | "['691700bf-84dc-4abf-969f-7c4cbaec9642'] not found in axis"
+2024-08-20 19:58:41,104 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:41,311 | ERROR | "None of [Index(['a3531a98-5551-4f7c-bd3d-506966c51830'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:41,311 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:41,746 | ERROR | "None of [Index(['b0295fc4-08b0-457e-9f0f-ba3a67c6e2f1'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:41,746 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:42,040 | ERROR | "None of [Index(['db05164a-f32f-426d-ae37-df2c6b560a1f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:42,040 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:42,288 | ERROR | "None of [Index(['84620131-6637-43a1-8acb-77ed028df3d1'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:42,288 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:42,536 | ERROR | "None of [Index(['dba91f98-ac02-458a-b527-31a75457db29'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:42,536 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:42,947 | ERROR | "None of [Index(['43135f28-f810-4433-be0f-d486d682d2e8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:42,948 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:43,239 | ERROR | "None of [Index(['eb9c2a89-5507-4840-9e42-c6c736b2d99e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:43,239 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:43,687 | ERROR | "['c8f6528b-351a-464f-a58e-6880583e50a7'] not found in axis"
+2024-08-20 19:58:43,687 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:44,022 | ERROR | "None of [Index(['37172c64-0924-4e95-9af7-f6f77a79e92b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:44,022 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:44,295 | ERROR | "['acfe763e-03e5-41f8-afca-3dc65e592fc1'] not found in axis"
+2024-08-20 19:58:44,295 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:44,716 | ERROR | "None of [Index(['26ee4ed1-1d21-42fb-83c7-9adde65960d7'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:44,717 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:44,834 | ERROR | "None of [Index(['9c20fae4-e63f-4902-9093-389bfe703a80'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:44,834 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:45,293 | ERROR | "None of [Index(['2b5985f7-164b-428a-adcc-97dbc52a810a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:45,293 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:45,725 | ERROR | "['7202dbcd-256e-449b-856a-f9e9148afeb4'] not found in axis"
+2024-08-20 19:58:45,725 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:45,884 | ERROR | "None of [Index(['6d5b2d49-d42a-4bdd-91eb-8742ee7ee3f5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:45,884 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:46,138 | ERROR | "None of [Index(['a3e8dc20-873f-4db2-b279-5c4e1198bcb2'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:46,139 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:48,505 | ERROR | "['08119114-9d0b-4d71-b775-cc043a0f47c7'] not found in axis"
+2024-08-20 19:58:48,505 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:48,927 | ERROR | "None of [Index(['7ee11ae7-dc5c-4108-8113-80c5cff0cd33'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:48,927 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:49,177 | ERROR | "None of [Index(['931afafc-2f1b-4e9f-af57-aeb6ed4785b3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:49,177 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:49,376 | ERROR | "None of [Index(['3db8c515-b040-4ebf-bdb1-dcbc5ac9c702'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:49,376 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:49,803 | ERROR | "None of [Index(['56136ba9-c5e4-41c5-bfec-002d04e407ac'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:49,803 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:50,319 | ERROR | "None of [Index(['9d74099c-4381-44b0-bdf8-543f58370b2e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:50,319 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:50,501 | ERROR | "None of [Index(['30fbbeb1-b6fe-4630-8bfe-13ee4cbe0b3e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:50,502 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:50,938 | ERROR | "None of [Index(['4e872bd1-90db-44bd-9826-c789221f70dc'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:50,938 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:51,182 | ERROR | "None of [Index(['179fa652-9faf-4e26-a1ca-e65994c72a3b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:51,183 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:51,453 | ERROR | "None of [Index(['a740b83a-21b0-4de6-b201-81d8c03ee397'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:51,453 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:51,786 | ERROR | "['d2547ecb-ae48-416d-a441-50a05718bc55'] not found in axis"
+2024-08-20 19:58:51,786 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:52,058 | ERROR | "None of [Index(['033a6090-f369-451c-ad69-949b629c304b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:52,058 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:52,543 | ERROR | "['ebd459ef-c562-4e6f-8c3d-35afa4dc4b2b'] not found in axis"
+2024-08-20 19:58:52,543 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:52,899 | ERROR | "None of [Index(['c797db24-66df-4463-8dc3-d9bb0f0b3e6c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:52,899 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:53,086 | ERROR | "None of [Index(['710fec42-d70f-41bb-b686-045735a949b1'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:53,086 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:53,247 | ERROR | "None of [Index(['7a2389cf-b050-4fde-b794-0af2592b2f19'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:53,247 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:53,689 | ERROR | "['ee9afe87-c43e-44a7-a4bd-4f3ea5af857f'] not found in axis"
+2024-08-20 19:58:53,689 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:54,007 | ERROR | "None of [Index(['62b50fd5-8e3e-4f51-b200-862550b8e314'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:54,007 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:54,291 | ERROR | "None of [Index(['88b7de04-7dc6-4758-a082-1fddfc4bec9a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:54,291 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:54,706 | ERROR | "['f7db45d7-0fa9-4e14-9151-023c59deb585'] not found in axis"
+2024-08-20 19:58:54,706 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:56,398 | ERROR | "['86a63c9a-6179-433f-a7df-5304d41bf396'] not found in axis"
+2024-08-20 19:58:56,398 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:57,730 | ERROR | "['0b89d28c-68e6-4c31-a1f1-c1b16f2eff72'] not found in axis"
+2024-08-20 19:58:57,730 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:58,079 | ERROR | "None of [Index(['64360c95-1fe3-4f36-ab6f-2488f55dd709'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:58,079 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:59,290 | ERROR | "None of [Index(['0ce5f623-e646-40fb-ba9d-55e34fe3fda0'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:59,290 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:59,497 | ERROR | "None of [Index(['5dadd1be-0246-4037-a8d9-148a8804284f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:59,498 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:58:59,945 | ERROR | "None of [Index(['44cd2785-fa79-4703-8679-fb4cf57e2a26'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:58:59,945 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:00,171 | ERROR | "['46753906-e41a-4b92-a33d-bcbe799e21dc'] not found in axis"
+2024-08-20 19:59:00,171 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:01,474 | ERROR | "['672d3276-53c7-4d49-89b3-fc6e48aa6904'] not found in axis"
+2024-08-20 19:59:01,474 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:01,792 | ERROR | "None of [Index(['99562903-dbf8-44d9-a746-ccd21fc7f943'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:01,792 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:04,226 | ERROR | "None of [Index(['2eb1cb69-2c92-4863-8dd4-ee4fcd7abbac'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:04,226 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:04,486 | ERROR | "['e6d82a7a-9bee-499f-a7d7-d6d6e501355e'] not found in axis"
+2024-08-20 19:59:04,486 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:04,747 | ERROR | "['4883c03f-971d-4ab3-90fc-df6a9a30fa0f'] not found in axis"
+2024-08-20 19:59:04,748 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:05,857 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:59:05,857 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:06,247 | ERROR | "None of [Index(['80d0d5a4-a72e-49a3-9dde-cfd428931a0f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:06,248 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:06,304 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:59:06,304 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:06,463 | ERROR | "None of [Index(['c3d09b8c-7de0-4198-9cda-bbe37596b04b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:06,463 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:06,973 | ERROR | "None of [Index(['27b334ca-7a0c-455a-aa72-b4e0136df5c2'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:06,974 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:07,028 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:59:07,028 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:07,146 | ERROR | "None of [Index(['9d7c6144-466f-49a1-b829-a1e5d9c42c40'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:07,146 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:07,576 | ERROR | "['b69860a3-e3a6-441c-bb90-9e5fa619f30f'] not found in axis"
+2024-08-20 19:59:07,576 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:07,927 | ERROR | "['f38ead24-ca09-4c78-9895-10123100148d'] not found in axis"
+2024-08-20 19:59:07,927 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:08,205 | ERROR | "None of [Index(['b29adc42-3d0f-46f5-a38f-fd129c1fdbb2'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:08,205 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:08,338 | ERROR | "None of [Index(['2b2fb18f-30e4-489f-aa21-8d754e04331f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:08,338 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:08,543 | ERROR | "None of [Index(['bcb6d962-f69e-4555-8666-7536dfa589a8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:08,543 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:08,747 | ERROR | "['b3300db6-08db-4c92-8ecc-6f266226c5b3'] not found in axis"
+2024-08-20 19:59:08,747 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:09,019 | ERROR | "None of [Index(['33668294-09fb-4ff5-ab6c-130853b27038'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:09,020 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:09,422 | ERROR | "None of [Index(['8c8aaf81-6fed-43b4-b750-862bbbc3fdd1'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:09,422 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:09,552 | ERROR | "None of [Index(['1997ec89-dc99-46fa-87de-7274d7e3d6d5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:09,552 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:09,607 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:59:09,607 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:09,843 | ERROR | "None of [Index(['60865bf1-b338-4a2f-a2f5-a0cd94885591'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:09,843 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:09,978 | ERROR | "None of [Index(['4add9b9c-580c-4f2a-a197-cdc8a72799f4'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:09,979 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:10,079 | ERROR | "['a26d95d8-e365-4d7a-8335-fb401f22d6f3'] not found in axis"
+2024-08-20 19:59:10,079 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:10,186 | ERROR | "None of [Index(['60c24a2f-b64e-45d4-81c0-c3840d4f455a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:10,186 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:10,390 | ERROR | "['a0eb9d3b-d92c-4cd2-8cfb-fc167133ed19'] not found in axis"
+2024-08-20 19:59:10,391 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:10,729 | ERROR | "None of [Index(['bf94ba89-e1ca-4d6c-b59c-f9dcf4783fb8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:10,729 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:10,852 | ERROR | "['e0bd0d08-047f-487d-b214-45c91898b2c3'] not found in axis"
+2024-08-20 19:59:10,852 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:11,237 | ERROR | "None of [Index(['960d5944-949c-47ec-af39-9739dd06e9bf'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:11,238 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:11,411 | ERROR | "None of [Index(['017b789d-8101-424c-969c-d50d44b3c265'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:11,411 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:11,889 | ERROR | "None of [Index(['34744b86-61bf-4009-b535-c7add2f795b3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:11,889 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:12,103 | ERROR | "['9e8302cc-7079-4989-b15a-5ed5ae48036b'] not found in axis"
+2024-08-20 19:59:12,104 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:12,231 | ERROR | "['52fd1354-1ad2-41e5-b5f5-beffb5808822'] not found in axis"
+2024-08-20 19:59:12,231 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:12,387 | ERROR | "['06876b26-9aee-4302-96bb-b7f952fe9d44'] not found in axis"
+2024-08-20 19:59:12,387 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:12,741 | ERROR | "['d47cda9d-2a45-4212-9cf8-38a5621b6bfe'] not found in axis"
+2024-08-20 19:59:12,741 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:13,208 | ERROR | "['10239109-5c65-43ee-8b58-f6f944fb5b01'] not found in axis"
+2024-08-20 19:59:13,209 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:13,275 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:59:13,275 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:13,364 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:59:13,364 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:13,752 | ERROR | "None of [Index(['ac43fb9d-0a32-4be5-a8ce-edb097c35428'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:13,752 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:13,873 | ERROR | "None of [Index(['898794b1-2cc6-4101-983f-2533cd2b7e41'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:13,874 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:14,171 | ERROR | "['3caa1f62-6c41-428e-928e-49a4e28e906d'] not found in axis"
+2024-08-20 19:59:14,171 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:14,291 | ERROR | "None of [Index(['4525439a-ce41-49da-8982-a7063c8ea493'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:14,291 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:14,595 | ERROR | "None of [Index(['fb8a3518-7013-4444-b82b-c343a6a9764d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:14,595 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:15,136 | ERROR | "None of [Index(['c247b99a-37b8-4f59-bde1-dea62f329a30'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:15,136 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:15,638 | ERROR | "['7bba27ec-e45f-4522-9784-839b606b6261'] not found in axis"
+2024-08-20 19:59:15,638 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:16,139 | ERROR | "None of [Index(['6c64f7aa-860e-43df-82e7-bd39bcdfcd5c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:16,139 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:16,627 | ERROR | "None of [Index(['e2774c86-7d7f-4c3e-a830-bef1960b4253'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:16,627 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:16,683 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:59:16,683 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:16,799 | ERROR | "None of [Index(['36e4f964-d0fa-4e78-b1a2-36bb964bdc7c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:16,799 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:16,857 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:59:16,857 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:17,317 | ERROR | "None of [Index(['40391903-2fe2-43c3-b9a8-ecf215fcca5d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:17,317 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:17,734 | ERROR | "None of [Index(['5f415bed-60a5-48b7-9090-131c03f94850'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:17,734 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:17,922 | ERROR | "None of [Index(['146f9007-8afb-4fd6-bb79-d05233ca05e1'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:17,922 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:19,314 | ERROR | "['e9976178-0c82-46aa-a3eb-58fb812bf79f'] not found in axis"
+2024-08-20 19:59:19,314 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:20,563 | ERROR | "None of [Index(['036202cc-be1b-4c3f-a1b2-c12caa0b28b3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:20,563 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:20,734 | ERROR | "None of [Index(['f84fe1ef-87eb-44c4-ac55-afa9e6a2ce31'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:20,734 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:21,130 | ERROR | "None of [Index(['00685509-d3dd-482d-a92c-9d009e7af6d8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:21,130 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:21,275 | ERROR | "['a33e62c1-66cc-4db7-80ed-148172db6ffe'] not found in axis"
+2024-08-20 19:59:21,275 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:21,329 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:59:21,329 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:21,453 | ERROR | "None of [Index(['d55ffdd2-92e1-4ea3-a290-ac568b08f83e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:21,454 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:22,733 | ERROR | "None of [Index(['d16c316a-d32c-4d93-9de4-e9340218c5cb'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:22,733 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:22,908 | ERROR | "None of [Index(['66db36ae-bdde-42c2-b587-60ab06f8ec34'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:22,908 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:23,401 | ERROR | "None of [Index(['e97a9ff1-2ab0-4b38-904b-f60676639aa4'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:23,401 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:23,519 | ERROR | "['6724efd9-d58d-4360-a8e1-0b3512f09bad'] not found in axis"
+2024-08-20 19:59:23,519 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:23,893 | ERROR | "None of [Index(['c7b0a04d-105e-4a26-9ada-193f477b4c01'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:23,893 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:24,242 | ERROR | "None of [Index(['54fb7350-1a82-4881-b42e-6f9e26ee128c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:24,243 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:24,412 | ERROR | "['c3d50eee-3153-41f5-81ed-1ca323c34667'] not found in axis"
+2024-08-20 19:59:24,412 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:25,720 | ERROR | "None of [Index(['3a4ea31c-f7da-47d3-b0f4-3a1f51921286'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:25,720 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:25,815 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:59:25,815 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:25,991 | ERROR | "None of [Index(['ba93f194-7db9-4321-be99-17338c8a2bac'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:25,991 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:26,044 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:59:26,044 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:26,341 | ERROR | "None of [Index(['28ab9dae-6c9f-491a-8292-88dd334eccb2'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:26,341 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:26,992 | ERROR | "None of [Index(['c89a0ec5-7d2c-4c52-be5d-b4bfce2aa603'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:26,992 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:27,132 | ERROR | "None of [Index(['51651df2-d5f5-434b-b309-33d423bb8c2a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:27,132 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:27,248 | ERROR | "None of [Index(['0c61c288-d3d9-44bd-bde0-0e391c39a628'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:27,248 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:27,317 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:59:27,317 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:27,870 | ERROR | "['99915609-4f5e-4c87-be39-a88b222eeb75'] not found in axis"
+2024-08-20 19:59:27,870 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:28,144 | ERROR | "None of [Index(['fc659067-2e95-4b90-8d30-c6aa4004461f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:28,144 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:28,595 | ERROR | "None of [Index(['1801d57f-a60e-421b-ae3c-990e482b9a33'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:28,595 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:28,945 | ERROR | "None of [Index(['a8dd774b-7695-4282-83c2-745d58681d95'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:28,946 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:29,575 | ERROR | "None of [Index(['f4e82060-810f-4850-86aa-6b1a0199b01e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:29,575 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:29,700 | ERROR | "None of [Index(['3347bdc7-3c06-4ccf-a190-ae026f1f31c4'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:29,700 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:30,012 | ERROR | "['a5b2f196-06c5-4a8e-a985-ca15f348cdb3'] not found in axis"
+2024-08-20 19:59:30,012 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:30,633 | ERROR | "['bc3365f5-e1ec-47ad-bd55-fa6d270a1bff'] not found in axis"
+2024-08-20 19:59:30,634 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:32,048 | ERROR | "None of [Index(['4373f983-3a04-435a-a395-2d5a7d28b9ab'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:32,048 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:32,300 | ERROR | "None of [Index(['01c2ab45-938b-46e4-897e-d5ef78e6871b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:32,300 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:32,431 | ERROR | "None of [Index(['5d3bdfa3-bcb5-43e5-828d-b0bd92ea6b93'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:32,431 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:32,764 | ERROR | "None of [Index(['b04d16ff-f071-45f7-9e42-3c4a2a6f3fee'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:32,764 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:32,941 | ERROR | "None of [Index(['01195186-9ec2-41aa-917a-cbe2a09fa87a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:32,941 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:33,393 | ERROR | "None of [Index(['a36e916d-af73-4ccf-97e3-4b0776dd2a78'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:33,393 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:33,634 | ERROR | "['0f9cf165-014d-49d3-96e4-f46d3cda1e9d'] not found in axis"
+2024-08-20 19:59:33,634 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:35,305 | ERROR | "None of [Index(['ede4d81a-11f3-40e3-bd5a-63b037092c02'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:35,305 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:35,603 | ERROR | "None of [Index(['8f08d17e-bc24-4f11-938c-0ef308b494e9'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:35,603 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:35,827 | ERROR | "['80ec4bd6-83d8-4f84-a421-e8b8fc4c151c'] not found in axis"
+2024-08-20 19:59:35,827 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:37,298 | ERROR | "None of [Index(['17a98e95-f324-4d6c-8711-4248950aee8e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:37,298 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:37,777 | ERROR | "None of [Index(['bd6bbf95-dffe-4e59-80c3-a0aa233981e1'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:37,777 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:37,899 | ERROR | "None of [Index(['82df5d5c-870e-4ff7-aff9-7c8a03621165'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:37,899 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:38,053 | ERROR | "None of [Index(['849d2ecc-7e70-4c7f-bbd1-3962aadee632'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:38,053 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:38,433 | ERROR | "None of [Index(['25d8db3d-7745-4be7-abf7-aaf2cfed6483'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:38,433 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:38,556 | ERROR | "None of [Index(['d064f361-fdc3-42ef-b6c1-1b79c0979df1'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:38,556 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:39,055 | ERROR | "['2115362e-00c3-43fa-96c5-78b1fe61744b'] not found in axis"
+2024-08-20 19:59:39,055 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:39,483 | ERROR | "None of [Index(['a9f08591-0ec2-45e5-9877-9dc672e11500'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:39,483 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:39,626 | ERROR | "None of [Index(['e74a7af4-25d4-4ab7-a1e5-d3521a2152cb'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:39,626 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:39,740 | ERROR | "None of [Index(['1fce50b5-0cc0-40a3-985a-be9622bb0c95'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:39,740 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:39,794 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:59:39,794 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:40,055 | ERROR | "None of [Index(['e3805ff1-512e-4ed4-af89-ee5d112cdf77'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:40,055 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:40,424 | ERROR | "None of [Index(['e4121c01-6769-4a38-850a-6054cc016eae'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:40,424 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:40,818 | ERROR | "None of [Index(['11b81d8b-9c57-4963-9b02-3275ca5dbb92'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:40,818 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:40,950 | ERROR | "None of [Index(['c5aafecb-355f-47f5-bf5c-141f34094970'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:40,950 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:42,315 | ERROR | "None of [Index(['8a02c955-385f-4e71-9cec-9fb32e323829'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:42,315 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:42,426 | ERROR | "None of [Index(['4a4408a7-e1fd-4800-a578-802caffca712'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:42,426 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:42,884 | ERROR | "None of [Index(['003dfa4f-00e0-4090-b715-13d18b8a211f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:42,884 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:43,267 | ERROR | "None of [Index(['2206f46b-8d77-4d0d-9c8b-6c3d91e6a334'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:43,267 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:43,616 | ERROR | "None of [Index(['611425be-1deb-491c-9f11-34eacf957376'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:43,616 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:45,047 | ERROR | "['dba2cc83-3942-49a8-a282-01417f8f6608'] not found in axis"
+2024-08-20 19:59:45,047 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:45,482 | ERROR | "None of [Index(['1277fde0-0cf8-4ca0-8aa5-afdb603e0f3f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:45,482 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:45,679 | ERROR | "None of [Index(['eefe530a-37c1-49bb-ae4d-623a50c86a6d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:45,679 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:45,870 | ERROR | "['bd913c20-40de-47fd-927e-d4a3b2496b8b'] not found in axis"
+2024-08-20 19:59:45,870 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:46,162 | ERROR | "None of [Index(['87688b07-1bfa-4370-8f42-26f1f0daf887'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:46,162 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:46,264 | ERROR | "['e1b8b09b-6a07-4dc3-a4fd-bc53be512e3c'] not found in axis"
+2024-08-20 19:59:46,264 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:46,459 | ERROR | "None of [Index(['fd126d04-3308-4a9e-b855-f047599ad71e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:46,459 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:46,843 | ERROR | "None of [Index(['4454dce1-2609-4ef6-b7f1-0c0baa19270e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:46,844 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:47,093 | ERROR | "None of [Index(['4bb489b3-d53d-4100-a98d-3d69d531ad6c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:47,094 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:49,832 | ERROR | "None of [Index(['58f91fbf-010d-4866-b6e9-6974448882be'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:49,833 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:50,285 | ERROR | "None of [Index(['c133479e-75c0-42b8-96d5-6c7498bbbd3c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:50,285 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:50,782 | ERROR | "['d9eb00e8-3f22-4c4e-aed1-add1af4e4730'] not found in axis"
+2024-08-20 19:59:50,782 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:50,898 | ERROR | "None of [Index(['ace3adca-2c44-444f-9b09-823bcc9ae5fc'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:50,898 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:51,378 | ERROR | "None of [Index(['e625e89e-bc03-4b6c-b192-2f94f8025fa6'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:51,379 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:51,688 | ERROR | "None of [Index(['229a8a35-989f-446e-bd67-8edf526789f5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:51,688 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:51,796 | ERROR | 'life_expectancy'
+2024-08-20 19:59:51,796 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:52,307 | ERROR | "None of [Index(['be5cfacf-f49e-4d3c-b579-b780e299fd6a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:52,307 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:52,511 | ERROR | "None of [Index(['815dd744-8f79-4525-a035-6d16ec6260f0'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:52,512 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:52,875 | ERROR | "None of [Index(['fab69e15-c3d5-41e9-8ef3-2954aa8318a4'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:52,875 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:53,042 | ERROR | "None of [Index(['2f88da9f-c665-4eff-ba46-d04ea495e05c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:53,042 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:53,487 | ERROR | "['3e5b0f6c-de9b-48a1-b6e8-1755aeb9b4b2'] not found in axis"
+2024-08-20 19:59:53,488 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:53,917 | ERROR | "['4a6fe434-7c51-4ef9-8b5d-e3f83468bae3'] not found in axis"
+2024-08-20 19:59:53,917 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:54,032 | ERROR | "None of [Index(['93252e55-5220-4d33-86d0-152ee93ce256'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:54,032 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:54,544 | ERROR | "None of [Index(['770f0e76-d12d-41e0-aa51-e08045672a6d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:54,544 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:54,604 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:59:54,604 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:54,705 | ERROR | "None of [Index(['b12e27e7-abb7-4ce1-a133-c4a86c72eeff'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:54,705 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:54,944 | ERROR | "None of [Index(['6d068bd5-46f6-45fa-9f79-24d860f0ad51'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:54,944 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:55,186 | ERROR | "None of [Index(['d42a6bb3-a291-4af8-95aa-80bffd463926'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:55,186 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:55,427 | ERROR | "None of [Index(['e0966912-d498-4ad6-9106-3edf3b7527e2'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:55,427 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:55,836 | ERROR | "['da953620-68c8-4338-b07c-216c4b15b686'] not found in axis"
+2024-08-20 19:59:55,837 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:56,241 | ERROR | "['a9054e38-b247-43e7-b503-c89be2fde9ca'] not found in axis"
+2024-08-20 19:59:56,241 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:56,746 | ERROR | "None of [Index(['3269477f-ba25-4fbd-bbf0-9b8d7f60410d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:56,746 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:56,894 | ERROR | "None of [Index(['807dee48-5b79-427e-9bec-dcdd7f668e26'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 19:59:56,894 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:57,129 | ERROR | "['0928005b-2972-443c-9146-0a4c7a6e3e4b'] not found in axis"
+2024-08-20 19:59:57,130 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 19:59:58,228 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 19:59:58,228 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:00,642 | ERROR | "None of [Index(['70671007-b6e1-4f6f-9082-98ee07ae7b9c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:00,642 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:00,702 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:00:00,702 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:01,078 | ERROR | "['d501c4c7-cb52-40f3-9b89-09539adc96b0'] not found in axis"
+2024-08-20 20:00:01,078 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:01,258 | ERROR | "None of [Index(['492a6b98-9df7-486d-89b0-a68e97025fd6'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:01,258 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:01,597 | ERROR | "None of [Index(['c08b3cab-ec20-4b73-888a-aae7f00ff2c3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:01,597 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:02,062 | ERROR | "None of [Index(['a3d59fd2-a5fe-4892-9a21-0b0555d54633'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:02,062 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:02,405 | ERROR | "None of [Index(['90cd0d9f-7a32-4fa1-beca-a94b43f253af'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:02,405 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:02,795 | ERROR | "None of [Index(['76de53cf-0608-49be-b99a-325a10eaba97'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:02,795 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:03,036 | ERROR | "None of [Index(['792c3cb1-e152-470c-bf85-622182da4aee'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:03,036 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:03,325 | ERROR | "['c898bcf0-e5e7-44e9-88ae-e7818cfd862b'] not found in axis"
+2024-08-20 20:00:03,325 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:04,618 | ERROR | "None of [Index(['454a8d29-630d-4716-944e-67031c20e2a4'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:04,618 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:04,733 | ERROR | "None of [Index(['a30cb8b6-49f0-445f-aed5-211d4f2b1fdf'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:04,733 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:04,877 | ERROR | "None of [Index(['607d1d36-56f3-45e2-9c1b-2778dfed79dc'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:04,877 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:04,995 | ERROR | "None of [Index(['388b6ecb-cdbf-4f80-9752-44ffb5f5b42d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:04,996 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:05,368 | ERROR | "['e8c67010-151c-43a4-bca4-5f3480e5a015'] not found in axis"
+2024-08-20 20:00:05,368 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:05,636 | ERROR | "None of [Index(['54e6905b-a96d-4d10-be93-301efd0e18c3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:05,636 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:05,790 | ERROR | "['3855922e-2f2e-4dc5-93d7-ad9361739bde'] not found in axis"
+2024-08-20 20:00:05,790 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:05,973 | ERROR | "None of [Index(['db971a5d-27fd-4652-88cc-853675987ce2'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:05,973 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:06,109 | ERROR | "['1cc147f9-3dfe-496c-8024-61f9f20014db'] not found in axis"
+2024-08-20 20:00:06,109 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:07,517 | ERROR | "['466b9b22-1214-4478-803a-25f1c3ea0723'] not found in axis"
+2024-08-20 20:00:07,517 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:09,056 | ERROR | "None of [Index(['22b86719-d52a-4a68-9cf8-b1a78b982002'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:09,056 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:09,161 | ERROR | "None of [Index(['c2050ee0-cb80-4b51-98ca-a37e6fcaebe6'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:09,161 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:09,633 | ERROR | "None of [Index(['f73be8ac-6fdf-4efe-97cf-751788626970'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:09,633 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:10,096 | ERROR | "None of [Index(['495d641a-4ca6-46c3-8762-2af670b8429b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:10,096 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:10,413 | ERROR | "None of [Index(['7a1d7b2d-deeb-4956-a2f8-e1d349405ffc'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:10,413 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:10,690 | ERROR | "None of [Index(['232233a1-0acf-4930-832d-f113cf462040'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:10,691 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:10,878 | ERROR | "None of [Index(['b6559370-c056-49b2-93a8-68af1b49912a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:10,878 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:11,054 | ERROR | "None of [Index(['b59dbd48-4285-4234-9636-5a715d53a871'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:11,054 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:11,271 | ERROR | "['59b31b2c-3ca7-4180-b1cb-760afe15adf3'] not found in axis"
+2024-08-20 20:00:11,271 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:12,616 | ERROR | "None of [Index(['5e260dfd-2270-412a-922d-332e0fdf15ed'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:12,616 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:12,964 | ERROR | "['6fbe4c66-9dcb-42e0-baf3-f7ec069ebcd6'] not found in axis"
+2024-08-20 20:00:12,965 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:13,232 | ERROR | "None of [Index(['7aa9f6ef-b7c0-46f3-a625-97e6870827ab'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:13,232 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:13,674 | ERROR | "None of [Index(['31fa2529-502b-4584-ad95-4ea079b42449'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:13,675 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:15,118 | ERROR | "None of [Index(['29d6b45b-644c-4e17-b5c7-21f4d2b06a7d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:15,118 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:15,536 | ERROR | "None of [Index(['5d8df3d5-61ff-468a-ad3a-b6c83173cc87'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:15,536 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:15,884 | ERROR | "None of [Index(['51c98fe3-b16d-4d6f-9fad-90c03c6e0a42'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:15,884 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:16,071 | ERROR | "['ce6252bc-bbc3-4ff5-afb6-a74805bca09d'] not found in axis"
+2024-08-20 20:00:16,071 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:16,314 | ERROR | "None of [Index(['2d3c6867-071c-493e-a2d2-373303efd6b7'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:16,314 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:16,719 | ERROR | "None of [Index(['a22fa82b-63ea-4e2a-8152-a51a720fdba2'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:16,719 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:16,776 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:00:16,776 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:16,970 | ERROR | "['71e9268d-4b29-417c-b7db-c02b1efa609f'] not found in axis"
+2024-08-20 20:00:16,970 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:19,499 | ERROR | "None of [Index(['27bde4df-9d1d-4bc2-9db4-5a6004698c46'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:19,500 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:19,554 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:00:19,554 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:19,811 | ERROR | "None of [Index(['36af3eab-9b72-4035-a4be-57e1c29bf046'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:19,811 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:22,564 | ERROR | "None of [Index(['0dd12259-968c-478d-95ac-5986f6a3b168'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:22,565 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:22,781 | ERROR | "None of [Index(['5b346c18-2b23-47b5-90ad-b424c003fa2d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:22,782 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:22,837 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:00:22,837 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:23,305 | ERROR | "['a3a2d5f8-61a3-47c1-84ba-5ef4f59a866e'] not found in axis"
+2024-08-20 20:00:23,305 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:23,704 | ERROR | "['76850d99-1d98-401e-abf9-57fa7ddcb1ef'] not found in axis"
+2024-08-20 20:00:23,704 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:24,050 | ERROR | "None of [Index(['6adf037c-75c1-42e4-a7ed-7852d52ee556'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:24,051 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:24,542 | ERROR | "['b42aea92-db17-4236-ad87-8f466f8301a1'] not found in axis"
+2024-08-20 20:00:24,543 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:25,890 | ERROR | "None of [Index(['c1788d59-65a3-4092-a3ff-8e986f72f169'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:25,890 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:26,357 | ERROR | "None of [Index(['5df4df33-2fa1-4d66-a9cf-17a2a4fb08a6'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:26,357 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:26,473 | ERROR | "None of [Index(['bb971c72-e326-4a13-ba43-b538a1845d51'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:26,473 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:26,528 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:00:26,528 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:27,743 | ERROR | "None of [Index(['25ab8037-c521-4b2b-83a7-20e5e4867be9'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:27,743 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:27,905 | ERROR | "None of [Index(['f7d8c088-d0e0-4337-9e16-d4f59b904b16'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:27,905 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:28,100 | ERROR | "None of [Index(['008c8613-490a-4d24-b37b-dfda1607dc6c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:28,100 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:28,289 | ERROR | "None of [Index(['0591dccf-7132-4ca9-894a-aa9d17d80ddb'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:28,289 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:28,728 | ERROR | "None of [Index(['bd62fdf5-18af-485c-96dd-3d111336c220'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:28,728 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:28,875 | ERROR | "None of [Index(['82f8f78b-a9d5-4a08-ad05-ecfafe2e014f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:28,875 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:29,046 | ERROR | "None of [Index(['3b6614d5-7342-4635-9b4c-4295a62cc658'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:29,046 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:29,501 | ERROR | "None of [Index(['8a83dd65-92ed-416c-b0f0-5d9f8989d8d0'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:29,501 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:29,824 | ERROR | "None of [Index(['1e9da004-2150-4681-9207-3fe1c4de556d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:29,824 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:29,885 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:00:29,885 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:30,067 | ERROR | "None of [Index(['dd1af026-075b-41ea-b21d-80ad85d3fa3e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:30,067 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:30,118 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:00:30,118 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:30,317 | ERROR | "None of [Index(['ac4f22a5-0ae3-441f-b058-444840dfd266'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:30,317 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:30,504 | ERROR | "None of [Index(['38c43bf8-6013-49c8-a9ad-4e55b77dcaee'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:30,505 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:30,853 | ERROR | "None of [Index(['3b8872bf-7dee-4795-b1fe-3fe41027c53f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:30,853 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:31,229 | ERROR | "None of [Index(['d59a7ca2-e57f-4715-9a95-fbf067787864'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:31,229 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:31,288 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:00:31,288 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:32,460 | ERROR | "['f5a04a1e-57ea-4cc3-80db-fc1c07bc3eef'] not found in axis"
+2024-08-20 20:00:32,460 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:32,515 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:00:32,515 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:32,685 | ERROR | "['8e95189f-f59d-4c29-ad71-c0584312bdeb'] not found in axis"
+2024-08-20 20:00:32,686 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:33,050 | ERROR | "None of [Index(['804d8b5c-4554-446f-ab68-9a577b6bc6ab'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:33,050 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:34,304 | ERROR | "['d205021e-67d9-4ad4-9f17-837b5720d059'] not found in axis"
+2024-08-20 20:00:34,304 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:34,552 | ERROR | "['5a0e920b-3eb4-4062-8970-7358d618b942'] not found in axis"
+2024-08-20 20:00:34,552 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:34,752 | ERROR | "['b1b63580-1429-4517-a02d-ba979602b8df'] not found in axis"
+2024-08-20 20:00:34,753 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:35,133 | ERROR | "None of [Index(['3196ee01-e441-48ab-bb8f-7270c2413810'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:35,133 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:35,513 | ERROR | "None of [Index(['9bb579ea-07ba-4008-a973-64453d3c2dd0'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:35,513 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:35,671 | ERROR | "['992cd7d2-a25c-4b2a-b2e5-5d877af68ed7'] not found in axis"
+2024-08-20 20:00:35,671 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:35,876 | ERROR | "['a1480f0c-ef48-486b-a15a-eaff858ab416'] not found in axis"
+2024-08-20 20:00:35,876 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:35,986 | ERROR | "None of [Index(['cf2ef241-3a93-4535-b299-335e35d9a389'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:35,987 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:37,178 | ERROR | "['6ed2eb8f-f9e5-4caa-b176-94af3f889b36'] not found in axis"
+2024-08-20 20:00:37,178 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:37,519 | ERROR | "['b4a44788-dc73-42fe-ae3d-da61ee2d0934'] not found in axis"
+2024-08-20 20:00:37,519 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:37,818 | ERROR | "None of [Index(['284d2758-a132-49ae-8735-d68316a541dd'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:37,818 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:38,198 | ERROR | "None of [Index(['04539ce1-5d7b-45fc-8144-33245c783699'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:38,198 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:38,510 | ERROR | "None of [Index(['c0776ed2-5e0a-43c9-9a5e-9fd245abace6'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:38,510 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:39,001 | ERROR | "None of [Index(['53185845-e75f-4a0a-b3a5-38fc4a594a0a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:39,001 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:39,100 | ERROR | "None of [Index(['bf91e46b-b3bb-43dd-81f5-0453504dbdfa'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:39,100 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:39,204 | ERROR | "None of [Index(['adc3bd94-8ccc-46af-8677-8564141d0b3d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:39,204 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:39,513 | ERROR | "['a64a4247-1006-4d61-b346-15a7b6bf48c3'] not found in axis"
+2024-08-20 20:00:39,514 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:39,672 | ERROR | "None of [Index(['c35c5cf1-81b8-4cf5-bf9a-f240129b3834'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:39,672 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:41,161 | ERROR | "['2f51df48-6e18-4b18-989f-702dd4d11f43'] not found in axis"
+2024-08-20 20:00:41,161 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:41,217 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:00:41,217 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:41,355 | ERROR | "['f3897aa2-6906-44d4-8102-cf4a547bfc45'] not found in axis"
+2024-08-20 20:00:41,355 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:41,612 | ERROR | "None of [Index(['8f7b3c4d-ff34-4d5e-96a8-1b0f542c6d4b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:41,613 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:41,968 | ERROR | "None of [Index(['4b3e3c64-5ed4-4a99-a5b9-1912f7414969'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:41,969 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:42,022 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:00:42,022 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:42,144 | ERROR | "['39a58768-2032-474b-86a7-be299ab6b023'] not found in axis"
+2024-08-20 20:00:42,144 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:42,581 | ERROR | "None of [Index(['4650102a-2c1d-4d01-ade6-a326d4bc8a51'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:42,581 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:42,876 | ERROR | "None of [Index(['b5cca370-d80f-4256-8204-ea7efa0fd549'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:42,877 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:43,006 | ERROR | 'life_expectancy'
+2024-08-20 20:00:43,006 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:44,418 | ERROR | "None of [Index(['d51e0157-cf34-46cb-a022-3c61b2daf1f3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:44,418 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:45,611 | ERROR | "None of [Index(['e967873e-6dcd-4b6c-a6ea-c4fe0220bcdc'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:45,611 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:45,969 | ERROR | "None of [Index(['74fa307a-eba4-4477-8933-fd014a18c059'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:45,969 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:46,271 | ERROR | "None of [Index(['f822a10d-354b-47ad-a2c4-6b9fb4cb6141'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:46,271 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:46,601 | ERROR | "['533b8131-fd6c-49ce-965b-442d9f05b3bc'] not found in axis"
+2024-08-20 20:00:46,601 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:46,714 | ERROR | "None of [Index(['6a0e8b09-4416-4f29-974e-8252623302f8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:46,714 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:46,772 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:00:46,772 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:47,194 | ERROR | "None of [Index(['08aa6531-384e-4cc0-825a-27f13be31916'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:47,194 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:47,544 | ERROR | "None of [Index(['c566f60b-03da-4ade-83ad-f69770271ab6'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:47,544 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:47,830 | ERROR | "None of [Index(['9a05e4b6-b29b-4a28-81c9-7a1eab426453'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:47,831 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:50,375 | ERROR | "['20fba362-7891-41af-8aa8-f52eb348f25a'] not found in axis"
+2024-08-20 20:00:50,375 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:50,799 | ERROR | "None of [Index(['5c70c6f2-0c25-4cc9-82c8-a6d9dd45a091'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:50,799 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:52,091 | ERROR | "None of [Index(['4cbffe3f-54c6-4e2c-b128-aedcd95e85bf'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:52,091 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:53,294 | ERROR | "None of [Index(['0e7b8eaa-62bc-4f77-9da9-516f66785e97'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:53,294 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:53,397 | ERROR | "None of [Index(['809b3724-69bd-449f-a933-f7816a075283'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:53,397 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:53,530 | ERROR | "None of [Index(['26b18d54-328a-4f17-aa87-9736bde74731'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:53,530 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:53,584 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:00:53,584 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:53,962 | ERROR | "None of [Index(['f0972c58-bd8b-46de-accb-9bbf12a23d03'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:53,963 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:54,354 | ERROR | "None of [Index(['6e8469dc-037b-440b-baae-cb785392e0d0'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:54,354 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:54,660 | ERROR | "['aac8eb54-e61c-400c-b7ba-1b4a13aa6150'] not found in axis"
+2024-08-20 20:00:54,660 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:54,717 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:00:54,717 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:55,150 | ERROR | "['c85ec442-0047-4c44-87b6-e944916dc482'] not found in axis"
+2024-08-20 20:00:55,150 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:55,336 | ERROR | "None of [Index(['5308048e-145a-4f2f-b114-87b6c4f96b55'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:55,336 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:55,830 | ERROR | "None of [Index(['2ec4fb63-bf94-4217-ad1c-d917af312435'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:55,830 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:55,890 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:00:55,890 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:56,098 | ERROR | "None of [Index(['732bedd5-2c02-4c33-a250-352ff5ce3384'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:56,098 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:56,264 | ERROR | "None of [Index(['08cc29a2-1d71-48c7-a3b5-ab2ea2eb58c8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:56,265 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:57,817 | ERROR | "None of [Index(['6799f2ca-92ea-4199-ab36-962b9d9bc9a6'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:57,817 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:00:57,933 | ERROR | "None of [Index(['dfbcca0d-a2c9-42a2-a40b-bd01400d3346'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:00:57,933 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:00,063 | ERROR | "None of [Index(['2cfb7d2f-16f4-4d5d-b0cd-326203b39fd1'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:00,063 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:00,119 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:01:00,119 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:00,271 | ERROR | "['88d0e63f-a0e8-4c52-8949-a541628f2063'] not found in axis"
+2024-08-20 20:01:00,271 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:00,651 | ERROR | "None of [Index(['7af3102b-ed3f-41ec-adf1-14b08697a522'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:00,652 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:00,779 | ERROR | "None of [Index(['6033f82d-7480-4465-bf5d-7259249f267c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:00,779 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:00,997 | ERROR | "None of [Index(['e99cc4ca-ec2c-44b0-ad89-d7440fd6ade2'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:00,997 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:01,052 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:01:01,052 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:01,175 | ERROR | "None of [Index(['e006173d-4daa-4ded-849f-d66488ca8ec0'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:01,175 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:01,540 | ERROR | "None of [Index(['c4ee13fb-ce62-45f2-8f4e-3748e0508456'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:01,540 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:01,871 | ERROR | "None of [Index(['aae92ca3-8c37-4e84-ba87-31f1605f9fb0'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:01,872 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:02,994 | ERROR | "None of [Index(['86087e14-9e0a-4ec3-9d11-6e7af8ea27c7'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:02,994 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:03,047 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:01:03,047 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:03,176 | ERROR | "['1ae1ca7a-c9e1-40f9-b4af-faee07f5904f'] not found in axis"
+2024-08-20 20:01:03,177 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:04,418 | ERROR | "None of [Index(['e4cfaa87-1b1b-47cc-84a8-f3b0e9e6b2e8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:04,418 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:04,739 | ERROR | "None of [Index(['2476f5f2-e06d-4e4b-a75e-42a761b8c78e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:04,739 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:04,952 | ERROR | "None of [Index(['cada3c14-b158-4f96-9337-930a24600f08'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:04,952 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:05,059 | ERROR | "['83b96f04-98dc-4c0c-ace9-5690f7b149f1'] not found in axis"
+2024-08-20 20:01:05,059 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:05,203 | ERROR | "None of [Index(['65d675cd-4372-4aed-9781-3860eea3a2f9'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:05,203 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:05,386 | ERROR | "None of [Index(['67ee7ba4-ab2e-4ebf-817f-f76dc4ec3148'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:05,386 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:05,653 | ERROR | "None of [Index(['c47d3541-b3f1-465c-92b4-6c61b95531b8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:05,653 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:08,145 | ERROR | "None of [Index(['5a72717d-b7da-44b0-9f4a-cce77a651485'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:08,146 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:08,543 | ERROR | "None of [Index(['654b2fce-5c08-4a3a-86b9-718a8c060206'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:08,543 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:08,916 | ERROR | "['903e87f4-9201-4455-9d25-835b23e16f38'] not found in axis"
+2024-08-20 20:01:08,916 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:10,352 | ERROR | "None of [Index(['fd87f0ac-b0f8-4f1c-8b52-0a05637ce059'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:10,352 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:10,797 | ERROR | "None of [Index(['54a9ffc4-2546-4fb6-b628-00b80de11d6d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:10,797 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:10,915 | ERROR | "None of [Index(['55a4cb8a-1ea6-413d-bc54-b6f2d8c2e4e2'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:10,915 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:11,424 | ERROR | "['dcf864fe-06b3-44e4-aa30-64382f0c9b44'] not found in axis"
+2024-08-20 20:01:11,424 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:11,476 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:01:11,476 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:11,648 | ERROR | "None of [Index(['fb4b4f6d-c8d5-4d16-af2a-d03d54ee2909'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:11,648 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:11,836 | ERROR | "None of [Index(['2733ed12-3d3a-4930-aa39-6ff4312c9b70'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:11,836 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:12,180 | ERROR | "None of [Index(['5bfd5da6-483f-4e56-a9c3-892bf3e66b4a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:12,180 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:13,652 | ERROR | "None of [Index(['17e52c5b-8542-4c94-943f-a478ce908f45'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:13,652 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:13,830 | ERROR | "None of [Index(['9bd226b4-8c32-4e26-b3b8-4aab3c093d8e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:13,830 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:13,994 | ERROR | "['530110ca-640c-4b26-af98-2e2c03a7f2ea'] not found in axis"
+2024-08-20 20:01:13,994 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:15,251 | ERROR | "None of [Index(['b7299b9b-4fae-4ffe-9d1a-3158fba06204'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:15,251 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:16,781 | ERROR | "None of [Index(['edbbb0b9-1220-41e5-8dcb-17a75230d87b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:16,782 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:17,043 | ERROR | "None of [Index(['546dd558-bd75-445c-85ac-1d3d65c510ed'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:17,043 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:17,377 | ERROR | "None of [Index(['a41e8b58-3004-4a6d-b55f-39e7a3ff0b5a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:17,378 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:17,508 | ERROR | "None of [Index(['f2d94e42-9a87-49cf-bba4-6e8e00ffef22'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:17,508 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:17,770 | ERROR | "None of [Index(['58ff272b-d1dc-43c1-a9b6-86e4867e8f5c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:17,771 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:17,929 | ERROR | "None of [Index(['67e05e03-0caa-4ce7-9bcc-8afe70e16220'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:17,930 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:18,083 | ERROR | "None of [Index(['0b3ddcb5-1d70-4483-b15d-efb1f03680a1'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:18,083 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:18,181 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:01:18,181 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:18,535 | ERROR | "None of [Index(['096e402a-dfae-430d-9c0b-e2d416fc45cc'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:18,535 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:19,190 | ERROR | "['dcef5103-a9ef-4f33-8e41-7a06dd80f0f3'] not found in axis"
+2024-08-20 20:01:19,190 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:19,422 | ERROR | "None of [Index(['1cced35c-316d-418a-9384-813158661520'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:19,422 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:22,303 | ERROR | "None of [Index(['73e67b8e-8c7a-42d0-baea-a73c39629549'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:22,303 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:22,542 | ERROR | "None of [Index(['2620446d-e4ef-49c8-adf2-8b29c2cc0729'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:22,542 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:22,713 | ERROR | "None of [Index(['c512d2c2-2815-4721-b995-e726451c46fa'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:22,713 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:22,957 | ERROR | "None of [Index(['314a5195-b421-4717-9106-df6823ce7b86'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:22,958 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:23,333 | ERROR | "None of [Index(['bbb7883a-2ec7-47f1-8929-708fa93133d7'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:23,333 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:23,624 | ERROR | "None of [Index(['0e58f0a2-0fdd-46aa-9d02-224c96c8aefa'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:23,624 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:24,007 | ERROR | "None of [Index(['87b79172-7209-4490-8f01-f5f66832a44b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:24,008 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:24,270 | ERROR | "None of [Index(['6860a39f-78fc-423b-af81-deccb4ea61a3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:24,270 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:24,497 | ERROR | "None of [Index(['126dae57-9a73-4fad-9702-3da0e2b4fc70'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:24,497 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:24,745 | ERROR | "None of [Index(['c4a41b48-f231-460f-b275-662656c344ea'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:24,745 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:26,148 | ERROR | "None of [Index(['73b96918-ce55-4491-b5c7-48e7be2ba13a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:26,148 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:26,390 | ERROR | "None of [Index(['8ef34f7b-681b-41c0-9e38-c399cc147008'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:26,391 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:26,687 | ERROR | "None of [Index(['2a6920b5-172d-4e26-8bdf-752b2ba9b2b0'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:26,687 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:27,031 | ERROR | "None of [Index(['c224f3f0-b279-4a19-bd5f-70ca196ea665'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:27,031 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:27,173 | ERROR | "['c064f43a-8afd-4351-8e74-68cf7fb359d3'] not found in axis"
+2024-08-20 20:01:27,173 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:27,299 | ERROR | "['681ae903-28a9-4f9f-b706-e9cec89922a5'] not found in axis"
+2024-08-20 20:01:27,299 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:28,797 | ERROR | "None of [Index(['c828e3fe-f018-421d-8b68-41e5be421177'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:28,797 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:28,856 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:01:28,856 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:29,134 | ERROR | "['60a1f8bc-7c38-46ec-a5b7-ae0651b35299'] not found in axis"
+2024-08-20 20:01:29,134 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:29,192 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:01:29,192 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:29,372 | ERROR | "None of [Index(['e70654b2-0c2f-4d46-a5f6-6ba70929d2d5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:29,372 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:30,522 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:01:30,522 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:30,837 | ERROR | "['77ea5058-a919-40ac-b633-e76cdeef6633'] not found in axis"
+2024-08-20 20:01:30,837 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:31,055 | ERROR | "['059c451e-fd32-4f23-b08e-8e8b5fa9d613'] not found in axis"
+2024-08-20 20:01:31,055 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:31,346 | ERROR | "None of [Index(['8bb9e97a-2905-41bb-8f2c-0e540ef30abf'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:31,346 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:31,592 | ERROR | "None of [Index(['ea620dbb-6fe3-4778-9ceb-916268e2157c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:31,592 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:31,647 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:01:31,647 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:32,920 | ERROR | "None of [Index(['ed689077-427d-4a28-9c9c-1ac4357686e8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:32,920 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:34,124 | ERROR | "None of [Index(['96a8752e-32dc-4f5c-9424-1cb816b4e4b6'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:34,124 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:34,316 | ERROR | "None of [Index(['b6f9cfba-529f-4f47-a895-8abd341243c2'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:34,316 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:52,275 | ERROR | "None of [Index(['319e1e54-0914-4e29-ab61-41d97c606cec'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:52,276 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:52,340 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:01:52,340 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:52,488 | ERROR | "['95296ae6-171f-452e-962f-b1966998e570'] not found in axis"
+2024-08-20 20:01:52,488 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:52,835 | ERROR | "['6723c5a4-5ebb-44f8-a1cd-a950ae5cd4ea'] not found in axis"
+2024-08-20 20:01:52,835 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:54,409 | ERROR | "None of [Index(['24c7b7ca-cf8b-4e32-bafe-931c7121bff1'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:54,409 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:54,466 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:01:54,467 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:54,931 | ERROR | "['d30aac19-1601-400a-9daa-ea2d284d64b7'] not found in axis"
+2024-08-20 20:01:54,931 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:01:55,092 | ERROR | "None of [Index(['125aa751-2166-4fa7-b390-ed67fb541563'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:01:55,092 | WARNING | Evaluation returned None, assigning a default low score.
+2024-08-20 20:03:36,830 | ERROR | "None of [Index(['c546faa0-ed00-43ab-9d61-729784d8ae6e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:03:37,281 | ERROR | "None of [Index(['6d71e48e-a00c-4931-9235-3b900cf95a79'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:03:37,576 | ERROR | "None of [Index(['412595e0-a40c-406c-99d4-f3e5de38c85a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:03:38,094 | ERROR | "None of [Index(['fff2fd7f-a04c-4a47-924c-942a96d4f18f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:03:38,314 | ERROR | "None of [Index(['b5f6fe3c-41bc-4a28-8834-2ff65a51d40b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:03:38,622 | ERROR | "['1352bfa7-28ac-4758-850a-089fe1bca4f0'] not found in axis"
+2024-08-20 20:03:38,903 | ERROR | "None of [Index(['efe41a40-048c-4917-a4e2-233935518481'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:03:38,994 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:03:39,448 | ERROR | "None of [Index(['f635ec60-8eef-4cb7-a04a-d7c245cbfd5f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:17,709 | ERROR | "None of [Index(['ea3a8009-b554-4fb0-a1e0-9c8bae4a9309'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:17,861 | ERROR | 'life_expectancy'
+2024-08-20 20:04:18,243 | ERROR | "None of [Index(['db1eb71c-3ede-4c10-a3a7-f8c1bccfa30f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:18,372 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:04:18,831 | ERROR | "['9ad8325d-16b9-4331-a56c-997e17e7b42e'] not found in axis"
+2024-08-20 20:04:19,102 | ERROR | "None of [Index(['c8175765-f093-4446-bdab-d085ae94f5e6'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:19,555 | ERROR | "None of [Index(['92453947-ee3b-4a0c-b134-fc1fbe6c78d8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:19,744 | ERROR | "['13959561-2674-483d-a8a6-92765177470b'] not found in axis"
+2024-08-20 20:04:21,495 | ERROR | "None of [Index(['ae194636-8479-4305-9450-e725cac83417'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:21,776 | ERROR | "None of [Index(['d6cebdd8-b9a7-4fff-8672-55ee0884ec4f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:21,950 | ERROR | "None of [Index(['93d22459-e92f-4ed4-873e-b71d5e4e5eff'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:22,038 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:04:23,730 | ERROR | "['77c4e0ec-c8a9-4c74-95c6-f2512374ffe9'] not found in axis"
+2024-08-20 20:04:23,967 | ERROR | "None of [Index(['d56dfc29-290f-47da-ae9e-a25c52820488'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:24,179 | ERROR | "None of [Index(['caaa3a38-40bb-4a81-9be8-d6bab222dc03'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:24,613 | ERROR | "None of [Index(['24497f17-ce95-4f19-95fc-02e31443265c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:24,818 | ERROR | "['e2569eed-0c8e-4215-a844-1df546436c8c'] not found in axis"
+2024-08-20 20:04:24,979 | ERROR | 'life_expectancy'
+2024-08-20 20:04:26,615 | ERROR | "None of [Index(['d46cce4a-e9b8-4112-bb09-4fe3e2c8e95b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:27,090 | ERROR | "None of [Index(['ee3026ee-a25b-42c7-a75f-5ce3a03500bd'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:27,477 | ERROR | "None of [Index(['6bc3c8f7-f410-4874-a723-ea3abe928e60'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:27,830 | ERROR | "['00939e9d-e40e-498a-8902-da0db51f6fd4'] not found in axis"
+2024-08-20 20:04:28,310 | ERROR | "['7bcf115f-a1b4-4fad-aa11-03958c695eb2'] not found in axis"
+2024-08-20 20:04:28,596 | ERROR | "['e4d13686-b43b-4035-8f87-1556b7c453f9'] not found in axis"
+2024-08-20 20:04:28,711 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:04:29,092 | ERROR | "None of [Index(['8a965f91-3d60-4659-b3a9-f9eb80d3ccbf'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:30,647 | ERROR | "None of [Index(['3c21648c-7c6e-4756-b6e3-328f9e8079d5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:30,810 | ERROR | "['ef66f015-5a01-4df7-9592-e587f7ccb8e1'] not found in axis"
+2024-08-20 20:04:31,027 | ERROR | "None of [Index(['ca1341b0-90cb-4699-9031-5da9319c4df0'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:31,172 | ERROR | 'life_expectancy'
+2024-08-20 20:04:31,579 | ERROR | "None of [Index(['1e75d7ec-c25d-4c19-a0cc-7726e9be86a2'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:31,837 | ERROR | "None of [Index(['cd3d85ef-97a2-4fd3-84c3-495b34c6bb36'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:31,993 | ERROR | "None of [Index(['ddbd92c8-3d4e-4d97-b1bf-70cb80ae2482'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:32,187 | ERROR | "None of [Index(['426a9186-dcc9-4f81-b97f-858fe203af84'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:32,337 | ERROR | "None of [Index(['d56a46cc-01a3-48a2-a67c-830572f5f681'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:32,492 | ERROR | 'life_expectancy'
+2024-08-20 20:04:32,823 | ERROR | "['a7f4ab35-93d5-4ebd-a757-085147dfdef6'] not found in axis"
+2024-08-20 20:04:33,198 | ERROR | "None of [Index(['20c90316-28cd-47b8-b057-f79966578423'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:33,586 | ERROR | "['284f9bf9-2cfa-4165-9062-7de6a3e50fa2'] not found in axis"
+2024-08-20 20:04:33,882 | ERROR | "None of [Index(['af968810-2ba4-43e5-91c7-974922203490'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:34,377 | ERROR | "None of [Index(['bb9c5afa-ae55-4880-bc15-24af05510ddd'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:34,539 | ERROR | "None of [Index(['82e29fef-4699-465a-b233-e8147ad25830'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:34,959 | ERROR | "None of [Index(['f3dc77f6-cf52-436f-9e22-9ce262058969'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:35,266 | ERROR | "None of [Index(['19abfe5f-f0d1-4f22-8b23-73d73ad44ce6'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:35,660 | ERROR | "None of [Index(['c7d69080-d470-40a1-bf99-a21191b446bd'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:04:35,760 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:24:55,684 | ERROR | "['5f7a8310-3ff5-4a12-b9a0-45d0aa777f18'] not found in axis"
+2024-08-20 20:24:55,995 | ERROR | "None of [Index(['99da0f70-8829-423b-9209-6b309fb8c732'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:24:56,225 | ERROR | "None of [Index(['eb44d581-afdc-4249-b960-306dedbbe852'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:24:56,342 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:24:56,444 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:24:56,871 | ERROR | "None of [Index(['acc08f82-c967-46ab-aa7c-13da5c964ca1'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:24:57,012 | ERROR | 'life_expectancy'
+2024-08-20 20:24:57,201 | ERROR | "None of [Index(['f8f0f5f5-341c-4499-b808-a5250801b14e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:24:57,411 | ERROR | "['a9b626db-73d2-4d4b-ad2f-906e6860e204'] not found in axis"
+2024-08-20 20:24:59,030 | ERROR | "None of [Index(['84984048-8a79-4640-a1a1-59fca1b69a3b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:24:59,290 | ERROR | "None of [Index(['e198858f-68ae-459a-84f5-fa2689434522'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:24:59,615 | ERROR | "None of [Index(['c6e474cf-143e-496c-8512-5b34214c27fc'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:00,023 | ERROR | "None of [Index(['40018080-ac69-4959-ac38-b06331d0218f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:00,257 | ERROR | "['36554f36-d319-4a6d-a75a-615d5b03a7e7'] not found in axis"
+2024-08-20 20:25:00,445 | ERROR | "['4497051b-265c-47a9-aa04-0b18b86464c5'] not found in axis"
+2024-08-20 20:25:00,638 | ERROR | "None of [Index(['12b34935-8c9b-4d43-8b76-1a24ab04a52f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:01,042 | ERROR | "None of [Index(['6308e334-b41b-404f-8096-558e7789d9c4'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:02,575 | ERROR | "['9cb802bf-798e-4bb8-b0c2-df48f881ded9'] not found in axis"
+2024-08-20 20:25:02,870 | ERROR | "None of [Index(['c9da72d6-b1d8-4203-9115-f6704d9a606d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:03,178 | ERROR | "None of [Index(['f5a5fbb3-d3b5-41b6-b75c-5344a7fa7bf3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:04,680 | ERROR | "None of [Index(['691a7559-e6d9-4bbc-878b-1b267a3df954'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:04,849 | ERROR | "None of [Index(['1230c180-1d42-4795-b995-78b28690e02e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:04,997 | ERROR | "None of [Index(['0049a272-0dd6-4bc6-b097-fd199d2cf4d7'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:05,160 | ERROR | "None of [Index(['dbcb0873-cea6-41b5-b72b-28caa989ab2a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:05,645 | ERROR | "None of [Index(['6a6af9d3-00d8-464b-9ad0-f4f24852b7ba'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:06,136 | ERROR | "['4326d921-90f4-4183-96bd-0ad2a0119f6f'] not found in axis"
+2024-08-20 20:25:06,420 | ERROR | "None of [Index(['7e66158f-8a2f-43c3-9770-7fa1bb985c99'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:06,509 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:25:06,838 | ERROR | "['9dd9b069-2ff0-4cd7-8766-d8891da259f3'] not found in axis"
+2024-08-20 20:25:08,113 | ERROR | "['69453b6a-1116-40dd-aaf3-c00860362e7d'] not found in axis"
+2024-08-20 20:25:08,610 | ERROR | "None of [Index(['2103e185-c511-4a5e-837f-da8e3c43be0c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:08,936 | ERROR | "['4127c54e-7110-4966-ac7b-373e09f4ba67'] not found in axis"
+2024-08-20 20:25:09,118 | ERROR | "None of [Index(['bf2f0908-1534-4819-9d2f-92b80132a968'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:09,330 | ERROR | "None of [Index(['088a07f1-e9d4-4589-ba69-8d31a1d79e2c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:09,552 | ERROR | "None of [Index(['682b9a98-1fdc-4473-ad17-1d556a4cec40'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:09,829 | ERROR | "None of [Index(['16b7625b-265e-4b89-96f8-99ed235787b5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:09,980 | ERROR | "['6a4b9c7d-142d-427f-adbf-6d7b5857cec3'] not found in axis"
+2024-08-20 20:25:11,484 | ERROR | "None of [Index(['e8eca14c-07fa-4a79-8d9e-06b595c7d87e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:11,571 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:25:11,744 | ERROR | "None of [Index(['dd6c95c6-5bb6-4415-879e-7a401021fa25'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:14,360 | ERROR | "None of [Index(['8bf4fda8-33f1-4e15-9dca-153c9433903b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:14,537 | ERROR | "None of [Index(['f4b1e9a7-62c7-4ac3-a891-8afeaf9e9942'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:25:14,881 | ERROR | "['d20d3f49-5870-4a4a-9532-b3c76a09e4c7'] not found in axis"
+2024-08-20 20:26:25,099 | ERROR | "None of [Index(['13d8b3e2-628c-4355-bba0-0833d0ef240e'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:26:25,509 | ERROR | "None of [Index(['16b61cd0-78ff-4cbf-9c8e-047249edafe7'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:26:25,816 | ERROR | "['799b8421-02c6-4143-a5ba-d4a39afe0d7a'] not found in axis"
+2024-08-20 20:26:26,295 | ERROR | "None of [Index(['df660e77-5538-44d6-937f-aa4595a6e526'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:26:26,451 | ERROR | "None of [Index(['7df538b6-9ec4-4aea-a3f4-92325e29accc'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:26:26,944 | ERROR | "None of [Index(['d100f8d9-dbdd-4a3c-9661-603a04a0e152'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:26:27,257 | ERROR | "None of [Index(['72a283f5-6c9c-483a-90f6-bbf9ed200e53'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:26:29,920 | ERROR | "None of [Index(['034385fc-d5fb-42a4-94b3-bbda0d6303bf'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:26:37,302 | ERROR | "['1f78b3ef-18c6-49cb-95ec-157b7dfb0020'] not found in axis"
+2024-08-20 20:26:37,631 | ERROR | "None of [Index(['42a947e4-077f-4a35-ab76-f2328b121139'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:26:38,065 | ERROR | "None of [Index(['ac85c322-a347-4e58-b3d3-5ff43a8caaff'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:26:38,285 | ERROR | "None of [Index(['e559fda6-0d96-43b9-b18f-fe569f836f25'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:26:38,761 | ERROR | "None of [Index(['083a5eee-8ddd-493e-8f6e-b4df46776673'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:26:39,251 | ERROR | "None of [Index(['4aefddc2-3e66-4b85-b873-4093e6d02ea8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:26:39,644 | ERROR | "None of [Index(['f7c1db55-6fe2-4976-8452-4cb4f5ddcfe8'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:26:40,957 | ERROR | "None of [Index(['a261935e-f2da-4312-a413-90eda0b1a37b'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:26:41,432 | ERROR | "['c1b2218e-e5cc-4606-8ab9-3c1205d17072'] not found in axis"
+2024-08-20 20:45:33,584 | ERROR | "['f4f8f486-0c6d-4740-9824-1606532dcbf5'] not found in axis"
+2024-08-20 20:45:34,153 | ERROR | "None of [Index(['0a962c42-c5d6-41cc-af9c-edabca9450b1'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:45:34,451 | ERROR | "None of [Index(['3d96fa52-55fd-4f2a-ada9-b46f7e3f55ed'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:45:35,782 | ERROR | "['122b08d3-a34b-4416-8ab3-c037c5620b0a'] not found in axis"
+2024-08-20 20:45:36,338 | ERROR | "['fa857e44-88bf-498f-aa40-30ecc1cbd6dd'] not found in axis"
+2024-08-20 20:45:36,567 | ERROR | "['0e27d62a-1fc0-4cd9-a62c-65b51640e0b1'] not found in axis"
+2024-08-20 20:45:36,672 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:45:36,798 | ERROR | 'life_expectancy'
+2024-08-20 20:45:36,878 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:49:46,719 | ERROR | "None of [Index(['fac787de-ef9c-4381-b853-eb056bfc2278'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:49:46,810 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:49:48,525 | ERROR | "None of [Index(['d61ddfb9-6087-4144-9a38-da2a61895fb3'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:49:48,911 | ERROR | "None of [Index(['7b48d2e9-2bf4-403d-a70f-37f082603fb7'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:49:48,993 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:49:49,243 | ERROR | "None of [Index(['e9287781-05dd-4906-a3d3-fc9336538052'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:49:49,813 | ERROR | "['1700f90e-e9f6-428b-ab6b-48baed841951'] not found in axis"
+2024-08-20 20:49:51,252 | ERROR | "None of [Index(['8cd64631-de99-44ca-b5b9-8666b346c579'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:49:57,726 | ERROR | "['8205759c-10a6-4f8a-afcd-abea426dc7eb'] not found in axis"
+2024-08-20 20:49:57,806 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:49:57,945 | ERROR | 'life_expectancy'
+2024-08-20 20:49:59,161 | ERROR | "None of [Index(['e3f885b8-ecee-4f06-bf6e-ca31eb02d851'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:49:59,521 | ERROR | "None of [Index(['1d3c9fd5-82b3-4ed8-b6ad-7969446cf7de'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:49:59,773 | ERROR | "None of [Index(['5a949f14-796f-4543-a48a-eea4b8c7f51f'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:49:59,979 | ERROR | "None of [Index(['f7435998-03a2-45d6-b96d-bbb58f5b3421'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:50:00,310 | ERROR | "None of [Index(['960f1ec1-f265-433f-b1ee-215f74ce5f34'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:50:00,758 | ERROR | "None of [Index(['3690280e-e43d-4333-a37a-8a6f66d3fac5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:56:12,170 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:56:12,359 | ERROR | "None of [Index(['6ff4eee9-2feb-414c-86e3-e872229cdf8d'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:56:12,459 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:56:12,591 | ERROR | "None of [Index(['740a25f8-a0db-458a-b323-e57d41af67c1'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 20:56:12,650 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:56:12,719 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:56:12,913 | ERROR | "['50ef4515-a52a-4e7d-a4fa-3d77109cdca1'] not found in axis"
+2024-08-20 20:56:12,975 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:56:13,077 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 20:56:13,196 | ERROR | 'life_expectancy'
+2024-08-20 20:56:46,408 | ERROR | "None of [Index(['15c1ab98-5237-4d17-910e-ee565aaaaa91'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 21:00:31,353 | ERROR | "None of [Index(['4e69fa6d-b887-41c1-bc7a-d47894f64b21'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 21:00:31,595 | ERROR | "None of [Index(['eb49516f-3fbc-47d3-8a5d-68d4ae0f9318'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 21:00:32,874 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 21:00:34,355 | ERROR | "None of [Index(['71220e3f-e70a-425f-b0ad-783b878b5431'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 21:00:51,948 | ERROR | "['adcd1a80-0dc4-4802-92fc-e99f6cfdc3ec'] not found in axis"
+2024-08-20 21:00:52,432 | ERROR | "None of [Index(['15bff37f-82da-4721-8631-31ee04da123c'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 21:00:53,716 | ERROR | "None of [Index(['b5f64195-bbe2-4cdb-97e6-3068a0c53d9a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 21:00:57,017 | ERROR | At time-step 1 it is only possible to use the "buy" action.
+2024-08-20 21:04:26,599 | ERROR | "None of [Index(['1734d818-031d-4ff0-8fbb-3f55a0f7fa5a'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 21:06:10,473 | ERROR | "None of [Index(['6888a800-e171-418f-9ddc-f6710a66e8a5'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 21:06:10,782 | ERROR | "None of [Index(['bf34bb18-bb7e-4ac8-85b8-3aadc07ec251'], dtype='object', name='server_id')] are in the [index]"
+2024-08-20 21:06:16,532 | ERROR | "None of [Index(['1030d507-fd55-4f13-9986-0586bdedf9ef'], dtype='object', name='server_id')] are in the [index]"
