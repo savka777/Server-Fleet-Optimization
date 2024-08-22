@@ -70,7 +70,7 @@ def initialize_state(time_step):
             'slots_capacity': slots_capacity,  # Initialize with total slots capacity
             'latency_sensitivity': datacenters_df.loc[datacenters_df['datacenter_id'] == dc_id, 'latency_sensitivity'].values[0],
             'allocated_servers': {server: 0 for server in servers_df['server_generation']},
-            'operating_times': {server: 0 for server in servers_df['server_generation']}
+            'operating_times': {server: 0.1 for server in servers_df['server_generation']}
         }
     
     state = {
@@ -274,7 +274,7 @@ def buy_server(state, server_type, datacenter_id):
         O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
 
 
-        print(f"Purchased {server_type} at datacenter {datacenter_id}. Updated 0: {O} Remaining demand: {state['required_servers'][server_type]}")
+        print(f"Purchased {server_type} at datacenter {datacenter_id}. Updated 0bj: {O} Remaining demand: {state['required_servers'][server_type]}")
     else:
         print(f"Cannot purchase {server_type} at datacenter {datacenter_id}: Not enough slots capacity.")
 
@@ -306,10 +306,15 @@ def move_server(state, server_type, from_datacenter_id, to_datacenter_id):
             
             # Transfer the operating time for the server
             to_datacenter['operating_times'][server_type] = from_datacenter['operating_times'][server_type]
+               # Mark the server as moved in the fleet data
+            for server in state['datacenters'][to_datacenter_id]['fleet']:
+                if server['server_generation'] == server_type:
+                    server['moved'] = 1  # Mark the server as moved
+
             # Calculate the overall objective O after the action
             # O = calculate_objective(state)
             O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
-            print(f"Moved {server_type} from {from_datacenter_id} to {to_datacenter_id}. Updated Objective O: {O}")
+            print(f"Moved {server_type} from {from_datacenter_id} to {to_datacenter_id}. Updated Obj: {O}")
         else:
             print(f"Cannot move server {server_type} from datacenter {from_datacenter_id} to {to_datacenter_id}: Not enough capacity.")
     else:
@@ -374,7 +379,7 @@ def dismiss_server(state, server_type, datacenter_id):
         datacenter['slots_capacity'] += servers_df.loc[servers_df['server_generation'] == server_type, 'slots_size'].values[0]
             
         # Reset operating time for the dismissed server
-        datacenter['operating_times'][server_type] = 0
+        datacenter['operating_times'][server_type] = 0.1
         # Calculate the overall objective O after the action
         # O = calculate_objective(state)
         O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
@@ -405,6 +410,8 @@ if __name__ == "__main__":
     buy_server(state, 'CPU.S1', 'DC1')
     buy_server(state, 'CPU.S1', 'DC1')
     dismiss_server(state,'CPU.S1','DC1')
+    buy_server(state, 'CPU.S1', 'DC1')
+
  
     # Check the state after the action
     print("\n")
