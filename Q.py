@@ -6,6 +6,7 @@ import uuid
 import json
 from scipy.stats import weibull_min
 import evaluation
+import matplotlib.pyplot as plt
 
 """
 Key Components:
@@ -63,9 +64,13 @@ actions.append(('hold',))  # Do nothing - using a tuple here for consistency
 
 # print(actions)
 
-def convert_dict_to_tuple(d):
-    """Recursively convert a dictionary to a tuple for hashing."""
-    return tuple(sorted((k, convert_dict_to_tuple(v) if isinstance(v, dict) else v) for k, v in d.items()))
+def convert_to_hashable(data):
+    if isinstance(data, dict):
+        return tuple(sorted((k, convert_to_hashable(v)) for k, v in data.items()))
+    elif isinstance(data, list):
+        return tuple(convert_to_hashable(v) for v in data)
+    else:
+        return data
 
 def hash_state(state):
     """Convert the state dictionary into a hashable tuple."""
@@ -74,11 +79,9 @@ def hash_state(state):
         tuple(sorted(state['demand'].items())),
         tuple(sorted(state['required_servers'].items())),
         tuple(sorted(state['slot_requirements'].items())),
-        tuple((dc_id, convert_dict_to_tuple(dc_data)) for dc_id, dc_data in sorted(state['datacenters'].items())),
-        #round(state['profit'], 2)  # Round profit to 2 decimal places to reduce state space granularity
+        tuple((dc_id, convert_to_hashable(dc_data)) for dc_id, dc_data in sorted(state['datacenters'].items())),
     )
     return state_tuple
-
 
 # Check what the initial state at the moment is, initial state can be set to time_step 1 from demands df
 def initialize_state(time_step):
@@ -170,6 +173,11 @@ def calculate_demand_and_capacity(state, demand_df, servers_df):
     
     # Prepare the fleet DataFrame from the state
     fleet_df = prepare_fleet_df(state, servers_df)
+      # Check if fleet_df is empty or malformed
+    if fleet_df.empty:
+        print("Warning: fleet_df is empty.")
+        # Return empty DataFrame with the correct columns to avoid KeyError
+        return D_pivoted, pd.DataFrame(columns=['server_generation', 'latency_sensitivity']), fleet_df
     
     # Calculate the capacity
     Z = evaluation.get_capacity_by_server_generation_latency_sensitivity(fleet_df)
@@ -186,6 +194,11 @@ def reshape_selling_prices(selling_prices_df):
 def calculate_objective(state, demand_df, selling_prices_df, servers_df):
     # Prepare demand, capacity, and fleet DataFrame
     D, Z, fleet_df = calculate_demand_and_capacity(state, demand_df, servers_df)
+
+     # Check if the fleet DataFrame is empty or lacks necessary columns
+    if fleet_df.empty or 'server_generation' not in fleet_df.columns or 'latency_sensitivity' not in fleet_df.columns:
+        print("Fleet is empty or missing necessary columns, returning default objective value.")
+        return 1e-6  # Return a very small default value to avoid division by zero or other issues
 
     # Reshape selling_prices_df to the correct format
     selling_prices_df_pivoted = reshape_selling_prices(selling_prices_df)
@@ -207,6 +220,27 @@ def calculate_objective(state, demand_df, selling_prices_df, servers_df):
 #     utilization = 0
 #     return capacity, latency_sensitivity, utilization, used_capacity
 
+def calculate_reward(state, previous_O, action_result):
+    """
+    Calculate the reward for the current state based on the change in the objective function O
+    and the result of the action.
+    
+    The reward is based on the improvement or degradation of the objective O after taking an action,
+    and includes penalties for unsuccessful actions.
+    """
+    # Calculate the new objective after the action
+    new_O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
+    
+    # Reward is the difference between the new objective and the previous objective
+    reward = new_O - previous_O
+    
+    # Penalize if the action failed due to constraints
+    if not action_result['success']:
+        reward -= action_result['penalty']  # Apply a penalty if the action failed
+
+    return reward, new_O
+
+
 def buy_server(state, server_type, datacenter_id):
     # server_info = servers_df[servers_df['server_generation'] == server_type].iloc[0]
     server_slots = state['slot_requirements'][server_type]
@@ -221,14 +255,39 @@ def buy_server(state, server_type, datacenter_id):
         state['demand'][server_type] = max(0, state['demand'][server_type] - server_capacity)
         state['required_servers'][server_type] = max(0, state['required_servers'][server_type] - 1)
 
+        # Ensure the fleet key exists and append to it
+        if 'fleet' not in datacenter:
+            datacenter['fleet'] = []
+        datacenter['fleet'].append({
+            'server_generation': server_type,
+            'datacenter_id': datacenter_id,
+            'purchase_price': servers_df.loc[servers_df['server_generation'] == server_type, 'purchase_price'].values[0],
+            'energy_consumption': servers_df.loc[servers_df['server_generation'] == server_type, 'energy_consumption'].values[0],
+            'cost_of_moving': servers_df.loc[servers_df['server_generation'] == server_type, 'cost_of_moving'].values[0],
+            'average_maintenance_fee': servers_df.loc[servers_df['server_generation'] == server_type, 'average_maintenance_fee'].values[0],
+            'life_expectancy': servers_df.loc[servers_df['server_generation'] == server_type, 'life_expectancy'].values[0],
+            'capacity': server_capacity,
+            'slots_size': server_slots,
+            'moved': 0,
+        })
+
         # Calculate the overall objective O after the action
         # O = calculate_objective(state)
         O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
-
-
         print(f"Purchased {server_type} at datacenter {datacenter_id}. Updated 0bj: {O} Remaining demand: {state['required_servers'][server_type]}")
+        action_result = {
+            'success': True,  # True if the action was successful, False otherwise
+            'penalty': 0     # The penalty value
+            }
+
     else:
         print(f"Cannot purchase {server_type} at datacenter {datacenter_id}: Not enough slots capacity.")
+        action_result = {
+            'success': False, 
+            'penalty': -10     # The penalty value
+            }
+        
+    return state, action_result
 
 # print(calculate_initial_utilization("DC1"))
 # print(calculate_initial_utilization("DC2"))
@@ -258,20 +317,46 @@ def move_server(state, server_type, from_datacenter_id, to_datacenter_id):
             
             # Transfer the operating time for the server
             to_datacenter['operating_times'][server_type] = from_datacenter['operating_times'][server_type]
-               # Mark the server as moved in the fleet data
-            for server in state['datacenters'][to_datacenter_id]['fleet']:
+            #    # Mark the server as moved in the fleet data
+            # for server in state['datacenters'][to_datacenter_id]['fleet']:
+            #     if server['server_generation'] == server_type:
+            #         server['moved'] = 1  # Mark the server as moved
+             # Transfer the server from the fleet of the source datacenter to the destination datacenter
+            server_to_move = None
+            for server in from_datacenter['fleet']:
                 if server['server_generation'] == server_type:
-                    server['moved'] = 1  # Mark the server as moved
+                    server_to_move = server
+                    break
+            
+            if server_to_move:
+                from_datacenter['fleet'].remove(server_to_move)
+                server_to_move['datacenter_id'] = to_datacenter_id
+                server_to_move['moved'] = 1
+                if 'fleet' not in to_datacenter:
+                    to_datacenter['fleet'] = []
+                to_datacenter['fleet'].append(server_to_move)
 
             # Calculate the overall objective O after the action
             # O = calculate_objective(state)
             O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
             print(f"Moved {server_type} from {from_datacenter_id} to {to_datacenter_id}. Updated Obj: {O}")
+            action_results = {
+                'success': True,  # True if the action was successful, False otherwise
+                'penalty': 0     # The penalty value
+                }
         else:
-            # Need to implement constraints logic somewhere
             print(f"Cannot move server {server_type} from datacenter {from_datacenter_id} to {to_datacenter_id}: Not enough capacity.")
+            action_results = {
+                'success': False,  # True if the action was successful, False otherwise
+                'penalty': -10     # The penalty value
+            }
     else:
         print(f"Cannot move server {server_type}: No such server in datacenter {from_datacenter_id}.")
+        action_results = {
+            'success': False,  # True if the action was successful, False otherwise
+            'penalty': -10     # The penalty value
+        }
+    return state, action_results
 
 
 # When server retires replace if needed (not sure if we need this yet)
@@ -335,10 +420,24 @@ def dismiss_server(state, server_type, datacenter_id):
         datacenter['operating_times'][server_type] = 0.1
         # Calculate the overall objective O after the action
         # O = calculate_objective(state)
+         # Remove the server from the fleet
+        for server in datacenter['fleet']:
+            if server['server_generation'] == server_type:
+                datacenter['fleet'].remove(server)
+                break
         O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
         print(f"Dismissed {server_type} from {datacenter_id}. Updated Objective O: {O}")
+        action_results = {
+            'success': True,  # True if the action was successful, False otherwise
+            'penalty': 0     # The penalty value
+        }
     else:
         print(f"Cannot dismiss server {server_type}: No such server in datacenter {datacenter_id}.")
+        action_results = {
+            'success': False,  # True if the action was successful, False otherwise
+            'penalty': -10     # The penalty value
+        }
+    return state, action_results
 
 def hold(state):
     # Optionally calculate Objective O even if no action is taken
@@ -346,26 +445,306 @@ def hold(state):
     O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
     print(f"Held state. Objective O remains: {O}")
 
-if __name__ == "__main__":
 
-    # Initialize the state
-    print("The Initial State: ")
-    state = initialize_state(time_step=1)
-    print("state: " ,state)
-    print("\n")
 
-    buy_server(state, 'CPU.S1', 'DC1')
-    hold(state)
-    buy_server(state, 'CPU.S1', 'DC1')
-    buy_server(state, 'CPU.S1', 'DC1')
-    buy_server(state, 'CPU.S1', 'DC1')
-    buy_server(state, 'CPU.S1', 'DC1')
-    dismiss_server(state,'CPU.S1','DC1')
-    buy_server(state, 'CPU.S1', 'DC1')
+# if __name__ == "__main__":
+
+#     # Initialize the state
+#     print("The Initial State: ")
+#     state = initialize_state(time_step=1)
+#     test = calculate_objective(state, demand_df, selling_prices_df, servers_df)
+#     print(test)
+#     print("state: " ,state)
+#     print("\n")
+
+#     buy_server(state, 'CPU.S1', 'DC1')
+#     hold(state)
+#     buy_server(state, 'CPU.S1', 'DC1')
+#     buy_server(state, 'CPU.S1', 'DC1')
+#     buy_server(state, 'CPU.S1', 'DC1')
+#     buy_server(state, 'CPU.S1', 'DC1')
+#     dismiss_server(state,'CPU.S1','DC1')
+#     buy_server(state, 'CPU.S1', 'DC1')
 
  
-    # Check the state after the actions and Obj O, notice demand has decreased which is good
-    print("\n")
-    print(state["demand"])
-    O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
-    print("Objective O after actions:", O)
+#     # Check the state after the actions and Obj O, notice demand has decreased which is good
+#     print("\n")
+#     print(state["demand"])
+#     O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
+#     print("Objective O after actions:", O)
+
+# if __name__ == "__main__":
+#     # Q-learning parameters
+#     alpha = 0.1  # Learning rate
+#     gamma = 0.9  # Discount factor
+#     epsilon = 1.0  # Exploration rate
+#     epsilon_decay = 0.995  # Decay rate for exploration
+#     epsilon_min = 0.01  # Minimum exploration rate
+#     num_episodes = 1000  # Number of episodes
+
+#     # Initialize Q-table as a dictionary
+#     Q_table = {}
+
+#     def choose_action(state, actions, epsilon):
+#         """Select an action using the epsilon-greedy strategy."""
+#         if random.uniform(0, 1) < epsilon:
+#             return random.choice(actions)  # Explore
+#         else:
+#             state_hash = hash_state(state)
+#             if state_hash not in Q_table or len(Q_table[state_hash]) == 0:
+#                 return random.choice(actions)  # Explore if state not in Q-table
+#             else:
+#                 return max(Q_table[state_hash], key=Q_table[state_hash].get)  # Exploit
+
+#     def update_Q_table(state, action, reward, next_state):
+#         """Update the Q-table using the Bellman equation."""
+#         state_hash = hash_state(state)
+#         next_state_hash = hash_state(next_state)
+
+#         if state_hash not in Q_table:
+#             Q_table[state_hash] = {act: 0 for act in actions}
+
+#         best_next_action = max(Q_table.get(next_state_hash, {}), key=Q_table.get(next_state_hash, {}).get, default=0)
+#         current_Q = Q_table[state_hash][action]
+
+#         # Bellman equation
+#         Q_table[state_hash][action] = current_Q + alpha * (reward + gamma * Q_table[next_state_hash].get(best_next_action, 0) - current_Q)
+
+#     def perform_action(state, action):
+#         """Perform the selected action and update the state."""
+#         action_type = action[0]
+
+#         if action_type == 'buy':
+#             return buy_server(state, action[1], action[2])
+#         elif action_type == 'move':
+#             return move_server(state, action[1], action[2], action[3])
+#         elif action_type == 'dismiss':
+#             return dismiss_server(state, action[1], action[2])
+#         elif action_type == 'hold':
+#             hold(state)
+#             return state, {'success': True, 'penalty': 0}
+
+#     # Q-learning loop
+#     for episode in range(num_episodes):
+#         state = initialize_state(time_step=1)
+#         previous_O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
+#         print(f"Initial Objective O: {previous_O}")
+
+#         done = False
+#         total_reward = 0
+
+#         while not done:
+#             time_step_actions = 0
+#             while not done:
+#                 action = choose_action(state, actions, epsilon)
+#                 next_state, action_result = perform_action(state, action)
+#                 reward, new_O = calculate_reward(state, previous_O, action_result)
+
+#                 update_Q_table(state, action, reward, next_state)
+
+#                 state = next_state
+#                 previous_O = new_O
+#                 total_reward += reward
+
+#                 time_step_actions += 1
+
+#                 # Check if demand is fully met or other stopping criteria
+#                 if all(v == 0 for v in state['demand'].values()) or time_step_actions > 100:
+#                     done = True
+#                     break
+
+#             # Simulate moving to the next time step
+#             if not done:
+#                 state = initialize_state(time_step=state['time_step'] + 1)
+
+#         # Decay epsilon after each episode
+#         if epsilon > epsilon_min:
+#             epsilon *= epsilon_decay
+
+#         print(f"Episode {episode + 1}, Objective O: {previous_O}, Total Reward: {total_reward}")
+
+#     # After training, evaluate the policy by setting epsilon to 0 (pure exploitation)
+
+
+import matplotlib.pyplot as plt
+if __name__ == "__main__":
+    # Q-learning parameters
+    alpha = 0.2  # Learning rate
+    gamma = 0.7  # Discount factor
+    epsilon = 1.0  # Exploration rate
+    epsilon_decay = 0.7  # Decay rate for exploration
+    epsilon_min = 0.01  # Minimum exploration rate
+    num_episodes = 5  # Number of episodes
+
+    # Initialize Q-table as a dictionary
+    Q_table = {}
+    
+    # Lists to store results
+    episode_rewards = []
+    objective_O_values = []
+    action_counts = []
+    time_step_results = {}
+
+    def choose_action(state, actions):
+        """Select an action using the epsilon-greedy strategy."""
+        if random.uniform(0, 1) < epsilon:
+            return random.choice(actions)  # Explore
+        else:
+            state_hash = hash_state(state)
+            if state_hash not in Q_table:
+                return random.choice(actions)  # Explore if state not in Q-table
+            else:
+                return max(Q_table[state_hash], key=Q_table[state_hash].get)  # Exploit
+
+    def update_Q_table(state, action, reward, next_state):
+        """Update the Q-table using the Bellman equation."""
+        state_hash = hash_state(state)
+        next_state_hash = hash_state(next_state)
+
+        if state_hash not in Q_table:
+            Q_table[state_hash] = {act: 0 for act in actions}
+
+        best_next_action = max(Q_table.get(next_state_hash, {}), key=Q_table.get(next_state_hash, {}).get, default=0)
+        current_Q = Q_table[state_hash][action]
+
+        # Bellman equation
+        Q_table[state_hash][action] = current_Q + alpha * (reward + gamma * Q_table[next_state_hash].get(best_next_action, 0) - current_Q)
+
+    def perform_action(state, action):
+        """Perform the selected action and update the state."""
+        action_type = action[0]
+
+        if action_type == 'buy':
+            return buy_server(state, action[1], action[2])
+        elif action_type == 'move':
+            return move_server(state, action[1], action[2], action[3])
+        elif action_type == 'dismiss':
+            return dismiss_server(state, action[1], action[2])
+        elif action_type == 'hold':
+            hold(state)
+            return state, {'success': True, 'penalty': 0}
+        else:
+            return state, {'success': False, 'penalty': -10}
+
+    # Q-learning loop
+    for episode in range(num_episodes):
+        
+        state = initialize_state(time_step=1)
+        previous_O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
+        print(f"Initial Objective O: {previous_O}")
+
+        episode_reward = 0
+        action_count = 0
+        done = False
+        time_step = 1
+
+        while not done:
+            time_step_actions = 0
+            while not done:
+                action = choose_action(state, actions)
+                next_state, action_result = perform_action(state, action)
+                reward, new_O = calculate_reward(state, previous_O, action_result)
+
+                update_Q_table(state, action, reward, next_state)
+
+                state = next_state
+                previous_O = new_O
+
+                episode_reward += reward
+                action_count += 1
+
+                time_step_actions += 1
+
+                # Check if demand is fully met or other stopping criteria
+                if all(v == 0 for v in state['demand'].values()) or time_step_actions > 500:
+                    done = True
+                    break
+
+            # Store results by time step
+            if time_step not in time_step_results:
+                time_step_results[time_step] = {
+                    'reward': 0,
+                    'actions': 0,
+                    'objective_O': 0
+                }
+
+            time_step_results[time_step]['reward'] += episode_reward
+            time_step_results[time_step]['actions'] += action_count
+            time_step_results[time_step]['objective_O'] += previous_O
+
+            # Move to the next time step
+            time_step += 1
+            if time_step <= 168:
+                state = initialize_state(time_step)
+            else:
+                done = True
+
+        # Decay epsilon after each episode
+        if epsilon > epsilon_min:
+            epsilon *= epsilon_decay
+
+        # Store overall episode results
+        episode_rewards.append(episode_reward)
+        objective_O_values.append(previous_O)
+        action_counts.append(action_count)
+
+        print(f"Episode {episode + 1}, Objective O: {previous_O}, Reward: {episode_reward}, Actions: {action_count}")
+
+    # After training, plot the results
+
+    # Plot the rewards over episodes
+    plt.figure(figsize=(12, 6))
+    plt.plot(range(num_episodes), episode_rewards, label='Total Reward per Episode')
+    plt.xlabel('Episode')
+    plt.ylabel('Total Reward')
+    plt.title('Total Reward over Episodes')
+    plt.legend()
+    plt.show()
+
+    # Plot the objective function O over episodes
+    plt.figure(figsize=(12, 6))
+    plt.plot(range(num_episodes), objective_O_values, label='Final Objective O per Episode', color='orange')
+    plt.xlabel('Episode')
+    plt.ylabel('Objective O')
+    plt.title('Objective O over Episodes')
+    plt.legend()
+    plt.show()
+
+    # Plot the action counts per episode
+    plt.figure(figsize=(12, 6))
+    plt.plot(range(num_episodes), action_counts, label='Total Actions per Episode', color='green')
+    plt.xlabel('Episode')
+    plt.ylabel('Total Actions')
+    plt.title('Total Actions over Episodes')
+    plt.legend()
+    plt.show()
+
+    # Plot results by time step
+    time_steps = sorted(time_step_results.keys())
+    rewards_by_time_step = [time_step_results[ts]['reward'] for ts in time_steps]
+    actions_by_time_step = [time_step_results[ts]['actions'] for ts in time_steps]
+    objective_O_by_time_step = [time_step_results[ts]['objective_O'] for ts in time_steps]
+
+    plt.figure(figsize=(12, 6))
+    plt.plot(time_steps, rewards_by_time_step, label='Total Reward per Time Step')
+    plt.xlabel('Time Step')
+    plt.ylabel('Total Reward')
+    plt.title('Total Reward over Time Steps')
+    plt.legend()
+    plt.show()
+
+    plt.figure(figsize=(12, 6))
+    plt.plot(time_steps, objective_O_by_time_step, label='Objective O per Time Step', color='orange')
+    plt.xlabel('Time Step')
+    plt.ylabel('Objective O')
+    plt.title('Objective O over Time Steps')
+    plt.legend()
+    plt.show()
+
+    plt.figure(figsize=(12, 6))
+    plt.plot(time_steps, actions_by_time_step, label='Total Actions per Time Step', color='green')
+    plt.xlabel('Time Step')
+    plt.ylabel('Total Actions')
+    plt.title('Total Actions over Time Steps')
+    plt.legend()
+    plt.show()
