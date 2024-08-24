@@ -7,7 +7,10 @@ import json
 from scipy.stats import weibull_min
 import evaluation
 import matplotlib.pyplot as plt
-
+import matplotlib.pyplot as plt
+import uuid
+import json
+from copy import deepcopy
 """
 Key Components:
 
@@ -61,8 +64,6 @@ for server_type in servers_df['server_generation']:
                 actions.append(('move', server_type, from_dc_id, to_dc_id))  # Move a server between datacenters
 
 actions.append(('hold',))  # Do nothing - using a tuple here for consistency
-
-# print(actions)
 
 def convert_to_hashable(data):
     if isinstance(data, dict):
@@ -118,10 +119,6 @@ def initialize_state(time_step):
     }
     
     return state
-
-# print("Initial State: ")
-# print((initialize_state(1)))
-# print('\n')
 
 '''
 This sections focuses on the Objective 0 = U x L x P
@@ -190,7 +187,6 @@ def reshape_selling_prices(selling_prices_df):
     
     return selling_prices_pivoted
 
-
 def calculate_objective(state, demand_df, selling_prices_df, servers_df):
     # Prepare demand, capacity, and fleet DataFrame
     D, Z, fleet_df = calculate_demand_and_capacity(state, demand_df, servers_df)
@@ -212,14 +208,6 @@ def calculate_objective(state, demand_df, selling_prices_df, servers_df):
     O = U * L * P
     return O
 
-# # Get the initial state of the datacenters
-# def calculate_initial_utilization(datacenter_id):
-#     capacity = datacenters_df.loc[datacenters_df['datacenter_id'] == datacenter_id, 'slots_capacity'].values[0]
-#     latency_sensitivity = datacenters_df.loc[datacenters_df['datacenter_id'] == datacenter_id, 'latency_sensitivity'].values[0]
-#     used_capacity = 0
-#     utilization = 0
-#     return capacity, latency_sensitivity, utilization, used_capacity
-
 def calculate_reward(state, previous_O, action_result):
     """
     Calculate the reward for the current state based on the change in the objective function O
@@ -231,15 +219,21 @@ def calculate_reward(state, previous_O, action_result):
     # Calculate the new objective after the action
     new_O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
     
-    # Reward is the difference between the new objective and the previous objective
-    reward = new_O - previous_O
+    # Reward is the percentage difference between the new objective and the previous objective
+    if previous_O > 0:
+        reward = (new_O - previous_O) / previous_O * 100
+    else:
+        reward = new_O - previous_O  # If previous_O is 0, just take the difference
     
-    # Penalize if the action failed due to constraints
+    # add a small positive reward for maintaining the same objective to encourage stable performance
+    if reward == 0:
+        reward = 0.1
+
+    # penalize if the action failed due to constraints
     if not action_result['success']:
         reward -= action_result['penalty']  # Apply a penalty if the action failed
 
     return reward, new_O
-
 
 def buy_server(state, server_type, datacenter_id):
     # server_info = servers_df[servers_df['server_generation'] == server_type].iloc[0]
@@ -258,6 +252,7 @@ def buy_server(state, server_type, datacenter_id):
         # Ensure the fleet key exists and append to it
         if 'fleet' not in datacenter:
             datacenter['fleet'] = []
+
         datacenter['fleet'].append({
             'server_generation': server_type,
             'datacenter_id': datacenter_id,
@@ -272,27 +267,23 @@ def buy_server(state, server_type, datacenter_id):
         })
 
         # Calculate the overall objective O after the action
-        # O = calculate_objective(state)
         O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
         print(f"Purchased {server_type} at datacenter {datacenter_id}. Updated 0bj: {O} Remaining demand: {state['required_servers'][server_type]}")
         action_result = {
-            'success': True,  # True if the action was successful, False otherwise
-            'penalty': 0     # The penalty value
+            'success': True, 
+            'penalty': 0  
             }
 
     else:
         print(f"Cannot purchase {server_type} at datacenter {datacenter_id}: Not enough slots capacity.")
+        left_over_slots = server_slots - datacenter['slots_capacity']
+        penalty = left_over_slots / server_slots * 100 # unmet demand scaled to percantage
         action_result = {
             'success': False, 
-            'penalty': -10     # The penalty value
+            'penalty': penalty
             }
         
     return state, action_result
-
-# print(calculate_initial_utilization("DC1"))
-# print(calculate_initial_utilization("DC2"))
-# print(calculate_initial_utilization("DC3"))
-# print(calculate_initial_utilization("DC4"))
 
 def move_server(state, server_type, from_datacenter_id, to_datacenter_id):
     # Find the number of slots we need to move 
@@ -317,11 +308,6 @@ def move_server(state, server_type, from_datacenter_id, to_datacenter_id):
             
             # Transfer the operating time for the server
             to_datacenter['operating_times'][server_type] = from_datacenter['operating_times'][server_type]
-            #    # Mark the server as moved in the fleet data
-            # for server in state['datacenters'][to_datacenter_id]['fleet']:
-            #     if server['server_generation'] == server_type:
-            #         server['moved'] = 1  # Mark the server as moved
-             # Transfer the server from the fleet of the source datacenter to the destination datacenter
             server_to_move = None
             for server in from_datacenter['fleet']:
                 if server['server_generation'] == server_type:
@@ -337,27 +323,28 @@ def move_server(state, server_type, from_datacenter_id, to_datacenter_id):
                 to_datacenter['fleet'].append(server_to_move)
 
             # Calculate the overall objective O after the action
-            # O = calculate_objective(state)
             O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
             print(f"Moved {server_type} from {from_datacenter_id} to {to_datacenter_id}. Updated Obj: {O}")
+
             action_results = {
-                'success': True,  # True if the action was successful, False otherwise
-                'penalty': 0     # The penalty value
+                'success': True,  
+                'penalty': 0     
                 }
         else:
             print(f"Cannot move server {server_type} from datacenter {from_datacenter_id} to {to_datacenter_id}: Not enough capacity.")
+            excess_slots = server_slots - to_datacenter['slots_capacity']
+            penalty = excess_slots * 10 
             action_results = {
-                'success': False,  # True if the action was successful, False otherwise
-                'penalty': -10     # The penalty value
+                'success': False,  
+                'penalty': penalty
             }
     else:
         print(f"Cannot move server {server_type}: No such server in datacenter {from_datacenter_id}.")
         action_results = {
-            'success': False,  # True if the action was successful, False otherwise
-            'penalty': -10     # The penalty value
+            'success': False,  
+            'penalty': -50     # Arbitrary penalty value
         }
     return state, action_results
-
 
 # When server retires replace if needed (not sure if we need this yet)
 def retire_and_replace_server(state, server_type, datacenter_id):
@@ -378,21 +365,6 @@ def retire_and_replace_server(state, server_type, datacenter_id):
         print(f"Replaced server {server_type} in datacenter {datacenter_id}.")
     else:
         print(f"Retired server {server_type} in datacenter {datacenter_id} without replacement.")
-
-'''This is done dynmamicaly now, leaving for now'''
-# Update the operating times after each time step of all the servers active in each datacenter
-# def update_operating_times(state):
-#     # Update the operating times for each server type in each datacenter
-#     for dc_id, datacenter in state['datacenters'].items():
-#         for server_type, operating_time in datacenter['operating_times'].items():
-#             if datacenter['allocated_servers'][server_type] > 0:
-#                 datacenter['operating_times'][server_type] += 1
-
-#                 # Check if the server has exceeded its lifespan 
-#                 life_expectancy = servers_df.loc[servers_df['server_generation'] == server_type, 'life_expectancy'].values[0]
-#                 if datacenter['operating_times'][server_type] >= life_expectancy:
-#                     retire_and_replace_server(state, server_type, dc_id)
-
 
 def dismiss_server(state, server_type, datacenter_id):
     #server_info = servers_df[servers_df['server_generation'] == server_type].iloc[0]
@@ -435,150 +407,27 @@ def dismiss_server(state, server_type, datacenter_id):
         print(f"Cannot dismiss server {server_type}: No such server in datacenter {datacenter_id}.")
         action_results = {
             'success': False,  # True if the action was successful, False otherwise
-            'penalty': -10     # The penalty value
+            'penalty': -50     # Artbitrary value for now, not sure if it needs any sort of calculation?
         }
     return state, action_results
 
 def hold(state):
-    # Optionally calculate Objective O even if no action is taken
-    # O = calculate_objective(state)
     O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
     print(f"Held state. Objective O remains: {O}")
 
 
-
-# if __name__ == "__main__":
-
-#     # Initialize the state
-#     print("The Initial State: ")
-#     state = initialize_state(time_step=1)
-#     test = calculate_objective(state, demand_df, selling_prices_df, servers_df)
-#     print(test)
-#     print("state: " ,state)
-#     print("\n")
-
-#     buy_server(state, 'CPU.S1', 'DC1')
-#     hold(state)
-#     buy_server(state, 'CPU.S1', 'DC1')
-#     buy_server(state, 'CPU.S1', 'DC1')
-#     buy_server(state, 'CPU.S1', 'DC1')
-#     buy_server(state, 'CPU.S1', 'DC1')
-#     dismiss_server(state,'CPU.S1','DC1')
-#     buy_server(state, 'CPU.S1', 'DC1')
-
- 
-#     # Check the state after the actions and Obj O, notice demand has decreased which is good
-#     print("\n")
-#     print(state["demand"])
-#     O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
-#     print("Objective O after actions:", O)
-
-# if __name__ == "__main__":
-#     # Q-learning parameters
-#     alpha = 0.1  # Learning rate
-#     gamma = 0.9  # Discount factor
-#     epsilon = 1.0  # Exploration rate
-#     epsilon_decay = 0.995  # Decay rate for exploration
-#     epsilon_min = 0.01  # Minimum exploration rate
-#     num_episodes = 1000  # Number of episodes
-
-#     # Initialize Q-table as a dictionary
-#     Q_table = {}
-
-#     def choose_action(state, actions, epsilon):
-#         """Select an action using the epsilon-greedy strategy."""
-#         if random.uniform(0, 1) < epsilon:
-#             return random.choice(actions)  # Explore
-#         else:
-#             state_hash = hash_state(state)
-#             if state_hash not in Q_table or len(Q_table[state_hash]) == 0:
-#                 return random.choice(actions)  # Explore if state not in Q-table
-#             else:
-#                 return max(Q_table[state_hash], key=Q_table[state_hash].get)  # Exploit
-
-#     def update_Q_table(state, action, reward, next_state):
-#         """Update the Q-table using the Bellman equation."""
-#         state_hash = hash_state(state)
-#         next_state_hash = hash_state(next_state)
-
-#         if state_hash not in Q_table:
-#             Q_table[state_hash] = {act: 0 for act in actions}
-
-#         best_next_action = max(Q_table.get(next_state_hash, {}), key=Q_table.get(next_state_hash, {}).get, default=0)
-#         current_Q = Q_table[state_hash][action]
-
-#         # Bellman equation
-#         Q_table[state_hash][action] = current_Q + alpha * (reward + gamma * Q_table[next_state_hash].get(best_next_action, 0) - current_Q)
-
-#     def perform_action(state, action):
-#         """Perform the selected action and update the state."""
-#         action_type = action[0]
-
-#         if action_type == 'buy':
-#             return buy_server(state, action[1], action[2])
-#         elif action_type == 'move':
-#             return move_server(state, action[1], action[2], action[3])
-#         elif action_type == 'dismiss':
-#             return dismiss_server(state, action[1], action[2])
-#         elif action_type == 'hold':
-#             hold(state)
-#             return state, {'success': True, 'penalty': 0}
-
-#     # Q-learning loop
-#     for episode in range(num_episodes):
-#         state = initialize_state(time_step=1)
-#         previous_O = calculate_objective(state, demand_df, selling_prices_df, servers_df)
-#         print(f"Initial Objective O: {previous_O}")
-
-#         done = False
-#         total_reward = 0
-
-#         while not done:
-#             time_step_actions = 0
-#             while not done:
-#                 action = choose_action(state, actions, epsilon)
-#                 next_state, action_result = perform_action(state, action)
-#                 reward, new_O = calculate_reward(state, previous_O, action_result)
-
-#                 update_Q_table(state, action, reward, next_state)
-
-#                 state = next_state
-#                 previous_O = new_O
-#                 total_reward += reward
-
-#                 time_step_actions += 1
-
-#                 # Check if demand is fully met or other stopping criteria
-#                 if all(v == 0 for v in state['demand'].values()) or time_step_actions > 100:
-#                     done = True
-#                     break
-
-#             # Simulate moving to the next time step
-#             if not done:
-#                 state = initialize_state(time_step=state['time_step'] + 1)
-
-#         # Decay epsilon after each episode
-#         if epsilon > epsilon_min:
-#             epsilon *= epsilon_decay
-
-#         print(f"Episode {episode + 1}, Objective O: {previous_O}, Total Reward: {total_reward}")
-
-#     # After training, evaluate the policy by setting epsilon to 0 (pure exploitation)
-
-
-import matplotlib.pyplot as plt
 if __name__ == "__main__":
     # Q-learning parameters
-    alpha = 0.2  # Learning rate
-    gamma = 0.7  # Discount factor
+    alpha = 0.15  # A lower alpha means learning is slower but more stable, while a higher alpha means faster learning but possibly less stability.
+    gamma = 0.9  # 1 means future rewards are highly valued, while a value close to 0 makes the agent short-sighted, focusing only on immediate rewards.
     epsilon = 1.0  # Exploration rate
-    epsilon_decay = 0.7  # Decay rate for exploration
+    epsilon_decay = 0.995  # Controls how quickly the exploration rate decreases. A slower decay allows more exploration for a longer period.
     epsilon_min = 0.01  # Minimum exploration rate
-    num_episodes = 5  # Number of episodes
-
-    # Initialize Q-table as a dictionary
-    Q_table = {}
-    
+    num_episodes = 500  # Number of episodes
+    Q_table = {} # Initialize Q-table as a dictionary
+    # Variables to track the best episode
+    best_O = -float('inf')  # Initialize with a very low value
+    best_actions_log = []
     # Lists to store results
     episode_rewards = []
     objective_O_values = []
@@ -601,31 +450,85 @@ if __name__ == "__main__":
         state_hash = hash_state(state)
         next_state_hash = hash_state(next_state)
 
+        # Initialize the Q-values for all actions in this state if it's not already in the Q-table
         if state_hash not in Q_table:
-            Q_table[state_hash] = {act: 0 for act in actions}
+            Q_table[state_hash] = {act: random.uniform(0.01, 0.1) for act in actions}
 
-        best_next_action = max(Q_table.get(next_state_hash, {}), key=Q_table.get(next_state_hash, {}).get, default=0)
+        # Initialize the Q-values for all actions in the next state if it's not already in the Q-table
+        if next_state_hash not in Q_table:
+            Q_table[next_state_hash] = {act: random.uniform(0.01, 0.1) for act in actions}
+
+        # best_next_action = max(Q_table.get(next_state_hash, {}), key=Q_table.get(next_state_hash, {}).get, default=0)
+        # current_Q = Q_table[state_hash][action]
+
+        best_next_action = max(Q_table[next_state_hash], key=Q_table[next_state_hash].get)
         current_Q = Q_table[state_hash][action]
-
         # Bellman equation
         Q_table[state_hash][action] = current_Q + alpha * (reward + gamma * Q_table[next_state_hash].get(best_next_action, 0) - current_Q)
 
-    def perform_action(state, action):
+    def perform_action(state, action, time_step):
         """Perform the selected action and update the state."""
         action_type = action[0]
+        action_record = {
+            "time_step": time_step,
+            "datacenter_id": action[2] if len(action) > 2 else None,
+            "server_generation": action[1] if len(action) > 1 else None,
+            "server_id": None, 
+            "action": action_type
+        }
 
         if action_type == 'buy':
-            return buy_server(state, action[1], action[2])
+            server_id = str(uuid.uuid4())
+            action_record["server_id"] = server_id 
+            state, action_result = buy_server(state, action[1], action[2])
         elif action_type == 'move':
-            return move_server(state, action[1], action[2], action[3])
+            state, action_result = move_server(state, action[1], action[2], action[3])
         elif action_type == 'dismiss':
-            return dismiss_server(state, action[1], action[2])
+            state, action_result = dismiss_server(state, action[1], action[2])
         elif action_type == 'hold':
             hold(state)
-            return state, {'success': True, 'penalty': 0}
+            action_result = {'success': True, 'penalty': 0}
         else:
-            return state, {'success': False, 'penalty': -10}
+            action_result = {'success': False, 'penalty': -10}
 
+        return state, action_result, action_record
+
+    def calculate_max_actions(state):
+        """Calculate the maximum number of actions allowed in this time step based on state complexity."""
+        # System-level metrics
+        num_data_centers = len(state['datacenters'])
+        num_server_types = len(state['required_servers'])
+
+        # Calculate the total unmet demand
+        total_unmet_demand = sum(state['demand'].values())
+    
+        # Calculate server imbalance across data centers
+        server_imbalance = 0
+        total_allocated_servers = 0
+        for dc_id, datacenter in state['datacenters'].items():
+            allocated_servers = sum(datacenter['allocated_servers'].values())
+            server_imbalance += abs(allocated_servers - sum(state['required_servers'].values()))
+            total_allocated_servers += allocated_servers
+
+        # Calculate the number of servers nearing the end of their lifespan
+        servers_near_end_lifespan = 0
+        for dc_id, datacenter in state['datacenters'].items():
+            for server_type, lifespan in datacenter['operating_times'].items():
+                life_expectancy = servers_df.loc[servers_df['server_generation'] == server_type, 'life_expectancy'].values[0]
+                if lifespan >= life_expectancy * 0.8:  # If server is within the last 20% of its lifespan
+                    servers_near_end_lifespan += 1
+
+        # base actions dynamically adjusted based on system size
+        base_actions = int(0.1 * total_allocated_servers) + num_data_centers + num_server_types
+    
+        # Additional actions allowed based on complexity (proportional to unmet demand and imbalance)
+        max_additional_actions = int((total_unmet_demand + server_imbalance + servers_near_end_lifespan) / (num_data_centers * num_server_types) * 50)
+    
+        # Ensure dynamic scaling without hard limits unless necessary
+        max_actions = base_actions + max_additional_actions
+    
+        return max_actions
+    
     # Q-learning loop
     for episode in range(num_episodes):
         
@@ -637,12 +540,15 @@ if __name__ == "__main__":
         action_count = 0
         done = False
         time_step = 1
+        action_log = []
 
-        while not done:
+        while time_step <= 168:
             time_step_actions = 0
+            done = False
+
             while not done:
                 action = choose_action(state, actions)
-                next_state, action_result = perform_action(state, action)
+                next_state, action_result, action_record = perform_action(state, action,time_step)
                 reward, new_O = calculate_reward(state, previous_O, action_result)
 
                 update_Q_table(state, action, reward, next_state)
@@ -652,14 +558,16 @@ if __name__ == "__main__":
 
                 episode_reward += reward
                 action_count += 1
+                action_log.append(action_record)
 
                 time_step_actions += 1
 
                 # Check if demand is fully met or other stopping criteria
-                if all(v == 0 for v in state['demand'].values()) or time_step_actions > 500:
+                if all(v == 0 for v in state['demand'].values()) or time_step_actions > 100:
                     done = True
+                    print(f"Episode {episode + 1} at Time Step {time_step} with Objective O: {previous_O}-------------------")
                     break
-
+            
             # Store results by time step
             if time_step not in time_step_results:
                 time_step_results[time_step] = {
@@ -667,16 +575,14 @@ if __name__ == "__main__":
                     'actions': 0,
                     'objective_O': 0
                 }
-
             time_step_results[time_step]['reward'] += episode_reward
             time_step_results[time_step]['actions'] += action_count
             time_step_results[time_step]['objective_O'] += previous_O
 
-            # Move to the next time step
             time_step += 1
-            if time_step <= 168:
-                state = initialize_state(time_step)
-            else:
+            print(f"-------------------New Time Step: {time_step}----------------------------")
+            
+            if time_step > 168:
                 done = True
 
         # Decay epsilon after each episode
@@ -688,10 +594,18 @@ if __name__ == "__main__":
         objective_O_values.append(previous_O)
         action_counts.append(action_count)
 
+        # Check if this episode's Objective O is the best found so far
+        if previous_O > best_O:
+            best_O = previous_O
+            best_actions_log = deepcopy(action_log) 
+
         print(f"Episode {episode + 1}, Objective O: {previous_O}, Reward: {episode_reward}, Actions: {action_count}")
 
     # After training, plot the results
-
+    with open('best_solution.json', 'w') as f:
+        json.dump(best_actions_log, f, indent=4)
+    
+    print(f"Best Objective O: {best_O}")
     # Plot the rewards over episodes
     plt.figure(figsize=(12, 6))
     plt.plot(range(num_episodes), episode_rewards, label='Total Reward per Episode')
@@ -748,3 +662,26 @@ if __name__ == "__main__":
     plt.title('Total Actions over Time Steps')
     plt.legend()
     plt.show()
+
+'''
+Observations:
+
+Objective O Decline: 
+The objective O is consistently declining across the time steps. 
+This suggests that the actions being taken (purchasing, moving, dismissing servers) might not be effectively optimizing the fleet management, 
+or the reward structure might not be guiding the agent toward beneficial actions.
+
+Repeated Actions: 
+There are instances where actions like moving or dismissing servers are attempted repeatedly, 
+even when they are not possible "Cannot move server CPU.S3: No such server in datacenter DC4"). 
+This indicates that the agent might not be learning effectively from the environment or the state transitions.
+
+Penalties: 
+There might be an issue with how penalties are influencing the Q-values. 
+If penalties are too harsh or not proportional to the mistake's severity, 
+they could lead to a negative feedback loop, causing the objective to spiral downward.
+
+Is the remaining demand being calculated correcly?
+*****The Q learning Loop is running very slow*****
+
+'''
