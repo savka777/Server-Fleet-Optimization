@@ -601,7 +601,6 @@ if __name__ == "__main__":
 
         print(f"Episode {episode + 1}, Objective O: {previous_O}, Reward: {episode_reward}, Actions: {action_count}")
 
-    # After training, plot the results
     with open('best_solution.json', 'w') as f:
         json.dump(best_actions_log, f, indent=4)
     
@@ -683,5 +682,11 @@ they could lead to a negative feedback loop, causing the objective to spiral dow
 
 Is the remaining demand being calculated correcly?
 *****The Q learning Loop is running very slow*****
+
+Check if there is a server, call other actions instead
+Check if there is demand for server
+Cannot take multiple actions on a signle server
+Focus on time_step 1, if we can great results we figure a way to optimize the speed of the algoritim
+Give priority to actions.
 
 '''
