@@ -423,7 +423,7 @@ if __name__ == "__main__":
     epsilon = 1.0  # Exploration rate
     epsilon_decay = 0.995  # Controls how quickly the exploration rate decreases. A slower decay allows more exploration for a longer period.
     epsilon_min = 0.01  # Minimum exploration rate
-    num_episodes = 500  # Number of episodes
+    num_episodes = 100  # Number of episodes
     Q_table = {} # Initialize Q-table as a dictionary
     # Variables to track the best episode
     best_O = -float('inf')  # Initialize with a very low value
@@ -466,11 +466,11 @@ if __name__ == "__main__":
         # Bellman equation
         Q_table[state_hash][action] = current_Q + alpha * (reward + gamma * Q_table[next_state_hash].get(best_next_action, 0) - current_Q)
 
-    def perform_action(state, action, time_step):
+    def perform_action(state, action):
         """Perform the selected action and update the state."""
         action_type = action[0]
         action_record = {
-            "time_step": time_step,
+            "time_step": 1,
             "datacenter_id": action[2] if len(action) > 2 else None,
             "server_generation": action[1] if len(action) > 1 else None,
             "server_id": None, 
@@ -538,52 +538,52 @@ if __name__ == "__main__":
 
         episode_reward = 0
         action_count = 0
-        done = False
-        time_step = 1
+        # done = False
+        # time_step = 1
         action_log = []
 
-        while time_step <= 168:
-            time_step_actions = 0
-            done = False
+        # while time_step <= 168:
+        #     time_step_actions = 0
+        #     done = False
 
-            while not done:
-                action = choose_action(state, actions)
-                next_state, action_result, action_record = perform_action(state, action,time_step)
-                reward, new_O = calculate_reward(state, previous_O, action_result)
+        while True:         #changes to time_step <= 168
+            action = choose_action(state, actions)
+            next_state, action_result, action_record = perform_action(state, action)
+            reward, new_O = calculate_reward(state, previous_O, action_result)
 
-                update_Q_table(state, action, reward, next_state)
+            update_Q_table(state, action, reward, next_state)
 
-                state = next_state
-                previous_O = new_O
+            state = next_state
+            previous_O = new_O
 
-                episode_reward += reward
-                action_count += 1
-                action_log.append(action_record)
+            episode_reward += reward
+            action_count += 1
+            action_log.append(action_record)
 
-                time_step_actions += 1
+            # time_step_actions += 1
 
-                # Check if demand is fully met or other stopping criteria
-                if all(v == 0 for v in state['demand'].values()) or time_step_actions > 100:
-                    done = True
-                    print(f"Episode {episode + 1} at Time Step {time_step} with Objective O: {previous_O}-------------------")
-                    break
-            
+            # Check if demand is fully met or other stopping criteria
+            if all(v == 0 for v in state['demand'].values()) or action_count >= 100:
+                print(f"----------------------- 1 -------------------")
+                print(f"Episode {episode + 1} with Objective O: {previous_O} after Time Step 1")
+                break
+
             # Store results by time step
-            if time_step not in time_step_results:
-                time_step_results[time_step] = {
-                    'reward': 0,
-                    'actions': 0,
-                    'objective_O': 0
-                }
-            time_step_results[time_step]['reward'] += episode_reward
-            time_step_results[time_step]['actions'] += action_count
-            time_step_results[time_step]['objective_O'] += previous_O
+            # if time_step not in time_step_results:
+            #     time_step_results[time_step] = {
+            #         'reward': 0,
+            #         'actions': 0,
+            #         'objective_O': 0
+            #     }
+            # time_step_results[time_step]['reward'] += episode_reward
+            # time_step_results[time_step]['actions'] += action_count
+            # time_step_results[time_step]['objective_O'] += previous_O
 
-            time_step += 1
-            print(f"-------------------New Time Step: {time_step}----------------------------")
-            
-            if time_step > 168:
-                done = True
+            # time_step += 1
+
+            #
+            # if time_step > 168:
+            #     done = True
 
         # Decay epsilon after each episode
         if epsilon > epsilon_min:
@@ -685,8 +685,8 @@ Is the remaining demand being calculated correcly?
 
 Check if there is a server, call other actions instead
 Check if there is demand for server
-Cannot take multiple actions on a signle server
-Focus on time_step 1, if we can great results we figure a way to optimize the speed of the algoritim
+Cannot take multiple actions on a single server
+Focus on time_step 1, if we can great results we figure a way to optimize the speed of the algorithm 
 Give priority to actions.
 
 '''
