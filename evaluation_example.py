@@ -2,7 +2,7 @@
 
 from utils import (load_problem_data,
                    load_solution)
-from evaluation import evaluation_function
+from evaluation_v6 import evaluation_function
 
 
 # LOAD SOLUTION
