@@ -1,16 +1,14 @@
-from copy import deepcopy
 import pandas as pd
-import numpy as np
 import random
-import uuid
-import json
-from scipy.stats import weibull_min
-import evaluation
-import matplotlib.pyplot as plt
+import evaluation_v6
 import matplotlib.pyplot as plt
 import uuid
 import json
+import numpy as np
 from copy import deepcopy
+from scipy.stats import weibull_min
+
+
 """
 Key Components:
 
@@ -161,7 +159,7 @@ def calculate_demand_and_capacity(state, demand_df, servers_df):
     
     # Extract the demand for the current time step
     time_step = state['time_step']
-    D = evaluation.get_time_step_demand(demand_df_melted, time_step)
+    D = evaluation_v6.get_time_step_demand(demand_df_melted, time_step)
 
     if 'server_generation' not in D.columns:
         D = D.reset_index()  # This makes sure 'server_generation' becomes a column
@@ -177,7 +175,7 @@ def calculate_demand_and_capacity(state, demand_df, servers_df):
         return D_pivoted, pd.DataFrame(columns=['server_generation', 'latency_sensitivity']), fleet_df
     
     # Calculate the capacity
-    Z = evaluation.get_capacity_by_server_generation_latency_sensitivity(fleet_df)
+    Z = evaluation_v6.get_capacity_by_server_generation_latency_sensitivity(fleet_df)
     
     return D_pivoted, Z, fleet_df
 
@@ -200,9 +198,9 @@ def calculate_objective(state, demand_df, selling_prices_df, servers_df):
     selling_prices_df_pivoted = reshape_selling_prices(selling_prices_df)
     
     # Use the provided methods to calculate U, L, P
-    U = evaluation.get_utilization(D, Z)
-    L = evaluation.get_normalized_lifespan(fleet_df)
-    P = evaluation.get_profit(D, Z, selling_prices_df_pivoted, fleet_df)
+    U = evaluation_v6.get_utilization(D, Z)
+    L = evaluation_v6.get_normalized_lifespan(fleet_df)
+    P = evaluation_v6.get_profit(D, Z, selling_prices_df_pivoted, fleet_df)
     
     # Calculate the overall objective O
     O = U * L * P
@@ -292,20 +290,29 @@ def move_server(state, server_type, from_datacenter_id, to_datacenter_id):
     from_datacenter = state['datacenters'][from_datacenter_id]
     # Get the datacenter we want to move the servers to
     to_datacenter = state['datacenters'][to_datacenter_id]
-    
+
     # Make sure we have those servers
-    if from_datacenter['allocated_servers'][server_type] > 0:
+    if from_datacenter['allocated_servers'][server_type] <= 0:
+
+        choose_action(state, actions)
+
+        action_results = {
+            'success': False,
+            'penalty': -50  # Arbitrary penalty value
+        }
+    else:
+
         # Make sure the destination datacenter has enough capacity
         if to_datacenter['slots_capacity'] >= server_slots:
             # Update, remove the servers from datacenter
             from_datacenter['allocated_servers'][server_type] -= 1
             # Update, add the amounts of slots avaliable
             from_datacenter['slots_capacity'] += server_slots
-            
+
             # Update the new datacenter
             to_datacenter['allocated_servers'][server_type] += 1
             to_datacenter['slots_capacity'] -= server_slots
-            
+
             # Transfer the operating time for the server
             to_datacenter['operating_times'][server_type] = from_datacenter['operating_times'][server_type]
             server_to_move = None
@@ -313,7 +320,7 @@ def move_server(state, server_type, from_datacenter_id, to_datacenter_id):
                 if server['server_generation'] == server_type:
                     server_to_move = server
                     break
-            
+
             if server_to_move:
                 from_datacenter['fleet'].remove(server_to_move)
                 server_to_move['datacenter_id'] = to_datacenter_id
@@ -327,23 +334,18 @@ def move_server(state, server_type, from_datacenter_id, to_datacenter_id):
             print(f"Moved {server_type} from {from_datacenter_id} to {to_datacenter_id}. Updated Obj: {O}")
 
             action_results = {
-                'success': True,  
-                'penalty': 0     
-                }
+                'success': True,
+                'penalty': 0
+            }
         else:
-            print(f"Cannot move server {server_type} from datacenter {from_datacenter_id} to {to_datacenter_id}: Not enough capacity.")
+            print(
+                f"Cannot move server {server_type} from datacenter {from_datacenter_id} to {to_datacenter_id}: Not enough capacity.")
             excess_slots = server_slots - to_datacenter['slots_capacity']
-            penalty = excess_slots * 10 
+            penalty = excess_slots * 10
             action_results = {
-                'success': False,  
+                'success': False,
                 'penalty': penalty
             }
-    else:
-        print(f"Cannot move server {server_type}: No such server in datacenter {from_datacenter_id}.")
-        action_results = {
-            'success': False,  
-            'penalty': -50     # Arbitrary penalty value
-        }
     return state, action_results
 
 # When server retires replace if needed (not sure if we need this yet)

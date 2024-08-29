@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from seeds import known_seeds
 from utils import save_solution
-from evaluation import get_actual_demand
+from evaluation_v6 import get_actual_demand
 
 
 def get_my_solution(d):
