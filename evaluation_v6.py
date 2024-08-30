@@ -1,5 +1,4 @@
 
-
 import logging
 import numpy as np
 import pandas as pd
@@ -18,9 +17,9 @@ file_handler.setFormatter(formatter)
 def get_known(key):
     # STORE SOME CONFIGURATION VARIABLES
     if key == 'datacenter_id':
-        return ['DC1', 
-                'DC2', 
-                'DC3', 
+        return ['DC1',
+                'DC2',
+                'DC3',
                 'DC4']
     elif key == 'actions':
         return ['buy',
@@ -28,25 +27,30 @@ def get_known(key):
                 'move',
                 'dismiss']
     elif key == 'server_generation':
-        return ['CPU.S1', 
-                'CPU.S2', 
-                'CPU.S3', 
-                'CPU.S4', 
-                'GPU.S1', 
-                'GPU.S2', 
+        return ['CPU.S1',
+                'CPU.S2',
+                'CPU.S3',
+                'CPU.S4',
+                'GPU.S1',
+                'GPU.S2',
                 'GPU.S3']
     elif key == 'latency_sensitivity':
-        return ['high', 
-                'medium', 
+        return ['high',
+                'medium',
                 'low']
     elif key == 'required_columns':
-        return ['time_step', 
-                'datacenter_id', 
-                'server_generation', 
+        return ['time_step',
+                'datacenter_id',
+                'server_generation',
                 'server_id',
                 'action']
     elif key == 'time_steps':
         return 168
+    elif key == 'datacenter_fields':
+        return ['datacenter_id',
+                'cost_of_energy',
+                'latency_sensitivity',
+                'slots_capacity']
 
 
 def solution_data_preparation(solution, servers, datacenters, selling_prices):
@@ -58,8 +62,8 @@ def solution_data_preparation(solution, servers, datacenters, selling_prices):
     # ADD PROBLEM DATA
     solution = solution.merge(servers, on='server_generation', how='left')
     solution = solution.merge(datacenters, on='datacenter_id', how='left')
-    solution = solution.merge(selling_prices, 
-                              on=['server_generation', 'latency_sensitivity'], 
+    solution = solution.merge(selling_prices,
+                              on=['server_generation', 'latency_sensitivity'],
                               how='left')
     # CHECK IF SERVERS ARE USED AT THE RIGHT RELEASE TIME
     solution = check_server_usage_by_release_time(solution)
@@ -99,7 +103,7 @@ def check_server_usage_by_release_time(solution):
     # CHECK THAT ONLY THE SERVERS AVAILABLE FOR PURCHASE AT A CERTAIN TIME-STEP
     # ARE USED AT THAT TIME-STEP
     solution['rt_is_fine'] = solution.apply(check_release_time, axis=1)
-    solution = solution[solution['rt_is_fine']]
+    solution = solution[(solution['rt_is_fine'] != 'buy') | solution['rt_is_fine']]
     solution = solution.drop(columns='rt_is_fine', inplace=False)
     return solution
 
@@ -174,10 +178,9 @@ def get_time_step_demand(demand, ts):
     return d
 
 
-
 def get_time_step_fleet(solution, ts):
-    # GET THE SOLUTION AT A SPECIFIC TIME-STEP t
-    if ts in solution['time_step']:
+    # GET THE SOLUTION AT A SPECIFIC TIME-STEP
+    if ts in solution['time_step'].values:
         s = solution[solution['time_step'] == ts]
         s = s.drop_duplicates('server_id', inplace=False)
         s = s.set_index('server_id', drop=False, inplace=False)
@@ -206,13 +209,13 @@ def get_valid_columns(cols1, cols2):
 
 def adjust_capacity_by_failure_rate(x):
     # HELPER FUNCTION TO CALCULATE THE FAILURE RATE f
-    return int(x * 1 - truncweibull_min.rvs(0.3, 0.05, 0.1, size=1).item())
+    return int(x * (1 - truncweibull_min.rvs(0.3, 0.05, 0.1, size=1).item()))
 
 
 def check_datacenter_slots_size_constraint(fleet):
     # CHECK DATACENTERS SLOTS SIZE CONSTRAINT
     slots = fleet.groupby(by=['datacenter_id']).agg({'slots_size': 'sum',
-                                                        'slots_capacity': 'mean'})
+                                                     'slots_capacity': 'mean'})
     test = slots['slots_size'] > slots['slots_capacity']
     constraint = test.any()
     if constraint:
@@ -241,6 +244,7 @@ def get_utilization(D, Z):
     else:
         return 0
 
+
 def get_normalized_lifespan(fleet):
     # CALCULATE OBJECTIVE L = NORMALIZED LIFESPAN
     return (fleet['lifespan'] / fleet['life_expectancy']).sum() / fleet.shape[0]
@@ -268,12 +272,13 @@ def get_revenue(D, Z, selling_prices):
 
 
 def get_cost(fleet):
-    # CALCULATE THE COST
+    # CALCULATE THE SERVER COST - PART 1
     fleet['cost'] = fleet.apply(calculate_server_cost, axis=1)
     return fleet['cost'].sum()
 
 
 def calculate_server_cost(row):
+    # CALCULATE THE SERVER COST - PART 2
     c = 0
     r = row['purchase_price']
     b = row['average_maintenance_fee']
@@ -291,10 +296,12 @@ def calculate_server_cost(row):
 
 
 def get_maintenance_cost(b, x, xhat):
-    return b * (1 + (((1.5)*(x))/xhat * np.log2(((1.5)*(x))/xhat)))
+    # CALCULATE THE CURRENT MAINTENANCE COST
+    return b * (1 + (((1.5 ) *(x) ) /xhat * np.log2(((1.5 ) *(x) ) /xhat)))
 
 
 def update_fleet(ts, fleet, solution):
+    # UPADATE THE FLEET ACCORDING TO THE ACTIONS AT THE CURRENT TIMESTEP
     if fleet.empty:
         fleet = solution.copy()
         fleet['lifespan'] = 0
@@ -307,10 +314,12 @@ def update_fleet(ts, fleet, solution):
         # MOVE
         if 'move' in server_id_action:
             s = server_id_action['move']
-            fleet.loc[s, 'datacenter_id'] = solution.loc[s, 'datacenter_id']
+            dc_fields = get_known('datacenter_fields')
+            fleet.loc[s, dc_fields] = solution.loc[s, dc_fields]
+            fleet.loc[s, 'selling_price'] = solution.loc[s, 'selling_price']
             fleet.loc[s, 'moved'] = 1
         # HOLD
-            # do nothing
+        # do nothing
         # DISMISS
         if 'dismiss' in server_id_action:
             fleet = fleet.drop(index=server_id_action['dismiss'], inplace=False)
@@ -320,73 +329,78 @@ def update_fleet(ts, fleet, solution):
 
 def put_fleet_on_hold(fleet):
     fleet['action'] = 'hold'
+    fleet['moved'] = 0
     return fleet
 
 
 def update_check_lifespan(fleet):
+    # INCREASE LIFESPAN COUNTER AND DROP SERVERS THAT HAVE ACHIEVED THEIR
+    # LIFE EXPECTANCY
     fleet['lifespan'] = fleet['lifespan'].fillna(0)
     fleet['lifespan'] += 1
-    fleet = fleet.drop(fleet.index[fleet['lifespan'] >= fleet['life_expectancy']], inplace=False)
+    fleet = fleet.drop(fleet.index[fleet['lifespan'] > fleet['life_expectancy']], inplace=False)
     return fleet
 
 
-def get_evaluation(solution, 
+def get_evaluation(solution,
                    demand,
                    datacenters,
                    servers,
                    selling_prices,
-                   time_steps=get_known('time_steps'), 
+                   time_steps=get_known('time_steps'),
                    verbose=1):
 
     # SOLUTION EVALUATION
-    
+
     # SOLUTION DATA PREPARATION
-    solution = solution_data_preparation(solution, 
-                                         servers, 
-                                         datacenters, 
+    solution = solution_data_preparation(solution,
+                                         servers,
+                                         datacenters,
                                          selling_prices)
 
     selling_prices = change_selling_prices_format(selling_prices)
 
     # DEMAND DATA PREPARATION
     demand = get_actual_demand(demand)
-
     OBJECTIVE = 0
     FLEET = pd.DataFrame()
     # if ts-related fleet is empty then current fleet is ts-fleet
-    for ts in range(1, time_steps+1):
+    for ts in range(1, time_steps +1):
+
         # GET THE ACTUAL DEMAND AT TIMESTEP ts
         D = get_time_step_demand(demand, ts)
 
         # GET THE SERVERS DEPLOYED AT TIMESTEP ts
         ts_fleet = get_time_step_fleet(solution, ts)
 
-        if ts_fleet.empty:
+        if ts_fleet.empty and not FLEET.empty:
             ts_fleet = FLEET
+        elif ts_fleet.empty and FLEET.empty:
+            continue
 
         # UPDATE FLEET
         FLEET = update_fleet(ts, FLEET, ts_fleet)
-  
+
         # CHECK IF THE FLEET IS EMPTY
         if FLEET.shape[0] > 0:
             # GET THE SERVERS CAPACITY AT TIMESTEP ts
             Zf = get_capacity_by_server_generation_latency_sensitivity(FLEET)
-    
+
             # CHECK CONSTRAINTS
             check_datacenter_slots_size_constraint(FLEET)
-    
+
             # EVALUATE THE OBJECTIVE FUNCTION AT TIMESTEP ts
             U = get_utilization(D, Zf)
-    
+
             L = get_normalized_lifespan(FLEET)
-    
-            P = get_profit(D, 
-                           Zf, 
+
+            P = get_profit(D,
+                           Zf,
                            selling_prices,
                            FLEET)
             o = U * L * P
             OBJECTIVE += o
-            
+
             # PUT ENTIRE FLEET on HOLD ACTION
             FLEET = put_fleet_on_hold(FLEET)
 
@@ -410,12 +424,12 @@ def get_evaluation(solution,
     return OBJECTIVE
 
 
-def evaluation_function(solution, 
+def evaluation_function(solution,
                         demand,
                         datacenters,
                         servers,
                         selling_prices,
-                        time_steps=get_known('time_steps'), 
+                        time_steps=get_known('time_steps'),
                         seed=None,
                         verbose=0):
 
@@ -427,19 +441,19 @@ def evaluation_function(solution,
     solution : pandas DataFrame
         This is a solution to the problem. This is provided by the partecipant.
     demand : pandas DataFrame
-        This is the demand data. This is provided by default in the data 
+        This is the demand data. This is provided by default in the data
         folder.
     datacenters : pandas DataFrame
-        This is the datacenters data. This is provided by default in the data 
+        This is the datacenters data. This is provided by default in the data
         folder.
     servers : pandas DataFrame
-        This is the servers data. This is provided by default in the data 
+        This is the servers data. This is provided by default in the data
         folder.
     selling_prices : pandas DataFrame
-        This is the selling prices data. This is provided by default in the 
+        This is the selling prices data. This is provided by default in the
         data folder.
     time_steps : int
-        This is the number of time-steps for which we need to evaluate the 
+        This is the number of time-steps for which we need to evaluate the
         solution.
     c1_max_violations : int
         This is the maximum number of violations to Contraint 1 that can be
@@ -455,12 +469,12 @@ def evaluation_function(solution,
     np.random.seed(seed)
     # EVALUATE SOLUTION
     try:
-        return get_evaluation(solution, 
+        return get_evaluation(solution,
                               demand,
                               datacenters,
                               servers,
                               selling_prices,
-                              time_steps=time_steps, 
+                              time_steps=time_steps,
                               verbose=verbose)
     # CATCH EXCEPTIONS
     except Exception as e:
