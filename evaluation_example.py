@@ -2,11 +2,11 @@
 
 from utils import (load_problem_data,
                    load_solution)
-from evaluation import evaluation_function
+from evaluation_v6 import evaluation_function
 
 
 # LOAD SOLUTION
-solution = load_solution('./data/solution.json')
+solution = load_solution('./multi_time_step_solution.json')
 
 # LOAD PROBLEM DATA
 demand, datacenters, servers, selling_prices = load_problem_data()
@@ -17,6 +17,6 @@ score = evaluation_function(solution,
                             datacenters,
                             servers,
                             selling_prices,
-                            seed=123)
+                            seed=None)
 
 print(f'Solution score: {score}')
