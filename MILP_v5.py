@@ -7,6 +7,7 @@ from evaluation import get_actual_demand, adjust_capacity_by_failure_rate, get_m
 from utils import load_problem_data, save_solution
 import logging
 
+# Constraint for max purchases, might not need. Removed for now but see line 131
 def calculate_max_purchase(demand: pd.DataFrame, servers: pd.DataFrame) -> int:
     """
     Calculate the maximum number of servers that might need to be purchased in a single time step.
@@ -127,14 +128,14 @@ def solve_fleet_optimization(demand: pd.DataFrame,
             for d in datacenters['datacenter_id']:
                 prob += buy[d, s] == 0
 
-    # # 4. Total purchase constraint
+    # # 4. Total purchase constraint (REMOVED THE PURCHASE CONSTRAINT FOR NOW NOT SURE IF NEEDED, IF SO SET UPBOUND = max_purchase_per_step in buy desicion var)
     # prob += pulp.lpSum(buy[d, s] for d in datacenters['datacenter_id'] for s in servers['server_generation']) <= max_purchase_per_step
 
-    # # Calculate utilization
+    # # Calculate utilization (USR THIS ONE AS THE EVAULATION FUNCTION REQUIREMENTS)
     # total_capacity = pulp.lpSum(adjust_capacity_by_failure_rate(server_count[d, s] * servers[servers['server_generation'] == s]['capacity'].values[0])
     #                             for d in datacenters['datacenter_id'] for s in servers['server_generation'])
     # Calculate utilization
-    average_failure_rate = 0.075  # midpoint of [0.05, 0.1]
+    average_failure_rate = 0.075  # midpoint of [0.05, 0.1] (use failure rate function instead above)
     total_capacity = pulp.lpSum(server_count[d, s] * servers[servers['server_generation'] == s]['capacity'].values[0] * (1 - average_failure_rate)
                                 for d in datacenters['datacenter_id'] for s in servers['server_generation'])
     numeric_columns = time_step_demand.select_dtypes(include=[np.number]).columns
@@ -290,94 +291,14 @@ def solve_multi_time_steps(demand: pd.DataFrame,
 
     return all_actions
 
-# def solve_multi_time_steps(demand: pd.DataFrame, 
-#                            datacenters: pd.DataFrame, 
-#                            servers: pd.DataFrame, 
-#                            selling_prices: pd.DataFrame, 
-#                            total_time_steps: int = 168) -> List[Dict]:
-#     all_actions = []
-#     results = []
-#     current_fleet = {d: {} for d in datacenters['datacenter_id']}
-    
-#     # Calculate the maximum purchase limit
-#     max_purchase_per_step = calculate_max_purchase(demand, servers)
-#     print(f"Calculated maximum purchase per step: {max_purchase_per_step}")
-
-#     for time_step in range(1, total_time_steps + 1):
-#         print(f"\nSolving for time step {time_step}")
-#         result = solve_fleet_optimization(
-#             demand, datacenters, servers, selling_prices, time_step, current_fleet, max_purchase_per_step
-#         )
-        
-#         if result is None:
-#             print(f"Failed to find a solution for time step {time_step}")
-#             continue
-        
-#         actions, current_fleet, utilization, lifespan, profit = result
-#         all_actions.extend(actions)
-
-#         print(f"Utilization: {utilization:.2f}")
-#         print(f"Lifespan: {lifespan:.2f}")
-#         print(f"Profit: {profit:.2f}")
-#         print(f"Total servers: {sum(len(servers) for servers in current_fleet.values())}")
-#         results.append(
-#             {
-#                 "time_step": time_step,
-#                 "utilization": utilization,
-#                 "lifespan": lifespan,
-#                 "profit": profit,
-#                 "total_servers": sum(len(servers) for servers in current_fleet.values())
-#             }
-#         )
-
-
-#     return all_actions,results
-
-# def solve_multi_time_steps(demand: pd.DataFrame, 
-#                            datacenters: pd.DataFrame, 
-#                            servers: pd.DataFrame, 
-#                            selling_prices: pd.DataFrame, 
-#                            total_time_steps: int = 168) -> List[Dict]:
-#     all_actions = []
-#     current_fleet = {}
-#     results = []
-    
-#     # Calculate the maximum purchase limit
-#     max_purchase_per_step = calculate_max_purchase(demand, servers)
-#     print(f"Calculated maximum purchase per step: {max_purchase_per_step}")
-
-#     for time_step in range(1, total_time_steps + 1):
-        
-#         print(f"\nSolving for time step {time_step}")
-#         actions, current_fleet, utilization, lifespan, profit = solve_fleet_optimization(
-#             demand, datacenters, servers, selling_prices, time_step, current_fleet, max_purchase_per_step
-#         )
-#         all_actions.extend(actions)
-
-#         print(f"Utilization: {utilization:.2f}")
-#         print(f"Lifespan: {lifespan:.2f}")
-#         print(f"Profit: {profit:.2f}")
-#         results.append(
-#             {
-#                 "time_step": time_step,
-#                 "utilization": utilization,
-#                 "lifespan": lifespan,
-#                 "profit": profit,
-#                 "total_servers": sum(len(servers) for servers in current_fleet.values())
-#             }
-#         )
-
-#     return all_actions
 
 def main():
-    # Load problem data
     demand, datacenters, servers, selling_prices = load_problem_data()
 
-    # Solve for all time steps
+
     solution,results = solve_multi_time_steps(demand, datacenters, servers, selling_prices)
 
     if solution:
-        # Save the solution
         save_solution(solution, "improved_solution.json")
         save_solution(results, "results.json")
         print("Solution saved to 'improved_solution.json'")
