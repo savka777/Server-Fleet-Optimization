@@ -3,6 +3,5 @@ numpy==1.26.4
 scipy==1.13.1
 pulp==2.7.0
 uuid==1.30
-
 matplotlib~=3.9.2
 ortools~=9.10.4067
