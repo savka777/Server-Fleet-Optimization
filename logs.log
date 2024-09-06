@@ -1435,3 +1435,4 @@
 2024-08-20 21:06:10,473 | ERROR | "None of [Index(['6888a800-e171-418f-9ddc-f6710a66e8a5'], dtype='object', name='server_id')] are in the [index]"
 2024-08-20 21:06:10,782 | ERROR | "None of [Index(['bf34bb18-bb7e-4ac8-85b8-3aadc07ec251'], dtype='object', name='server_id')] are in the [index]"
 2024-08-20 21:06:16,532 | ERROR | "None of [Index(['1030d507-fd55-4f13-9986-0586bdedf9ef'], dtype='object', name='server_id')] are in the [index]"
+2024-09-04 15:25:58,768 | ERROR | Please check the solution format.

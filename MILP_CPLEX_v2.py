@@ -3,40 +3,49 @@ import pulp
 import numpy as np
 import pandas as pd
 from typing import Dict, List, Tuple
-from evaluation import get_actual_demand, adjust_capacity_by_failure_rate, get_maintenance_cost
+from evaluation_v6 import get_actual_demand, adjust_capacity_by_failure_rate, get_maintenance_cost
 from seeds import known_seeds
 from utils import load_problem_data, save_solution
 
+
 def generate_server_id():
     return str(uuid.uuid4())
 
-# Dataframes are to slow for looks up use this instead
+
+# Dataframes are too slow for looks up use this instead
 def create_lookup_dicts(datacenters, servers, selling_prices):
     datacenter_dict = datacenters.set_index('datacenter_id').to_dict('index')
     server_dict = servers.set_index('server_generation').to_dict('index')
-    selling_price_dict = selling_prices.set_index(['server_generation', 'latency_sensitivity'])['selling_price'].to_dict()
-    
+    selling_price_dict = selling_prices.set_index(['server_generation', 'latency_sensitivity'])[
+        'selling_price'].to_dict()
+
     return datacenter_dict, server_dict, selling_price_dict
+
 
 def generate_server_id():
     return str(uuid.uuid4())
+
 
 def get_maintenance_cost(base_cost, current_time, life_expectancy):
     return base_cost * (1 + (1.5 * current_time / life_expectancy) * np.log2(1.5 * current_time / life_expectancy))
 
-def solve_fleet_optimization(demand: Dict, 
-                             datacenter_dict: Dict, 
-                             server_dict: Dict, 
-                             selling_price_dict: Dict, 
-                             time_step: int, 
-                             current_fleet: Dict[str, Dict[str, Tuple[str, int]]]) -> Tuple[List[Dict], Dict[str, Dict[str, Tuple[str, int]]], float, float, float]:
+
+def solve_fleet_optimization(demand: Dict,
+                             datacenter_dict: Dict,
+                             server_dict: Dict,
+                             selling_price_dict: Dict,
+                             time_step: int,
+                             current_fleet: Dict[str, Dict[str, Tuple[str, int]]]) -> Tuple[
+    List[Dict], Dict[str, Dict[str, Tuple[str, int]]], float, float, float]:
     prob = pulp.LpProblem(f"Server_Fleet_Management_Step_{time_step}", pulp.LpMaximize)
     # Server ID tracking
-    server_id_counter = max([int(server_id.split('-')[-1]) for dc in current_fleet.values() for server_id in dc.keys()] + [0])
+    server_id_counter = max(
+        [int(server_id.split('-')[-1]) for dc in current_fleet.values() for server_id in dc.keys()] + [0])
+
     def get_next_server_id():
-      nonlocal server_id_counter
-      server_id_counter += 1
-      return f"server-{server_id_counter:04d}"
+        nonlocal server_id_counter
+        server_id_counter += 1
+        return f"server-{server_id_counter:04d}"
 
     datacenter_ids = list(datacenter_dict.keys())
     server_generations = list(server_dict.keys())
@@ -45,11 +54,11 @@ def solve_fleet_optimization(demand: Dict,
     '''Decision Variables'''
     buy = {(d, s): pulp.LpVariable(f"buy_{d}_{s}", lowBound=0, cat='Integer')
            for d in datacenter_ids for s in server_generations}
-    
+
     move = {(d1, d2, s): pulp.LpVariable(f"move_{d1}_{d2}_{s}", lowBound=0, cat='Integer')
-            for d1 in datacenter_ids for d2 in datacenter_ids 
+            for d1 in datacenter_ids for d2 in datacenter_ids
             if d1 != d2 for s in server_generations}
-    
+
     dismiss = {(d, s): pulp.LpVariable(f"dismiss_{d}_{s}", lowBound=0, cat='Integer')
                for d in datacenter_ids for s in server_generations}
 
@@ -60,13 +69,14 @@ def solve_fleet_optimization(demand: Dict,
                   for d in datacenter_ids for s in server_generations for l in latency_sensitivities}
 
     # Auxiliary variables for optimization goals
-    total_demand_met = pulp.lpSum(demand_met[d, s, l] for d in datacenter_ids for s in server_generations for l in latency_sensitivities)
-    
+    total_demand_met = pulp.lpSum(
+        demand_met[d, s, l] for d in datacenter_ids for s in server_generations for l in latency_sensitivities)
+
     total_age = pulp.lpSum(
         server_count[d, s] * (time_step - current_fleet[d].get(s, (None, time_step))[1])
         for d in datacenter_ids for s in server_generations
     )
-    
+
     profit = pulp.LpVariable("profit")
 
     '''Constraints'''
@@ -87,10 +97,10 @@ def solve_fleet_optimization(demand: Dict,
         for s in server_generations:
             current_count = sum(1 for server_gen, _ in current_fleet[d].values() if server_gen == s)
             prob += server_count[d, s] == (
-                current_count + buy[d, s] +
-                pulp.lpSum(move[d2, d, s] for d2 in datacenter_ids if d2 != d) -
-                dismiss[d, s] -
-                pulp.lpSum(move[d, d2, s] for d2 in datacenter_ids if d2 != d)
+                    current_count + buy[d, s] +
+                    pulp.lpSum(move[d2, d, s] for d2 in datacenter_ids if d2 != d) -
+                    dismiss[d, s] -
+                    pulp.lpSum(move[d, d2, s] for d2 in datacenter_ids if d2 != d)
             ), f"Server_Count_Dynamics_{d}_{s}"
 
     # 4. Lifecycle Management
@@ -126,13 +136,13 @@ def solve_fleet_optimization(demand: Dict,
     costs = pulp.lpSum(
         buy[d, s] * server_dict[s]['purchase_price'] +
         server_count[d, s] * (
-            server_dict[s]['energy_consumption'] * 
-            datacenter_dict[d]['cost_of_energy'] +
-            get_maintenance_cost(
-                server_dict[s]['average_maintenance_fee'],
-                time_step,
-                server_dict[s]['life_expectancy']
-            )
+                server_dict[s]['energy_consumption'] *
+                datacenter_dict[d]['cost_of_energy'] +
+                get_maintenance_cost(
+                    server_dict[s]['average_maintenance_fee'],
+                    time_step,
+                    server_dict[s]['life_expectancy']
+                )
         ) +
         pulp.lpSum(move[d, d2, s] * server_dict[s]['cost_of_moving']
                    for d2 in datacenter_ids if d2 != d)
@@ -146,7 +156,8 @@ def solve_fleet_optimization(demand: Dict,
     prob += w1 * total_demand_met + w2 * total_age + w3 * profit, "Objective"
 
     # Solver
-    solver = pulp.CPLEX_CMD(path=r"C:\Program Files\IBM\ILOG\CPLEX_Studio_Community2211\cplex\bin\x64_win64\cplex.exe", msg=True, threads=4)
+    solver = pulp.CPLEX_CMD(path=r"/Applications/CPLEX/CPLEX_Studio_Community2211/cplex/bin/x86-64_osx/cplex",
+                            msg=True, threads=4)
     prob.solve(solver)
 
     if pulp.LpStatus[prob.status] != 'Optimal':
@@ -154,11 +165,14 @@ def solve_fleet_optimization(demand: Dict,
         return None, current_fleet, 0, 0, 0
 
     # Extract actions and update fleet
-    actions, new_fleet = extract_actions_and_update_fleet(buy, move, dismiss, server_count, current_fleet, datacenter_ids, server_generations, time_step, get_next_server_id)
+    actions, new_fleet = extract_actions_and_update_fleet(buy, move, dismiss, server_count, current_fleet,
+                                                          datacenter_ids, server_generations, time_step,
+                                                          get_next_server_id)
 
     # Calculate actual values for U, L, and P
     actual_utilization = total_demand_met.value() / (total_capacity.value() + 1e-6)
-    actual_lifespan = total_age.value() / (pulp.lpSum(server_count[d, s] for d in datacenter_ids for s in server_generations).value() + 1e-6)
+    actual_lifespan = total_age.value() / (
+                pulp.lpSum(server_count[d, s] for d in datacenter_ids for s in server_generations).value() + 1e-6)
     actual_profit = profit.value()
 
     # Debug print
@@ -169,7 +183,9 @@ def solve_fleet_optimization(demand: Dict,
 
     return actions, new_fleet, actual_utilization, actual_lifespan, actual_profit
 
-def extract_actions_and_update_fleet(buy, move, dismiss, server_count, current_fleet, datacenter_ids, server_generations, time_step, get_next_server_id):
+
+def extract_actions_and_update_fleet(buy, move, dismiss, server_count, current_fleet, datacenter_ids,
+                                     server_generations, time_step, get_next_server_id):
     actions = []
     new_fleet = {d: {} for d in datacenter_ids}
 
@@ -187,7 +203,7 @@ def extract_actions_and_update_fleet(buy, move, dismiss, server_count, current_f
                     "action": "buy"
                 })
                 new_fleet[d][server_id] = (s, time_step)
-            
+
             # Move actions
             for d2 in datacenter_ids:
                 if d != d2:
@@ -206,7 +222,7 @@ def extract_actions_and_update_fleet(buy, move, dismiss, server_count, current_f
                             moved_servers.append(server_id)
                     for server_id in moved_servers:
                         del current_fleet[d][server_id]
-            
+
             # Dismiss actions
             dismiss_count = int(dismiss[d, s].value() or 0)
             dismissed_servers = []
@@ -222,7 +238,7 @@ def extract_actions_and_update_fleet(buy, move, dismiss, server_count, current_f
                     dismissed_servers.append(server_id)
             for server_id in dismissed_servers:
                 del current_fleet[d][server_id]
-            
+
             # Update fleet with remaining servers
             for server_id, (server_gen, purchase_time) in current_fleet[d].items():
                 if server_gen == s and server_id not in dismissed_servers:
@@ -230,43 +246,44 @@ def extract_actions_and_update_fleet(buy, move, dismiss, server_count, current_f
 
     return actions, new_fleet
 
+
 def solve_multi_time_steps(actual_demand, datacenters, servers, selling_prices, total_time_steps=168):
     all_actions = []
     results = []
-    
+
     datacenter_dict, server_dict, selling_price_dict = create_lookup_dicts(datacenters, servers, selling_prices)
-    
+
     current_fleet = {d: {} for d in datacenter_dict.keys()}
 
     for time_step in range(1, total_time_steps + 1):
         print(f"Solving for time step {time_step}")
         time_step_demand = actual_demand[actual_demand['time_step'] == time_step]
-        
+
         # Convert time_step_demand to the format expected by solve_fleet_optimization
         demand_dict = {}
         for _, row in time_step_demand.iterrows():
             server_gen = row['server_generation']
             for latency in ['high', 'medium', 'low']:
                 demand_dict[(server_gen, latency)] = row[latency]
-        
+
         result = solve_fleet_optimization(
             demand_dict, datacenter_dict, server_dict, selling_price_dict, time_step, current_fleet
         )
-        
+
         if result is None:
             print(f"Failed to find a solution for time step {time_step}")
             continue
-        
+
         actions, current_fleet, utilization, lifespan, profit = result
         all_actions.extend(actions)
-        
+
         print(f"Time step {time_step} results:")
         print(f"  Actions taken: {len(actions)}")
         print(f"  Current fleet size: {sum(len(servers) for servers in current_fleet.values())}")
         print(f"  Utilization: {utilization:.2f}")
         print(f"  Lifespan: {lifespan:.2f}")
         print(f"  Profit: {profit:.2f}")
-        
+
         results.append({
             "time_step": time_step,
             "utilization": utilization,
@@ -277,13 +294,14 @@ def solve_multi_time_steps(actual_demand, datacenters, servers, selling_prices, 
 
     return all_actions, results
 
+
 def main():
     # Load problem data
     base_demand, datacenters, servers, selling_prices = load_problem_data()
-    
+
     # Get all seeds
     all_seeds = known_seeds('test')
-    
+
     # Prepare a dictionary to store results for all seeds
     all_results = {}
 
@@ -291,25 +309,25 @@ def main():
         try:
             print(f"\nUsing random seed: {seed}")
             np.random.seed(seed)
-            
+
             # Generate actual demand
             actual_demand = get_actual_demand(base_demand)
-        
+
             # Solve the multi-time step problem
             print("Starting multi-time step optimization...")
             solution, results = solve_multi_time_steps(actual_demand, datacenters, servers, selling_prices)
-            
+
             if solution:
                 # Save solution with the correct naming convention
                 solution_file = f"{seed}.json"
                 save_solution(solution, solution_file)
                 print(f"Solution saved to '{solution_file}'")
-                
+
                 # # Save results (not for submission, but for our analysis)
                 # results_file = f"results_{seed}.json"
                 # save_solution(results, results_file)
                 # print(f"Results saved to '{results_file}'")
-                
+
                 # Print summary
                 print("\nOptimization Summary:")
                 print(f"Total time steps: {len(results)}")
@@ -327,12 +345,12 @@ def main():
                 # }
             else:
                 print(f"Failed to find a solution for seed {seed}")
-        
+
         except Exception as e:
             print(f"An error occurred during optimization for seed {seed}: {str(e)}")
             import traceback
             traceback.print_exc()
-            
+
             all_results[seed] = None
 
     # Print overall summary
@@ -348,8 +366,9 @@ def main():
             print(f"Seed {seed}: Failed to find a solution")
 
     # Save overall results (not for submission, but for our analysis)
-    save_solution(all_results, "all_seeds_results.json")
+    save_solution(all_results, "test_seeds_solutions/all_seeds_results.json")
     print("Overall results saved to 'all_seeds_results.json'")
+
 
 if __name__ == "__main__":
     main()

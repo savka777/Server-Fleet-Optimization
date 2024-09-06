@@ -365,7 +365,7 @@ def get_evaluation(solution,
     OBJECTIVE = 0
     FLEET = pd.DataFrame()
     # if ts-related fleet is empty then current fleet is ts-fleet
-    for ts in range(1, time_steps +1):
+    for ts in range(1, time_steps + 1):
 
         # GET THE ACTUAL DEMAND AT TIMESTEP ts
         D = get_time_step_demand(demand, ts)

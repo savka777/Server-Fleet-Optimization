@@ -6,7 +6,8 @@ from evaluation_v6 import evaluation_function
 
 
 # LOAD SOLUTION
-solution = load_solution('./multi_time_step_solution.json')
+solution = load_solution('test_seeds_solutions/2281.json')
+print(solution)
 
 # LOAD PROBLEM DATA
 demand, datacenters, servers, selling_prices = load_problem_data()

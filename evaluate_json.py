@@ -1,9 +1,9 @@
 import os
-from evaluation import evaluation_function
+from evaluation_v6 import evaluation_function
 from utils import load_solution, load_problem_data
 
 # Path to the directory where your solutions are stored
-solution_directory = './'
+solution_directory = 'test_seeds_solutions'
 
 # LOAD PROBLEM DATA (once, since the data remains the same)
 demand, datacenters, servers, selling_prices = load_problem_data()
